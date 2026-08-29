@@ -1,9 +1,0 @@
-上传 GitHub 时确认以下 5 项：
-
-[ ] index.html 在仓库根目录
-[ ] .github/workflows/pages.yml 已上传
-[ ] .nojekyll 已上传
-[ ] 默认分支叫 main
-[ ] Settings → Pages → Source 选择 GitHub Actions
-
-满足后，每次上传到 main 都会自动部署。
