@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#edf2ef" />
+  <meta name="description" content="高中72篇必背古诗文，2025课标精校，含全文、重点注释、赏析、知识清单与216道理解性默写。" />
+  <title>青绿书卷 · 高中72篇必背古诗文</title>
+  <style>
+@layer reset, tokens, base, layout, components, responsive, print;
+
+@layer reset{
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:28px}
+body,h1,h2,h3,h4,p{margin:0}
+button,input,textarea,select{font:inherit}
+}
+
+@layer tokens{
+:root{
+--bg:#f3efe8;--bg-top:#faf7f2;--paper:#fffdfa;--paper-soft:#faf6ef;--paper-warm:#f6efe6;
+--ink:#28231f;--ink-soft:#514840;--muted:#7d7167;--line:#e6ddd2;--line-soft:rgba(104,84,67,.085);
+--accent:#8b6049;--accent-soft:#eee1d5;--sidebar:288px;--content:960px;--measure:46em;
+--radius-lg:22px;--radius-md:14px;--shadow:0 18px 52px rgba(58,45,34,.05);
+--ease:cubic-bezier(.2,.8,.2,1);
+--ui:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif;
+--serif:"Songti SC",STSong,SimSun,serif;--display:STKaiti,KaiTi,"Songti SC",serif
+}
+}
+
+@layer base{
+html{background:var(--bg)}
+body{min-width:320px;color:var(--ink);background:radial-gradient(circle at 78% -10%,rgba(255,255,255,.9),transparent 32rem),linear-gradient(180deg,var(--bg-top) 0,var(--bg) 24%,#f0ece5 100%);font-family:var(--ui);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-anchor:none}
+::selection{background:#ead7c8;color:#3e2d24}
+button,a{-webkit-tap-highlight-color:transparent}a{color:inherit}
+.skip-link{position:fixed;left:14px;top:12px;z-index:300;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font-size:12px;text-decoration:none;box-shadow:var(--shadow);transform:translateY(-160%);transition:transform .16s ease}
+.skip-link:focus{transform:none}
+.noscript{margin:20px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:13px}
+}
+
+@layer layout{
+.sidebar{position:fixed;inset:0 auto 0 0;z-index:80;width:var(--sidebar);height:100dvh;padding:23px 14px 30px;border-right:1px solid var(--line);background:rgba(249,246,240,.965);backdrop-filter:blur(18px);overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;transform:translate3d(0,0,0);transition:transform .24s var(--ease)}
+.sidebar::-webkit-scrollbar{width:6px}.sidebar::-webkit-scrollbar-track{background:transparent}.sidebar::-webkit-scrollbar-thumb{border-radius:999px;background:#d7cec4}
+.main{width:calc(100% - var(--sidebar));margin-left:var(--sidebar);padding:46px clamp(24px,5vw,72px) 78px;transition:transform .24s var(--ease);will-change:transform}
+.hero,.content,.footer{width:min(100%,var(--content));margin-inline:auto}
+.sidebar-collapsed .sidebar{transform:translate3d(-100%,0,0);pointer-events:none}
+.sidebar-collapsed .main{transform:translate3d(calc(var(--sidebar) / -2),0,0)}
+.sidebar-backdrop{position:fixed;inset:0;z-index:70;border:0;background:rgba(35,29,24,.14);backdrop-filter:blur(2px);cursor:default}
+.sidebar-backdrop[hidden]{display:none}
+}
+
+@layer components{
+.brand{display:flex;align-items:center;gap:11px;padding:3px 10px 18px 39px}
+.brand-mark{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border:1px solid #dfd4c8;border-radius:11px;background:#fffaf4;color:var(--accent);font-family:Georgia,serif;font-size:12px;font-weight:700;box-shadow:inset 0 1px #fff}
+.brand h1{font-family:var(--display);font-size:20px;font-weight:600;letter-spacing:.045em}.brand p{margin-top:3px;color:var(--muted);font-size:10px}
+.catalog-group+.catalog-group{margin-top:17px}.catalog-heading{display:flex;align-items:center;justify-content:space-between;margin:0 7px 6px;padding:0 4px;color:#96897d;font-size:10px;font-weight:750;letter-spacing:.12em}.catalog-heading em{font-style:normal;color:#b0a59b;font-weight:500;letter-spacing:0}
+.catalog-item{position:relative;display:flex;gap:9px;align-items:flex-start;min-height:46px;padding:8px 9px;border-radius:12px;text-decoration:none;transition:background .15s ease,transform .15s ease,color .15s ease}
+.catalog-item:hover{background:#f0e8de}.catalog-item:active{transform:translateX(1px)}.catalog-item:focus-visible{outline:2px solid rgba(140,98,74,.25);outline-offset:2px}.catalog-item.active{background:var(--accent-soft);color:#4d3a2f}.catalog-item.active::before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:3px;border-radius:999px;background:#9b7258}
+.catalog-num{display:grid;place-items:center;flex:0 0 28px;height:28px;border:1px solid #e4d9cc;border-radius:9px;background:rgba(255,255,255,.7);color:#8d8175;font-size:9.5px;font-variant-numeric:tabular-nums}.catalog-copy{min-width:0;padding-top:1px}.catalog-copy b{display:block;font-size:12.5px;font-weight:650;line-height:1.35}.catalog-copy small{display:block;margin-top:3px;color:var(--muted);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sidebar-toggle{position:fixed;top:14px;left:calc(var(--sidebar) - 18px);z-index:120;display:grid;place-items:center;width:36px;height:36px;padding:0;border:1px solid #e0d5c9;border-radius:11px;background:rgba(255,252,247,.97);color:#63564d;box-shadow:0 8px 22px rgba(55,43,31,.09);backdrop-filter:blur(14px);cursor:pointer;transform:translateX(-50%);transition:left .24s var(--ease),transform .24s var(--ease),background .15s ease,box-shadow .15s ease}
+.sidebar-toggle:hover{background:#fff;box-shadow:0 10px 25px rgba(55,43,31,.12)}.sidebar-toggle:active{scale:.96}.sidebar-toggle:focus-visible{outline:2px solid rgba(140,98,74,.3);outline-offset:3px}.sidebar-toggle span{font-size:19px;line-height:1}.sidebar-collapsed .sidebar-toggle{left:14px;transform:none}
+
+.hero{padding:4px 3px 29px;margin-bottom:31px;border-bottom:1px solid var(--line)}.eyebrow{margin-bottom:9px;color:var(--accent);font-size:10.5px;font-weight:760;letter-spacing:.15em}.hero h2{font-family:var(--display);font-size:clamp(33px,4vw,43px);font-weight:600;line-height:1.18;letter-spacing:.024em}.hero-copy{max-width:760px;margin-top:13px;color:var(--muted);font-size:13px;line-height:1.9;text-wrap:pretty}.hero-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.hero-meta span{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,253,249,.7);color:#81746a;font-size:10.5px;box-shadow:inset 0 1px rgba(255,255,255,.7)}.hero-meta b{color:#5c483c;font-size:11.5px;font-variant-numeric:tabular-nums}
+
+.article{scroll-margin-top:28px;content-visibility:auto;contain-intrinsic-size:980px;margin-bottom:38px;padding:39px clamp(26px,4.5vw,48px) 43px;border:1px solid rgba(225,215,203,.92);border-radius:var(--radius-lg);background:var(--paper);box-shadow:var(--shadow)}
+.article-header{padding-bottom:22px;border-bottom:1px solid var(--line)}.article-kicker{display:flex;align-items:center;gap:7px;margin-bottom:8px}.article-index,.article-type{color:#968a7e;font-size:10px;font-weight:720;letter-spacing:.1em;font-variant-numeric:tabular-nums}.article-type{padding:3px 7px;border:1px solid #eadfd4;border-radius:999px;background:#faf6ef;color:#89776a;font-weight:650;letter-spacing:.04em}
+.article h1{font-family:var(--display);font-size:clamp(28px,3vw,35px);font-weight:600;line-height:1.27;letter-spacing:.025em;text-wrap:balance}.article-header p{margin-top:7px;color:var(--muted);font-size:11.5px}
+.section{padding-top:29px}.section+.section{margin-top:2px;border-top:1px solid var(--line-soft)}.section h3,.section-head h3{display:flex;align-items:center;gap:9px;margin-bottom:15px;color:#74675c;font-size:12.5px;font-weight:760;letter-spacing:.085em}.section h3::before,.section-head h3::before{content:"";width:15px;height:1px;background:#bca48f}
+.poem{max-width:var(--measure);white-space:pre-wrap;overflow-wrap:anywhere;text-wrap:pretty;font-family:var(--serif);font-size:19.5px;line-height:2.03;letter-spacing:.03em;color:#29241f}.article--poetry .poem{max-width:39em;font-size:20px;line-height:2.08;letter-spacing:.04em}.article--prose .poem{max-width:47em;line-height:2}
+.range{display:flex;gap:10px;margin-top:22px;padding:13px 15px;border-left:3px solid #b88968;border-radius:0 11px 11px 0;background:var(--paper-warm);color:#72675e;font-size:11.5px;line-height:1.8}.range b{flex:none;color:#71513f}
+.note-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.note{min-width:0;padding:11px 12px;border:1px solid #e9e0d6;border-radius:11px;background:var(--paper-soft);font-size:11.5px;line-height:1.65}.note b{display:block;margin-bottom:3px;color:#664e3f;font-size:11.5px}.note span{color:#665e57}
+.summary,.quiet-card{padding:16px 17px;border:1px solid #e9e1d7;border-radius:13px;background:var(--paper-soft);color:#514943;font-size:13px;line-height:1.88;text-wrap:pretty}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}.section-head h3{margin-bottom:0}.section-head span{padding:4px 8px;border:1px solid #e4d8cc;border-radius:999px;background:#faf6ef;color:#897467;font-size:9.5px;font-variant-numeric:tabular-nums}
+.dictation-list{display:grid;gap:10px}.dictation-card{position:relative;overflow:hidden;padding:16px 17px 15px;border:1px solid #e9ded2;border-radius:13px;background:linear-gradient(180deg,#fdfaf6 0,#faf6f0 100%);box-shadow:0 4px 16px rgba(76,57,43,.022)}.dictation-card::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:#c4a188}.question{display:flex;gap:9px}.question>b{display:grid;place-items:center;flex:0 0 22px;height:22px;margin-top:1px;border-radius:7px;background:#eadfd4;color:#745847;font-size:10.5px}.question p,.answer p{margin:0}.question p{color:#4b433d;font-size:13px;line-height:1.82;text-wrap:pretty}.answer{display:flex;gap:9px;margin:11px 0 0 31px;padding-top:10px;border-top:1px dashed rgba(122,98,77,.17);font-family:var(--serif);color:#4d4239;font-size:13.5px;line-height:1.82}.answer>span{flex:none;height:max-content;padding:1px 6px;border-radius:5px;background:#eee4d9;color:#886d5b;font-family:var(--ui);font-size:9.5px}
+.knowledge-grid,.exam-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.knowledge-card,.exam-card{min-width:0;padding:14px 15px;border:1px solid #e9e1d7;border-radius:13px;background:var(--paper-soft)}.knowledge-card.wide,.exam-card.wide{grid-column:1/-1}.knowledge-card>b,.exam-card h4{display:block;margin-bottom:7px;color:#7b6b5f;font-size:10.5px;font-weight:760;letter-spacing:.055em}.knowledge-card p,.exam-card p{color:#615951;font-size:12px;line-height:1.78;text-wrap:pretty}.knowledge-card ul{margin:0;padding-left:18px}.knowledge-card li{color:#615951;font-size:11.5px;line-height:1.72}.knowledge-card li+li{margin-top:4px}.knowledge-card.quote p{font-family:var(--serif);color:#654b3c;font-size:13px}
+.footer{padding-top:14px;color:#9c9187;text-align:center;font-size:10px;letter-spacing:.055em}
+}
+
+@layer responsive{
+@media(min-width:901px){.sidebar-backdrop{display:none!important}}
+@media(max-width:900px){
+:root{--sidebar:min(84vw,292px)}.main,.sidebar-collapsed .main{width:100%;margin-left:0;padding:58px 15px 60px;transform:none;will-change:auto}.sidebar{box-shadow:18px 0 48px rgba(48,39,31,.13)}.sidebar-toggle,.sidebar-collapsed .sidebar-toggle{top:11px;left:11px;transform:none}.hero,.content,.footer{max-width:760px}.note-list{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+html{scroll-padding-top:18px}.main,.sidebar-collapsed .main{padding:54px 11px 50px}.hero{padding:7px 5px 23px;margin-bottom:24px}.hero h2{font-size:29px}.hero-copy{font-size:12px;line-height:1.82}.hero-meta{gap:6px}.hero-meta span{padding:6px 9px}
+.article{content-visibility:visible;contain-intrinsic-size:auto;padding:25px 17px 30px;margin-bottom:26px;border-radius:17px}.article-header{padding-bottom:17px}.article h1{font-size:25px}.article-kicker{margin-bottom:7px}.poem,.article--poetry .poem{max-width:none;font-size:18px;line-height:1.96;letter-spacing:.018em}.section{padding-top:24px}.range{padding:12px 13px}.section-head{align-items:flex-start}.section-head span{margin-top:-1px}.answer{margin-left:0;font-size:13px}.question p{font-size:12.8px}.knowledge-grid,.exam-grid{grid-template-columns:1fr}.knowledge-card.wide,.exam-card.wide{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sidebar,.sidebar-toggle,.main,.catalog-item{transition:none!important}}
+}
+
+@layer print{
+@media print{
+body{background:#fff}.skip-link,.sidebar,.sidebar-toggle,.sidebar-backdrop{display:none!important}.main,.sidebar-collapsed .main{width:100%;margin:0;padding:0;transform:none}.hero,.content,.footer{max-width:none}.article{content-visibility:visible;contain-intrinsic-size:auto;break-inside:avoid;box-shadow:none;border-color:#ddd}.footer{display:none}
+}
+}
+
+
+/* 青绿书卷 · 阅读界面 */
+@media screen {
+:root{--bg:#f0f3f0;--paper:#fffefa;--paper-soft:#f6f8f4;--paper-warm:#edf3ed;--ink:#263c36;--muted:#74837b;--line:#dde5dd;--accent:#356b57;--accent-soft:#e2eee5;--sidebar:272px;--content:980px;--display:"Songti SC",STSong,SimSun,serif;--shadow:0 12px 50px #27473506;--reading-size:20px}
+body{background:radial-gradient(ellipse at 90% 0,#dce9e0 0,transparent 44%),linear-gradient(135deg,#f7f8f3,#edf2ef);background-attachment:fixed;color:var(--ink)}
+::selection{background:#d5e8d9;color:#244f3e}
+.sidebar{background:rgba(248,250,246,.94);border-right:1px solid #dce4dc;padding:30px 16px;scrollbar-width:thin;scrollbar-color:#c7d6ca transparent}
+.brand{padding:0 6px 26px;gap:12px}.brand-mark{width:42px;height:46px;flex-basis:42px;border:0;border-radius:13px 4px 13px 4px;background:#35624f;color:#fff;font-family:var(--serif);font-size:20px;box-shadow:0 5px 14px #35624f20}.brand h1{font-size:20px;letter-spacing:.07em}.brand p{font-size:10px;letter-spacing:.1em;margin-top:5px}
+.sidebar-toggle{top:32px;left:calc(var(--sidebar) - 2px);border-color:#d8e2d9;color:#426750;background:#fafcf9;border-radius:50%;width:29px;height:29px}.sidebar-collapsed .sidebar-toggle{left:15px}
+.main{padding:40px clamp(24px,4.5vw,68px) 70px;transition:margin .24s ease,width .24s ease;will-change:auto}.sidebar-collapsed .main{transform:none;margin-left:0;width:100%}
+.catalog-heading{color:#809187;font-size:10px;margin-top:24px;margin-bottom:10px}.catalog-heading em{color:#8b9d90}.catalog-item{padding:10px 9px;margin-bottom:3px;min-height:52px;align-items:center;border-radius:9px}.catalog-item:hover{background:#eaf0e9}.catalog-item.active{background:#e1ece2;color:#2e6049}.catalog-item.active::before{background:#467558;top:16px;bottom:16px;width:2px}.catalog-num{background:transparent;border:0;color:#99a69b;font-size:11px;flex-basis:25px}.catalog-item.active .catalog-num{color:#427054}.catalog-copy b{font-size:13px;font-weight:500}.catalog-copy small{font-size:10px;color:#849187;margin-top:5px}
+.catalog-search{display:flex;align-items:center;gap:8px;border:1px solid #dce5dc;background:#fff9;border-radius:10px;padding:10px 12px;color:#7d9182}.catalog-search input{width:100%;min-width:0;border:0;background:transparent;color:#345442;outline:0;font-size:12px}.catalog-search:focus-within{outline:2px solid #83aa91;outline-offset:2px}.search-empty{font-size:12px;line-height:1.8;padding:20px 10px;color:#74837b}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:295px;border:1px solid #dce5dc;border-radius:20px;padding:35px 34px 29px;margin-bottom:23px;background:linear-gradient(112deg,#fafff9 0%,#f0f6ed 55%,#e2eee4 100%);box-shadow:0 12px 45px #28483705}.hero .eyebrow{font-family:var(--ui);font-size:10px;letter-spacing:.19em;color:#58846b;margin-bottom:20px}.hero h2{font-size:clamp(29px,3.2vw,42px);font-weight:500;letter-spacing:.045em;position:relative;z-index:1;line-height:1.4}.hero h2 span{display:block;font-family:var(--ui);font-size:11px;letter-spacing:.28em;color:#7e9485;margin-top:8px;font-weight:400}.hero-copy{max-width:440px;font-size:12px;color:#798c7e;line-height:1.9;margin-top:18px;position:relative;z-index:1}.hero-meta{gap:8px;margin-top:22px;position:relative;z-index:1}.hero-meta span{border:1px solid #dbe5d9;background:#ffffffa8;padding:7px 10px;color:#7a8b7c;font-size:10px}.hero-meta b{color:#42684f;font-weight:600}.landscape{position:absolute;right:-45px;bottom:0;width:57%;height:100%;z-index:-1;opacity:.65;pointer-events:none}.hero-copy{max-width:65%}
+.reading-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:var(--content);margin:0 auto 21px;padding:0 4px}.reading-tools p{font-size:11px;color:#829184;letter-spacing:.07em}.tool-actions{display:flex;gap:5px;align-items:center}.tool-actions button{border:1px solid #dce5dc;background:#fcfefb;color:#5b7562;border-radius:8px;min-width:34px;min-height:32px;font-size:12px;cursor:pointer;padding:5px 10px}.tool-actions button:hover{background:#e4ede2}.tool-actions button[aria-pressed=true]{background:#3d6d53;color:#fff;border-color:#3d6d53}button:focus-visible,a:focus-visible{outline:2px solid #548c6a;outline-offset:4px}
+.article{border:1px solid #e0e6dc;background:var(--paper);border-radius:18px;padding:38px clamp(24px,4vw,52px) 44px;margin-bottom:26px;box-shadow:0 8px 38px #38522f04;scroll-margin-top:24px}.article-header{position:relative;padding-bottom:25px;border-bottom:1px solid #e5eade}.article-header:after{content:'文';position:absolute;right:0;top:10px;font-family:var(--serif);font-size:23px;color:#a6b3a3;border:1px solid #c7d1bf;padding:6px 8px;border-radius:3px;opacity:.65}.article--poetry .article-header:after{content:'诗'}.article-kicker{margin-bottom:13px;gap:12px}.article-index{color:#94a18f;font-size:10px;letter-spacing:.18em}.article-type{color:#668263;background:#f1f5ed;border-color:#e2e9da;font-size:9px}.article h1{font-size:32px;font-weight:500;letter-spacing:.06em;padding-right:45px}.article-header p{margin-top:12px;letter-spacing:.1em;color:#8a9785;font-size:11px}.poem,.article--poetry .poem{color:#334337;font-size:var(--reading-size);line-height:2.2;letter-spacing:.035em}.article--prose .poem{line-height:2.2}.section{padding-top:28px}.section h3,.section-head h3{color:#6e8369;font-size:11px;letter-spacing:.12em}.section h3:before,.section-head h3:before{width:4px;height:12px;border-radius:3px;background:#8eaa7e}.range{background:#f0f5eb;border-left-color:#98ad86;color:#7a8971;font-size:11px}.range b{color:#58714d}.note,.knowledge-card,.exam-card,.summary,.quiet-card{background:#f7f9f3;border-color:#e6eadf;border-radius:11px}.note b,.knowledge-card>b,.exam-card h4{color:#58744c}.note span,.knowledge-card p,.knowledge-card li,.exam-card p,.summary{color:#6a7464}.knowledge-card.quote p{color:#45693e}.dictation-card{background:#f8faf5;border-color:#e2e9db;box-shadow:none}.dictation-card:before{background:#9bb08a}.question>b,.answer>span{background:#e7efde;color:#60784d}.question p,.answer{color:#4e6046}.section-head span{background:#edf3e7;border-color:#dce5d4;color:#6f8660}.answer{border-top-color:#cfdcc5}.footer{color:#8d9a86;padding-top:20px}
+body.focus-reading .article .section:not(.original){display:none}body.focus-reading .range{display:none}body.focus-reading .poem{max-width:38em;margin-inline:auto}body.focus-reading .article{contain-intrinsic-size:600px}
+@media(max-width:1100px){.hero-copy{max-width:80%}.landscape{opacity:.4}.hero{padding:29px 26px}.main{padding-left:26px;padding-right:26px}}
+@media(max-width:900px){.main,.sidebar-collapsed .main{width:100%;margin:0;padding:66px 24px 50px}.sidebar{padding-top:65px}.sidebar-toggle,.sidebar-collapsed .sidebar-toggle{top:16px;left:18px;width:34px;height:34px}.hero,.content,.footer{max-width:760px}.reading-tools{max-width:760px}.hero{min-height:280px}.sidebar{width:min(84vw,292px)}}
+@media(max-width:540px){.main,.sidebar-collapsed .main{padding:62px 12px 40px}.hero{padding:26px 23px;min-height:300px;border-radius:16px}.hero h2{font-size:29px;max-width:260px}.hero .eyebrow{font-size:9px;margin-bottom:14px}.hero h2 span{font-size:9px;letter-spacing:.2em}.hero-copy{max-width:100%;font-size:11px}.hero-meta{gap:5px}.hero-meta span{padding:6px 8px;font-size:9px}.hero-meta b{font-size:11px}.landscape{width:95%;opacity:.28;right:-100px}.article{padding:28px 21px 32px;border-radius:16px}.article h1{font-size:27px}.poem,.article--poetry .poem{font-size:calc(var(--reading-size) - 2px);line-height:2.12}.reading-tools{gap:4px}.reading-tools p{font-size:10px;letter-spacing:0}.tool-actions button{padding:5px 8px}.hero-meta span:last-child{flex-basis:auto}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+}
+@media print{.reading-tools,.landscape{display:none!important}}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-controls="sidebar" aria-expanded="true" aria-label="收起目录">
+    <span aria-hidden="true">‹</span>
+  </button>
+
+  <aside class="sidebar" id="sidebar" aria-label="篇目目录">
+    <header class="brand">
+      <div class="brand-mark">72</div>
+      <div>
+        <h1>高中古诗文</h1>
+        <p>2025 课标精校</p>
+      </div>
+    </header>
+    <label class="catalog-search"><span aria-hidden="true">⌕</span><input id="catalogSearch" type="search" placeholder="搜索篇名、作者" aria-label="搜索篇名、作者" autocomplete="off"></label><p id="searchEmpty" class="search-empty" hidden>没有找到篇目，试试作者或标题关键词。</p>
+    <nav id="catalog" class="catalog"></nav>
+  </aside>
+  <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="关闭目录" hidden></button>
+
+  <main class="main" id="main" tabindex="-1" aria-label="高中72篇必背古诗文正文">
+    <header class="hero">
+<svg class="landscape" viewBox="0 0 600 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs><linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#a9c6b1" stop-opacity=".4"/><stop offset="1" stop-color="#507f68" stop-opacity=".55"/></linearGradient></defs><circle cx="407" cy="96" r="35" fill="#d5d6ac" opacity=".6"/><path d="M0 360 Q65 210 114 260 Q165 178 210 237 Q275 108 313 204 Q356 164 402 250 Q470 188 525 294 L600 235 V420 H0Z" fill="#b5cbbb" opacity=".55"/><path d="M30 420 Q120 305 180 335 Q250 190 306 292 Q349 235 397 295 Q464 178 504 251 Q540 220 600 324 V420Z" fill="url(#mountain)"/><path d="M120 420 Q215 339 302 370 T600 347 V420Z" fill="#7b9e8a" opacity=".4"/><path d="M0 399 Q177 366 335 404 T600 382" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/><path d="m338 127 8-3 8 4m20 9 7-3 7 2" fill="none" stroke="#739582" stroke-width="1.4"/></svg>
+      <p class="eyebrow">青绿书卷 / 高中古诗文阅读集</p>
+      <h2>在字里行间，<br>与千年相见。<span>高中 72 篇必背古诗文</span></h2>
+      <p class="hero-copy">从一字一句，读懂一篇。全文、注释、赏析与默写，陪你把书读薄，把记忆留深。</p>
+      <div class="hero-meta" aria-label="内容统计">
+        <span><b>72</b> 篇目</span><span><b>32</b> 文言文</span><span><b>40</b> 诗词曲</span><span><b>216</b> 理解性默写</span>
+      </div>
+    </header>
+    <div class="reading-tools"><p>慢慢读，让每一句有回响。</p><div class="tool-actions"><button type="button" id="fontDown" aria-label="减小字号">A−</button><button type="button" id="fontUp" aria-label="增大字号">A＋</button><button type="button" id="focusReading" aria-pressed="false">纯净阅读</button></div></div>
+    <div id="content" class="content"></div>
+    <footer class="footer">青绿书卷 · 72 篇古诗文<br><br>古籍用字及教材版本可能存在差异，考试请以学校现用教材与当地要求为准。</footer>
+  </main>
+
+  <noscript><div class="noscript">本网站需要启用 JavaScript 才能加载篇目内容。</div></noscript>
+  <script>
+const P='文言文';
+const S='诗词曲';
+
+const data=[
+["论语（十二章）","《论语》","先秦",P,"君子食无求饱，居无求安，敏于事而慎于言，就有道而正焉，可谓好学也已。\n人而不仁，如礼何？人而不仁，如乐何？\n朝闻道，夕死可矣。\n君子喻于义，小人喻于利。\n见贤思齐焉，见不贤而内自省也。\n质胜文则野，文胜质则史。文质彬彬，然后君子。\n士不可以不弘毅，任重而道远。仁以为己任，不亦重乎？死而后已，不亦远乎？\n譬如为山，未成一篑，止，吾止也；譬如平地，虽覆一篑，进，吾往也。\n知者不惑，仁者不忧，勇者不惧。\n颜渊问仁。子曰：“克己复礼为仁。一日克己复礼，天下归仁焉。为仁由己，而由人乎哉？”颜渊曰：“请问其目。”子曰：“非礼勿视，非礼勿听，非礼勿言，非礼勿动。”颜渊曰：“回虽不敏，请事斯语矣。”\n子贡问曰：“有一言而可以终身行之者乎？”子曰：“其恕乎！己所不欲，勿施于人。”\n小子何莫学夫《诗》？《诗》可以兴，可以观，可以群，可以怨。迩之事父，远之事君；多识于鸟兽草木之名。","2025年修订课标指定十二章；本页按修订版附录所列顺序整理。"],
+["劝学（节选）","荀子","先秦",P,"君子曰：学不可以已。\n青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴，不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。\n吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。\n积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得，圣心备焉。故不积跬步，无以至千里；不积小流，无以成江海。骐骥一跃，不能十步；驽马十驾，功在不舍。锲而舍之，朽木不折；锲而不舍，金石可镂。蚓无爪牙之利，筋骨之强，上食埃土，下饮黄泉，用心一也。蟹六跪而二螯，非蛇鳝之穴无可寄托者，用心躁也。","2025年修订课标指定三段：从“学不可以已”至“则知明而行无过矣”；从“吾尝终日而思矣”至“善假于物也”；从“积土成山”至“用心躁也”。"],
+["屈原列传（节选）","司马迁","西汉",P,"屈平疾王听之不聪也，谗谄之蔽明也，邪曲之害公也，方正之不容也，故忧愁幽思而作《离骚》。“离骚”者，犹离忧也。夫天者，人之始也；父母者，人之本也。人穷则反本，故劳苦倦极，未尝不呼天也；疾痛惨怛，未尝不呼父母也。屈平正道直行，竭忠尽智，以事其君，谗人间之，可谓穷矣。信而见疑，忠而被谤，能无怨乎？屈平之作《离骚》，盖自怨生也。《国风》好色而不淫，《小雅》怨诽而不乱。若《离骚》者，可谓兼之矣。上称帝喾，下道齐桓，中述汤、武，以刺世事。明道德之广崇，治乱之条贯，靡不毕见。其文约，其辞微，其志洁，其行廉。其称文小而其指极大，举类迩而见义远。其志洁，故其称物芳；其行廉，故死而不容。自疏濯淖污泥之中，蝉蜕于浊秽，以浮游尘埃之外，不获世之滋垢，皭然泥而不滓者也。推此志也，虽与日月争光可也。","课标范围：从“屈平疾王听之不聪也”至“虽与日月争光可也”。"],
+["谏太宗十思疏","魏征","唐",P,"臣闻求木之长者，必固其根本；欲流之远者，必浚其泉源；思国之安者，必积其德义。源不深而望流之远，根不固而求木之长，德不厚而思国之理，臣虽下愚，知其不可，而况于明哲乎！人君当神器之重，居域中之大，将崇极天之峻，永保无疆之休。不念居安思危，戒奢以俭，德不处其厚，情不胜其欲，斯亦伐根以求木茂，塞源而欲流长者也。\n凡百元首，承天景命，莫不殷忧而道著，功成而德衰，有善始者实繁，能克终者盖寡。岂其取之易而守之难乎？盖在殷忧必竭诚以待下，既得志则纵情以傲物；竭诚则胡越为一体，傲物则骨肉为行路。虽董之以严刑，振之以威怒，终苟免而不怀仁，貌恭而不心服。怨不在大，可畏惟人；载舟覆舟，所宜深慎；奔车朽索，其可忽乎！\n君人者，诚能见可欲则思知足以自戒，将有作则思知止以安人，念高危则思谦冲而自牧，惧满溢则思江海下百川，乐盘游则思三驱以为度，忧懈怠则思慎始而敬终，虑壅蔽则思虚心以纳下，想谗邪则思正身以黜恶，恩所加则思无因喜以谬赏，罚所及则思无因怒而滥刑。总此十思，弘兹九德，简能而任之，择善而从之，则智者尽其谋，勇者竭其力，仁者播其惠，信者效其忠；文武争驰，君臣无事，可以尽豫游之乐，可以养松乔之寿，鸣琴垂拱，不言而化。何必劳神苦思，代下司职，役聪明之耳目，亏无为之大道哉！","用“木—根、流—源、国—德义”开篇，十思是全文记忆骨架。"],
+["师说","韩愈","唐",P,"古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾后，其闻道也亦先乎吾，吾从而师之。吾师道也，夫庸知其年之先后生于吾乎？是故无贵无贱，无长无少，道之所存，师之所存也。\n嗟乎！师道之不传也久矣！欲人之无惑也难矣！古之圣人，其出人也远矣，犹且从师而问焉；今之众人，其下圣人也亦远矣，而耻学于师。是故圣益圣，愚益愚。圣人之所以为圣，愚人之所以为愚，其皆出于此乎？爱其子，择师而教之；于其身也，则耻师焉，惑矣。彼童子之师，授之书而习其句读者，非吾所谓传其道解其惑者也。句读之不知，惑之不解，或师焉，或不焉，小学而大遗，吾未见其明也。巫医乐师百工之人，不耻相师。士大夫之族，曰师曰弟子云者，则群聚而笑之。问之，则曰：“彼与彼年相若也，道相似也。位卑则足羞，官盛则近谀。”呜呼！师道之不复可知矣。巫医乐师百工之人，君子不齿，今其智乃反不能及，其可怪也欤！\n圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。\n李氏子蟠，年十七，好古文，六艺经传皆通习之，不拘于时，学于余。余嘉其能行古道，作《师说》以贻之。","核心线索：从师必要性 → 当时士大夫耻学于师 → 孔子从师 → 写作缘由。"],
+["阿房宫赋","杜牧","唐",P,"六王毕，四海一；蜀山兀，阿房出。覆压三百余里，隔离天日。骊山北构而西折，直走咸阳。二川溶溶，流入宫墙。五步一楼，十步一阁；廊腰缦回，檐牙高啄；各抱地势，钩心斗角。盘盘焉，囷囷焉，蜂房水涡，矗不知乎几千万落。长桥卧波，未云何龙？复道行空，不霁何虹？高低冥迷，不知西东。歌台暖响，春光融融；舞殿冷袖，风雨凄凄。一日之内，一宫之间，而气候不齐。\n妃嫔媵嫱，王子皇孙，辞楼下殿，辇来于秦；朝歌夜弦，为秦宫人。明星荧荧，开妆镜也；绿云扰扰，梳晓鬟也；渭流涨腻，弃脂水也；烟斜雾横，焚椒兰也；雷霆乍惊，宫车过也；辘辘远听，杳不知其所之也。一肌一容，尽态极妍，缦立远视，而望幸焉；有不得见者，三十六年。燕赵之收藏，韩魏之经营，齐楚之精英，几世几年，剽掠其人，倚叠如山。一旦不能有，输来其间。鼎铛玉石，金块珠砾，弃掷逦迤，秦人视之，亦不甚惜。\n嗟乎！一人之心，千万人之心也。秦爱纷奢，人亦念其家。奈何取之尽锱铢，用之如泥沙？使负栋之柱，多于南亩之农夫；架梁之椽，多于机上之工女；钉头磷磷，多于在庾之粟粒；瓦缝参差，多于周身之帛缕；直栏横槛，多于九土之城郭；管弦呕哑，多于市人之言语。使天下之人，不敢言而敢怒；独夫之心，日益骄固。戍卒叫，函谷举；楚人一炬，可怜焦土。\n呜呼！灭六国者六国也，非秦也；族秦者秦也，非天下也。嗟乎！使六国各爱其人，则足以拒秦；使秦复爱六国之人，则递三世可至万世而为君，谁得而族灭也？秦人不暇自哀，而后人哀之；后人哀之而不鉴之，亦使后人而复哀后人也。","按“建筑—宫女珍宝—秦亡—历史教训”四层背诵。"],
+["六国论","苏洵","北宋",P,"六国破灭，非兵不利，战不善，弊在赂秦。赂秦而力亏，破灭之道也。或曰：六国互丧，率赂秦耶？曰：不赂者以赂者丧。盖失强援，不能独完。故曰：弊在赂秦也。\n秦以攻取之外，小则获邑，大则得城。较秦之所得，与战胜而得者，其实百倍；诸侯之所亡，与战败而亡者，其实亦百倍。则秦之所大欲，诸侯之所大患，固不在战矣。思厥先祖父，暴霜露，斩荆棘，以有尺寸之地。子孙视之不甚惜，举以予人，如弃草芥。今日割五城，明日割十城，然后得一夕安寝。起视四境，而秦兵又至矣。然则诸侯之地有限，暴秦之欲无厌，奉之弥繁，侵之愈急。故不战而强弱胜负已判矣。至于颠覆，理固宜然。古人云：“以地事秦，犹抱薪救火，薪不尽，火不灭。”此言得之。\n齐人未尝赂秦，终继五国迁灭，何哉？与嬴而不助五国也。五国既丧，齐亦不免矣。燕赵之君，始有远略，能守其土，义不赂秦。是故燕虽小国而后亡，斯用兵之效也。至丹以荆卿为计，始速祸焉。赵尝五战于秦，二败而三胜。后秦击赵者再，李牧连却之。洎牧以谗诛，邯郸为郡，惜其用武而不终也。且燕赵处秦革灭殆尽之际，可谓智力孤危，战败而亡，诚不得已。向使三国各爱其地，齐人勿附于秦，刺客不行，良将犹在，则胜负之数，存亡之理，当与秦相较，或未易量。\n呜呼！以赂秦之地封天下之谋臣，以事秦之心礼天下之奇才，并力西向，则吾恐秦人食之不得下咽也。悲夫！有如此之势，而为秦人积威之所劫，日削月割，以趋于亡。为国者无使为积威之所劫哉！\n夫六国与秦皆诸侯，其势弱于秦，而犹有可以不赂而胜之之势。苟以天下之大，下而从六国破亡之故事，是又在六国下矣。","中心论点“弊在赂秦”，后文围绕“赂秦”和“不赂者”展开。"],
+["答司马谏议书","王安石","北宋",P,"某启：昨日蒙教，窃以为与君实游处相好之日久，而议事每不合，所操之术多异故也。虽欲强聒，终必不蒙见察，故略上报，不复一一自辨。重念蒙君实视遇厚，于反覆不宜卤莽，故今具道所以，冀君实或见恕也。\n盖儒者所争，尤在于名实，名实已明，而天下之理得矣。今君实所以见教者，以为侵官、生事、征利、拒谏，以致天下怨谤也。某则以谓受命于人主，议法度而修之于朝廷，以授之于有司，不为侵官；举先王之政，以兴利除弊，不为生事；为天下理财，不为征利；辟邪说，难壬人，不为拒谏。至于怨诽之多，则固前知其如此也。\n人习于苟且非一日，士大夫多以不恤国事、同俗自媚于众为善，上乃欲变此，而某不量敌之众寡，欲出力助上以抗之，则众何为而不汹汹然？盘庚之迁，胥怨者民也，非特朝廷士大夫而已。盘庚不为怨者故改其度，度义而后动，是而不见可悔故也。如君实责我以在位久，未能助上大有为，以膏泽斯民，则某知罪矣；如曰今日当一切不事事，守前所为而已，则非某之所敢知。\n无由会晤，不任区区向往之至！","抓“名实之辨”和对五项指责的逐条回应。"],
+["赤壁赋","苏轼","北宋",P,"壬戌之秋，七月既望，苏子与客泛舟游于赤壁之下。清风徐来，水波不兴。举酒属客，诵明月之诗，歌窈窕之章。少焉，月出于东山之上，徘徊于斗牛之间。白露横江，水光接天。纵一苇之所如，凌万顷之茫然。浩浩乎如冯虚御风，而不知其所止；飘飘乎如遗世独立，羽化而登仙。\n于是饮酒乐甚，扣舷而歌之。歌曰：“桂棹兮兰桨，击空明兮溯流光。渺渺兮予怀，望美人兮天一方。”客有吹洞箫者，倚歌而和之。其声呜呜然，如怨如慕，如泣如诉；余音袅袅，不绝如缕。舞幽壑之潜蛟，泣孤舟之嫠妇。\n苏子愀然，正襟危坐而问客曰：“何为其然也？”客曰：“‘月明星稀，乌鹊南飞’，此非曹孟德之诗乎？西望夏口，东望武昌，山川相缪，郁乎苍苍，此非孟德之困于周郎者乎？方其破荆州，下江陵，顺流而东也，舳舻千里，旌旗蔽空，酾酒临江，横槊赋诗，固一世之雄也，而今安在哉？况吾与子渔樵于江渚之上，侣鱼虾而友麋鹿；驾一叶之扁舟，举匏樽以相属。寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。挟飞仙以遨游，抱明月而长终。知不可乎骤得，托遗响于悲风。”\n苏子曰：“客亦知夫水与月乎？逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭，是造物者之无尽藏也，而吾与子之所共适。”\n客喜而笑，洗盏更酌。肴核既尽，杯盘狼籍。相与枕藉乎舟中，不知东方之既白。","背诵主线：乐—悲—理—喜；“水月之辩”是理解核心。"],
+["项脊轩志","归有光","明",P,"项脊轩，旧南阁子也。室仅方丈，可容一人居。百年老屋，尘泥渗漉，雨泽下注；每移案，顾视，无可置者。又北向，不能得日，日过午已昏。余稍为修葺，使不上漏。前辟四窗，垣墙周庭，以当南日，日影反照，室始洞然。又杂植兰桂竹木于庭，旧时栏楯，亦遂增胜。借书满架，偃仰啸歌，冥然兀坐，万籁有声；而庭阶寂寂，小鸟时来啄食，人至不去。三五之夜，明月半墙，桂影斑驳，风移影动，珊珊可爱。\n然余居于此，多可喜，亦多可悲。先是，庭中通南北为一。迨诸父异爨，内外多置小门墙，往往而是。东犬西吠，客逾庖而宴，鸡栖于厅。庭中始为篱，已为墙，凡再变矣。家有老妪，尝居于此。妪，先大母婢也，乳二世，先妣抚之甚厚。室西连于中闺，先妣尝一至。妪每谓余曰：“某所，而母立于兹。”妪又曰：“汝姊在吾怀，呱呱而泣；娘以指叩门扉曰：‘儿寒乎？欲食乎？’吾从板外相为应答。”语未毕，余泣，妪亦泣。余自束发读书轩中，一日，大母过余曰：“吾儿，久不见若影，何竟日默默在此，大类女郎也？”比去，以手阖门，自语曰：“吾家读书久不效，儿之成，则可待乎！”顷之，持一象笏至，曰：“此吾祖太常公宣德间执此以朝，他日汝当用之！”瞻顾遗迹，如在昨日，令人长号不自禁。\n轩东，故尝为厨，人往，从轩前过。余扃牖而居，久之，能以足音辨人。轩凡四遭火，得不焚，殆有神护者。\n项脊生曰：“蜀清守丹穴，利甲天下，其后秦皇帝筑女怀清台；刘玄德与曹操争天下，诸葛孔明起陇中。方二人之昧昧于一隅也，世何足以知之，余区区处败屋中，方扬眉、瞬目，谓有奇景。人知之者，其谓与坎井之蛙何异？”\n余既为此志，后五年，吾妻来归，时至轩中，从余问古事，或凭几学书。吾妻归宁，述诸小妹语曰：“闻姊家有阁子，且何谓阁子也？”其后六年，吾妻死，室坏不修。其后二年，余久卧病无聊，乃使人复葺南阁子，其制稍异于前。然自后余多在外，不常居。\n庭有枇杷树，吾妻死之年所手植也，今已亭亭如盖矣。","课标背诵篇目，篇幅较长。按“轩—家庭变迁—亲人回忆”梳理。"],
+["子路、曾皙、冉有、公西华侍坐","《论语》","先秦",P,"子路、曾皙、冉有、公西华侍坐。\n子曰：“以吾一日长乎尔，毋吾以也。居则曰：‘不吾知也！’如或知尔，则何以哉？”\n子路率尔而对曰：“千乘之国，摄乎大国之间，加之以师旅，因之以饥馑；由也为之，比及三年，可使有勇，且知方也。”\n夫子哂之。\n“求！尔何如？”\n对曰：“方六七十，如五六十，求也为之，比及三年，可使足民。如其礼乐，以俟君子。”\n“赤！尔何如？”\n对曰：“非曰能之，愿学焉。宗庙之事，如会同，端章甫，愿为小相焉。”\n“点！尔何如？”\n鼓瑟希，铿尔，舍瑟而作，对曰：“异乎三子者之撰。”\n子曰：“何伤乎？亦各言其志也。”\n曰：“莫春者，春服既成，冠者五六人，童子六七人，浴乎沂，风乎舞雩，咏而归。”\n夫子喟然叹曰：“吾与点也！”\n三子者出，曾皙后。曾皙曰：“夫三子者之言何如？”\n子曰：“亦各言其志也已矣。”\n曰：“夫子何哂由也？”\n曰：“为国以礼，其言不让，是故哂之。”\n“唯求则非邦也与？”\n“安见方六七十如五六十而非邦也者？”\n“唯赤则非邦也与？”\n“宗庙会同，非诸侯而何？赤也为之小，孰能为之大？”","人物语言极有性格，建议按“问志—言志—评志”场景背。"],
+["礼运（节选）·大道之行也","《礼记》","先秦至秦汉",P,"大道之行也，天下为公。选贤与能，讲信修睦。故人不独亲其亲，不独子其子，使老有所终，壮有所用，幼有所长，矜、寡、孤、独、废疾者皆有所养，男有分，女有归。货恶其弃于地也，不必藏于己；力恶其不出于身也，不必为己。是故谋闭而不兴，盗窃乱贼而不作，故外户而不闭。是谓大同。","课标范围：从“大道之行也”至“是谓大同”。"],
+["过秦论（上）","贾谊","西汉",P,"秦孝公据崤函之固，拥雍州之地，君臣固守，以窥周室；有席卷天下，包举宇内，囊括四海之意，并吞八荒之心。当是时也，商君佐之，内立法度，务耕织，修守战之具，外连衡而斗诸侯。于是秦人拱手而取西河之外。\n孝公既没，惠文、武、昭襄蒙故业，因遗策，南取汉中，西举巴蜀，东割膏腴之地，北收要害之郡。诸侯恐惧，会盟而谋弱秦，不爱珍器重宝肥饶之地，以致天下之士，合从缔交，相与为一。当此之时，齐有孟尝，赵有平原，楚有春申，魏有信陵。此四君者，皆明智而忠信，宽厚而爱人，尊贤而重士，约从离衡，兼韩、魏、燕、赵、宋、卫、中山之众。于是六国之士，有宁越、徐尚、苏秦、杜赫之属为之谋；齐明、周最、陈轸、召滑、楼缓、翟景、苏厉、乐毅之徒通其意；吴起、孙膑、带佗、倪良、王廖、田忌、廉颇、赵奢之伦制其兵。尝以十倍之地，百万之众，叩关而攻秦。秦人开关延敌，九国之师，逡巡而不敢进。秦无亡矢遗镞之费，而天下诸侯已困矣。于是从散约败，争割地而赂秦。秦有余力而制其弊，追亡逐北，伏尸百万，流血漂橹；因利乘便，宰割天下，分裂山河。强国请服，弱国入朝。延及孝文王、庄襄王，享国之日浅，国家无事。\n及至始皇，奋六世之余烈，振长策而御宇内，吞二周而亡诸侯，履至尊而制六合，执敲扑而鞭笞天下，威振四海。南取百越之地，以为桂林、象郡；百越之君，俯首系颈，委命下吏。乃使蒙恬北筑长城而守藩篱，却匈奴七百余里；胡人不敢南下而牧马，士不敢弯弓而报怨。于是废先王之道，焚百家之言，以愚黔首；隳名城，杀豪杰；收天下之兵，聚之咸阳，销锋镝，铸以为金人十二，以弱天下之民。然后践华为城，因河为池，据亿丈之城，临不测之渊，以为固。良将劲弩守要害之处，信臣精卒陈利兵而谁何。天下已定，始皇之心，自以为关中之固，金城千里，子孙帝王万世之业也。\n始皇既没，余威震于殊俗。然陈涉瓮牖绳枢之子，氓隶之人，而迁徙之徒也；才能不及中人，非有仲尼、墨翟之贤，陶朱、猗顿之富；蹑足行伍之间，而倔起阡陌之中，率疲弊之卒，将数百之众，转而攻秦；斩木为兵，揭竿为旗，天下云集响应，赢粮而景从。山东豪俊遂并起而亡秦族矣。\n且夫天下非小弱也，雍州之地，崤函之固，自若也。陈涉之位，非尊于齐、楚、燕、赵、韩、魏、宋、卫、中山之君也；锄耰棘矜，非铦于钩戟长铩也；谪戍之众，非抗于九国之师也；深谋远虑，行军用兵之道，非及向时之士也。然而成败异变，功业相反，何也？试使山东之国与陈涉度长絜大，比权量力，则不可同年而语矣。然秦以区区之地，致万乘之势，序八州而朝同列，百有余年矣；然后以六合为家，崤函为宫；一夫作难而七庙隳，身死人手，为天下笑者，何也？仁义不施而攻守之势异也。","按秦的“兴—强—盛—亡”推进。"],
+["报任安书（节选）","司马迁","西汉",P,"古者富贵而名摩灭，不可胜记，唯倜傥非常之人称焉。盖文王拘而演《周易》；仲尼厄而作《春秋》；屈原放逐，乃赋《离骚》；左丘失明，厥有《国语》；孙子膑脚，《兵法》修列；不韦迁蜀，世传《吕览》；韩非囚秦，《说难》《孤愤》；《诗》三百篇，大抵圣贤发愤之所为作也。此人皆意有所郁结，不得通其道也，故述往事，思来者。乃如左丘无目，孙子断足，终不可用，退而论书策，以舒其愤，思垂空文以自见。\n仆窃不逊，近自托于无能之辞，网罗天下放失旧闻，略考其行事，综其终始，稽其成败兴坏之纪，上计轩辕，下至于兹，为十表，本纪十二，书八章，世家三十，列传七十，凡百三十篇。亦欲以究天人之际，通古今之变，成一家之言。草创未就，会遭此祸，惜其不成，是以就极刑而无愠色。仆诚以著此书，藏之名山，传之其人，通邑大都，则仆偿前辱之责，虽万被戮，岂有悔哉？然此可为智者道，难为俗人言也。","课标范围：从“古者富贵而名摩灭”至“难为俗人言也”。"],
+["陈情表","李密","西晋",P,"臣密言：臣以险衅，夙遭闵凶。生孩六月，慈父见背；行年四岁，舅夺母志。祖母刘悯臣孤弱，躬亲抚养。臣少多疾病，九岁不行，零丁孤苦，至于成立。既无叔伯，终鲜兄弟，门衰祚薄，晚有儿息。外无期功强近之亲，内无应门五尺之僮，茕茕孑立，形影相吊。而刘夙婴疾病，常在床蓐，臣侍汤药，未曾废离。\n逮奉圣朝，沐浴清化。前太守臣逵察臣孝廉；后刺史臣荣举臣秀才。臣以供养无主，辞不赴命。诏书特下，拜臣郎中；寻蒙国恩，除臣洗马。猥以微贱，当侍东宫，非臣陨首所能上报。臣具以表闻，辞不就职。诏书切峻，责臣逋慢；郡县逼迫，催臣上道；州司临门，急于星火。臣欲奉诏奔驰，则刘病日笃；欲苟顺私情，则告诉不许：臣之进退，实为狼狈。\n伏惟圣朝以孝治天下，凡在故老，犹蒙矜育，况臣孤苦，特为尤甚。且臣少仕伪朝，历职郎署，本图宦达，不矜名节。今臣亡国贱俘，至微至陋，过蒙拔擢，宠命优渥，岂敢盘桓，有所希冀！但以刘日薄西山，气息奄奄，人命危浅，朝不虑夕。臣无祖母，无以至今日；祖母无臣，无以终余年。母、孙二人，更相为命，是以区区不能废远。\n臣密今年四十有四，祖母刘今年九十有六，是臣尽节于陛下之日长，报养刘之日短也。乌鸟私情，愿乞终养。臣之辛苦，非独蜀之人士及二州牧伯所见明知，皇天后土实所共鉴。愿陛下矜悯愚诚，听臣微志，庶刘侥幸，保卒余年。臣生当陨首，死当结草。臣不胜犬马怖惧之情，谨拜表以闻。","记住“陈苦情—陈孝情—释疑—请求”结构。"],
+["归去来兮辞（并序）","陶渊明","东晋",P,"余家贫，耕植不足以自给。幼稚盈室，瓶无储粟，生生所资，未见其术。亲故多劝余为长吏，脱然有怀，求之靡途。会有四方之事，诸侯以惠爱为德，家叔以余贫苦，遂见用于小邑。于时风波未静，心惮远役，彭泽去家百里，公田之利，足以为酒。故便求之。及少日，眷然有归欤之情。何则？质性自然，非矫厉所得。饥冻虽切，违己交病。尝从人事，皆口腹自役。于是怅然慷慨，深愧平生之志。犹望一稔，当敛裳宵逝。寻程氏妹丧于武昌，情在骏奔，自免去职。仲秋至冬，在官八十余日。因事顺心，命篇曰《归去来兮》。乙巳岁十一月也。\n归去来兮，田园将芜胡不归？既自以心为形役，奚惆怅而独悲？悟已往之不谏，知来者之可追。实迷途其未远，觉今是而昨非。舟遥遥以轻飏，风飘飘而吹衣。问征夫以前路，恨晨光之熹微。\n乃瞻衡宇，载欣载奔。僮仆欢迎，稚子候门。三径就荒，松菊犹存。携幼入室，有酒盈樽。引壶觞以自酌，眄庭柯以怡颜。倚南窗以寄傲，审容膝之易安。园日涉以成趣，门虽设而常关。策扶老以流憩，时矫首而遐观。云无心以出岫，鸟倦飞而知还。景翳翳以将入，抚孤松而盘桓。\n归去来兮，请息交以绝游。世与我而相违，复驾言兮焉求？悦亲戚之情话，乐琴书以消忧。农人告余以春及，将有事于西畴。或命巾车，或棹孤舟。既窈窕以寻壑，亦崎岖而经丘。木欣欣以向荣，泉涓涓而始流。善万物之得时，感吾生之行休。\n已矣乎！寓形宇内复几时？曷不委心任去留？胡为乎遑遑欲何之？富贵非吾愿，帝乡不可期。怀良辰以孤往，或植杖而耘耔。登东皋以舒啸，临清流而赋诗。聊乘化以归尽，乐夫天命复奚疑！","句式有节奏，按“归途—到家—田园—人生感悟”背。"],
+["种树郭橐驼传","柳宗元","唐",P,"郭橐驼，不知始何名。病偻，隆然伏行，有类橐驼者，故乡人号之“驼”。驼闻之，曰：“甚善。名我固当。”因舍其名，亦自谓橐驼云。\n其乡曰丰乐乡，在长安西。驼业种树，凡长安豪富人为观游及卖果者，皆争迎取养。视驼所种树，或移徙，无不活；且硕茂，早实以蕃。他植者虽窥伺效慕，莫能如也。\n有问之，对曰：“橐驼非能使木寿且孳也，能顺木之天，以致其性焉尔。凡植木之性，其本欲舒，其培欲平，其土欲故，其筑欲密。既然已，勿动勿虑，去不复顾。其莳也若子，其置也若弃，则其天者全而其性得矣。故吾不害其长而已，非有能硕茂之也；不抑耗其实而已，非有能早而蕃之也。他植者则不然，根拳而土易，其培之也，若不过焉则不及。苟有能反是者，则又爱之太恩，忧之太勤。旦视而暮抚，已去而复顾。甚者，爪其肤以验其生枯，摇其本以观其疏密，而木之性日以离矣。虽曰爱之，其实害之；虽曰忧之，其实仇之。故不我若也。吾又何能为哉！”\n问者曰：“以子之道，移之官理，可乎？”驼曰：“我知种树而已，理，非吾业也。然吾居乡，见长人者好烦其令，若甚怜焉，而卒以祸。旦暮吏来而呼曰：‘官命促尔耕，勖尔植，督尔获，早缫而绪，早织而缕，字而幼孩，遂而鸡豚。’鸣鼓而聚之，击木而召之。吾小人辍飧饔以劳吏者，且不得暇，又何以蕃吾生而安吾性耶？故病且怠。若是，则与吾业者其亦有类乎？”\n问者曰：“嘻，不亦善夫！吾问养树，得养人术。”传其事以为官戒也。","“种树之理”映射“治民之理”。"],
+["五代史伶官传序","欧阳修","北宋",P,"呜呼！盛衰之理，虽曰天命，岂非人事哉！原庄宗之所以得天下，与其所以失之者，可以知之矣。\n世言晋王之将终也，以三矢赐庄宗而告之曰：“梁，吾仇也；燕王，吾所立；契丹与吾约为兄弟；而皆背晋以归梁。此三者，吾遗恨也。与尔三矢，尔其无忘乃父之志！”庄宗受而藏之于庙。其后用兵，则遣从事以一少牢告庙，请其矢，盛以锦囊，负而前驱，及凯旋而纳之。\n方其系燕父子以组，函梁君臣之首，入于太庙，还矢先王，而告以成功，其意气之盛，可谓壮哉！及仇雠已灭，天下已定，一夫夜呼，乱者四应，仓皇东出，未及见贼而士卒离散，君臣相顾，不知所归。至于誓天断发，泣下沾襟，何其衰也！岂得之难而失之易欤？抑本其成败之迹，而皆自于人欤？\n《书》曰：“满招损，谦得益。”忧劳可以兴国，逸豫可以亡身，自然之理也。故方其盛也，举天下之豪杰，莫能与之争；及其衰也，数十伶人困之，而身死国灭，为天下笑。夫祸患常积于忽微，而智勇多困于所溺，岂独伶人也哉！","名句密集：“忧劳可以兴国，逸豫可以亡身”等。"],
+["石钟山记","苏轼","北宋",P,"《水经》云：“彭蠡之口有石钟山焉。”郦元以为下临深潭，微风鼓浪，水石相搏，声如洪钟。是说也，人常疑之。今以钟磬置水中，虽大风浪不能鸣也，而况石乎！至唐李渤始访其遗踪，得双石于潭上，扣而聆之，南声函胡，北音清越，桴止响腾，余韵徐歇。自以为得之矣。然是说也，余尤疑之。石之铿然有声者，所在皆是也，而此独以钟名，何哉？\n元丰七年六月丁丑，余自齐安舟行适临汝，而长子迈将赴饶之德兴尉，送之至湖口，因得观所谓石钟者。寺僧使小童持斧，于乱石间择其一二扣之，硿硿焉。余固笑而不信也。至莫夜月明，独与迈乘小舟，至绝壁下。大石侧立千尺，如猛兽奇鬼，森然欲搏人；而山上栖鹘，闻人声亦惊起，磔磔云霄间；又有若老人咳且笑于山谷中者，或曰此鹳鹤也。余方心动欲还，而大声发于水上，噌吰如钟鼓不绝。舟人大恐。徐而察之，则山下皆石穴罅，不知其浅深，微波入焉，涵澹澎湃而为此也。舟回至两山间，将入港口，有大石当中流，可坐百人，空中而多窍，与风水相吞吐，有窾坎镗鞳之声，与向之噌吰者相应，如乐作焉。因笑谓迈曰：“汝识之乎？噌吰者，周景王之无射也；窾坎镗鞳者，魏庄子之歌钟也。古之人不余欺也！”\n事不目见耳闻，而臆断其有无，可乎？郦元之所见闻，殆与余同，而言之不详；士大夫终不肯以小舟夜泊绝壁之下，故莫能知；而渔工水师虽知而不能言。此世所以不传也。而陋者乃以斧斤考击而求之，自以为得其实。余是以记之，盖叹郦元之简，而笑李渤之陋也。","典型“质疑—考察—结论”结构。"],
+["登泰山记","姚鼐","清",P,"泰山之阳，汶水西流；其阴，济水东流。阳谷皆入汶，阴谷皆入济。当其南北分者，古长城也。最高日观峰，在长城南十五里。\n余以乾隆三十九年十二月，自京师乘风雪，历齐河、长清，穿泰山西北谷，越长城之限，至于泰安。是月丁未，与知府朱孝纯子颍由南麓登。四十五里，道皆砌石为磴，其级七千有余。\n泰山正南面有三谷。中谷绕泰安城下，郦道元所谓环水也。余始循以入，道少半，越中岭，复循西谷，遂至其巅。古时登山，循东谷入，道有天门。东谷者，古谓之天门溪水，余所不至也。今所经中岭及山巅崖限当道者，世皆谓之天门云。道中迷雾冰滑，磴几不可登。及既上，苍山负雪，明烛天南；望晚日照城郭，汶水、徂徕如画，而半山居雾若带然。\n戊申晦，五鼓，与子颍坐日观亭，待日出。大风扬积雪击面。亭东自足下皆云漫。稍见云中白若樗蒱数十立者，山也。极天云一线异色，须臾成五采。日上，正赤如丹，下有红光，动摇承之。或曰，此东海也。回视日观以西峰，或得日，或否，绛皓驳色，而皆若偻。\n亭西有岱祠，又有碧霞元君祠；皇帝行宫在碧霞元君祠东。是日，观道中石刻，自唐显庆以来；其远古刻尽漫失。僻不当道者，皆不及往。\n山多石，少土；石苍黑色，多平方，少圜。少杂树，多松，生石罅，皆平顶。冰雪，无瀑水，无鸟兽音迹。至日观数里内无树，而雪与人膝齐。\n桐城姚鼐记。","重点背登山路线与日出描写。"],
+["《老子》八章","老子","先秦",P,"第八章\n上善若水。水善利万物而不争，处众人之所恶，故几于道。居善地，心善渊，与善仁，言善信，政善治，事善能，动善时。夫唯不争，故无尤。\n\n第十二章\n五色令人目盲；五音令人耳聋；五味令人口爽；驰骋畋猎，令人心发狂；难得之货，令人行妨。是以圣人为腹不为目，故去彼取此。\n\n第十五章\n古之善为士者，微妙玄通，深不可识。夫唯不可识，故强为之容：豫兮若冬涉川；犹兮若畏四邻；俨兮其若客；涣兮若冰之将释；敦兮其若朴；旷兮其若谷；混兮其若浊。孰能浊以静之徐清？孰能安以久动之徐生？保此道者不欲盈。夫唯不盈，故能蔽而新成。\n\n第二十二章\n曲则全，枉则直，洼则盈，敝则新，少则得，多则惑。是以圣人抱一为天下式。不自见，故明；不自是，故彰；不自伐，故有功；不自矜，故长。夫唯不争，故天下莫能与之争。古之所谓“曲则全”者，岂虚言哉！诚全而归之。\n\n第二十四章\n跂者不立；跨者不行；自见者不明；自是者不彰；自伐者无功；自矜者不长。其在道也，曰余食赘行。物或恶之，故有道者不处。\n\n第二十七章\n善行无辙迹；善言无瑕谪；善数不用筹策；善闭无关楗而不可开；善结无绳约而不可解。是以圣人常善救人，故无弃人；常善救物，故无弃物。是谓袭明。故善人者，不善人之师；不善人者，善人之资。不贵其师，不爱其资，虽智大迷，是谓要妙。\n\n第三十三章\n知人者智，自知者明。胜人者有力，自胜者强。知足者富。强行者有志。不失其所者久。死而不亡者寿。\n\n第八十一章\n信言不美，美言不信。善者不辩，辩者不善。知者不博，博者不知。圣人不积，既以为人己愈有，既以与人己愈多。天之道，利而不害；圣人之道，为而不争。","2025年修订课标指定第八、十二、十五、二十二、二十四、二十七、三十三、八十一章；第二十四章课标题示作“跂者不立”。异文以现用教材为准。"],
+["季氏将伐颛臾","《论语》","先秦",P,"季氏将伐颛臾。冉有、季路见于孔子曰：“季氏将有事于颛臾。”\n孔子曰：“求！无乃尔是过与？夫颛臾，昔者先王以为东蒙主，且在邦域之中矣，是社稷之臣也。何以伐为？”\n冉有曰：“夫子欲之，吾二臣者皆不欲也。”\n孔子曰：“求！周任有言曰：‘陈力就列，不能者止。’危而不持，颠而不扶，则将焉用彼相矣？且尔言过矣。虎兕出于柙，龟玉毁于椟中，是谁之过与？”\n冉有曰：“今夫颛臾，固而近于费。今不取，后世必为子孙忧。”\n孔子曰：“求！君子疾夫舍曰欲之而必为之辞。丘也闻有国有家者，不患寡而患不均，不患贫而患不安。盖均无贫，和无寡，安无倾。夫如是，故远人不服，则修文德以来之。既来之，则安之。今由与求也，相夫子，远人不服，而不能来也；邦分崩离析，而不能守也；而谋动干戈于邦内。吾恐季孙之忧，不在颛臾，而在萧墙之内也。”","孔子层层驳斥，逻辑清晰。"],
+["大学（节选）","《礼记》","先秦至秦汉",P,"古之欲明明德于天下者，先治其国；欲治其国者，先齐其家；欲齐其家者，先修其身；欲修其身者，先正其心；欲正其心者，先诚其意；欲诚其意者，先致其知；致知在格物。物格而后知至，知至而后意诚，意诚而后心正，心正而后身修，身修而后家齐，家齐而后国治，国治而后天下平。自天子以至于庶人，壹是皆以修身为本。","课标范围：从“古之欲明明德于天下者”至“壹是皆以修身为本”。"],
+["中庸（节选）","《礼记》","先秦至秦汉",P,"喜怒哀乐之未发，谓之中；发而皆中节，谓之和。中也者，天下之大本也；和也者，天下之达道也。致中和，天地位焉，万物育焉。\n博学之，审问之，慎思之，明辨之，笃行之。有弗学，学之弗能，弗措也；有弗问，问之弗知，弗措也；有弗思，思之弗得，弗措也；有弗辨，辨之弗明，弗措也；有弗行，行之弗笃，弗措也。人一能之，己百之；人十能之，己千之。","课标指定两段：“喜怒哀乐之未发……”与“博学之……人十能之，己千之”。"],
+["《孟子》一则","孟子","战国",P,"“敢问何谓浩然之气？”\n曰：“难言也。其为气也，至大至刚，以直养而无害，则塞于天地之间。其为气也，配义与道；无是，馁也。是集义所生者，非义袭而取之也。行有不慊于心，则馁矣。我故曰，告子未尝知义，以其外之也。必有事焉而勿正，心勿忘，勿助长也。无若宋人然：宋人有闵其苗之不长而揠之者，芒芒然归，谓其人曰：‘今日病矣！予助苗长矣！’其子趋而往视之，苗则槁矣。天下之不助苗长者寡矣。以为无益而舍之者，不耘苗者也；助之长者，揠苗者也，非徒无益，而又害之。”","2025年修订课标范围：从“敢问何谓浩然之气”至“而又害之”。"],
+["逍遥游（节选）","庄子","战国",P,"惠子谓庄子曰：“魏王贻我大瓠之种，我树之成，而实五石。以盛水浆，其坚不能自举也。剖之以为瓢，则瓠落无所容。非不呺然大也，吾为其无用而掊之。”\n庄子曰：“夫子固拙于用大矣。宋人有善为不龟手之药者，世世以洴澼絖为事。客闻之，请买其方百金。聚族而谋曰：‘我世世为洴澼絖，不过数金；今一朝而鬻技百金，请与之。’客得之，以说吴王。越有难，吴王使之将。冬，与越人水战，大败越人，裂地而封之。能不龟手一也，或以封，或不免于洴澼絖，则所用之异也。今子有五石之瓠，何不虑以为大樽而浮乎江湖，而忧其瓠落无所容？则夫子犹有蓬之心也夫！”","课标范围：从“惠子谓庄子曰”至“则夫子犹有蓬之心也夫”。"],
+["谏逐客书","李斯","秦",P,"臣闻吏议逐客，窃以为过矣。\n昔穆公求士，西取由余于戎，东得百里奚于宛，迎蹇叔于宋，来丕豹、公孙支于晋。此五子者，不产于秦，而穆公用之，并国二十，遂霸西戎。孝公用商鞅之法，移风易俗，民以殷盛，国以富强，百姓乐用，诸侯亲服，获楚、魏之师，举地千里，至今治强。惠王用张仪之计，拔三川之地，西并巴、蜀，北收上郡，南取汉中，包九夷，制鄢、郢，东据成皋之险，割膏腴之壤，遂散六国之从，使之西面事秦，功施到今。昭王得范雎，废穰侯，逐华阳，强公室，杜私门，蚕食诸侯，使秦成帝业。此四君者，皆以客之功。由此观之，客何负于秦哉！向使四君却客而不内，疏士而不用，是使国无富利之实，而秦无强大之名也。\n今陛下致昆山之玉，有随、和之宝，垂明月之珠，服太阿之剑，乘纤离之马，建翠凤之旗，树灵鼍之鼓。此数宝者，秦不生一焉，而陛下说之，何也？必秦国之所生然后可，则是夜光之璧，不饰朝廷；犀象之器，不为玩好；郑、卫之女不充后宫，而骏良駃騠不实外厩；江南金锡不为用，西蜀丹青不为采。所以饰后宫，充下陈，娱心意，说耳目者，必出于秦然后可，则是宛珠之簪、傅玑之珥、阿缟之衣、锦绣之饰不进于前，而随俗雅化、佳冶窈窕赵女不立于侧也。夫击瓮叩缶，弹筝搏髀，而歌呼呜呜快耳者，真秦之声也；《郑》《卫》《桑间》，《昭》《虞》《武》《象》者，异国之乐也。今弃击瓮叩缶而就《郑》《卫》，退弹筝而取《昭》《虞》，若是者何也？快意当前，适观而已矣。今取人则不然，不问可否，不论曲直，非秦者去，为客者逐。然则是所重者在乎色、乐、珠、玉，而所轻者在乎人民也。此非所以跨海内、制诸侯之术也。\n臣闻地广者粟多，国大者人众，兵强则士勇。是以太山不让土壤，故能成其大；河海不择细流，故能就其深；王者不却众庶，故能明其德。是以地无四方，民无异国，四时充美，鬼神降福，此五帝三王之所以无敌也。今乃弃黔首以资敌国，却宾客以业诸侯，使天下之士退而不敢西向，裹足不入秦，此所谓“藉寇兵而赍盗粮”者也。\n夫物不产于秦，可宝者多；士不产于秦，而愿忠者众。今逐客以资敌国，损民以益仇，内自虚而外树怨于诸侯，求国无危，不可得也。","列举秦国用客卿兴盛的历史，论证逐客之失。"],
+["兰亭集序","王羲之","东晋",P,"永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹；又有清流激湍，映带左右，引以为流觞曲水，列坐其次。虽无丝竹管弦之盛，一觞一咏，亦足以畅叙幽情。\n是日也，天朗气清，惠风和畅。仰观宇宙之大，俯察品类之盛，所以游目骋怀，足以极视听之娱，信可乐也。\n夫人之相与，俯仰一世，或取诸怀抱，悟言一室之内；或因寄所托，放浪形骸之外。虽趣舍万殊，静躁不同，当其欣于所遇，暂得于己，快然自足，不知老之将至；及其所之既倦，情随事迁，感慨系之矣。向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀。况修短随化，终期于尽！古人云：“死生亦大矣。”岂不痛哉！\n每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。后之视今，亦犹今之视昔，悲夫！故列叙时人，录其所述，虽世殊事异，所以兴怀，其致一也。后之览者，亦将有感于斯文。","“乐—痛—悲”情感推进鲜明。"],
+["滕王阁序","王勃","唐",P,"豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。\n时维九月，序属三秋。潦水尽而寒潭清，烟光凝而暮山紫。俨骖騑于上路，访风景于崇阿；临帝子之长洲，得仙人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀凫渚，穷岛屿之萦回；桂殿兰宫，即冈峦之体势。\n披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。云销雨霁，彩彻区明。落霞与孤鹜齐飞，秋水共长天一色。渔舟唱晚，响穷彭蠡之滨；雁阵惊寒，声断衡阳之浦。\n遥襟甫畅，逸兴遄飞。爽籁发而清风生，纤歌凝而白云遏。睢园绿竹，气凌彭泽之樽；邺水朱华，光照临川之笔。四美具，二难并。穷睇眄于中天，极娱游于暇日。天高地迥，觉宇宙之无穷；兴尽悲来，识盈虚之有数。望长安于日下，目吴会于云间。地势极而南溟深，天柱高而北辰远。关山难越，谁悲失路之人？萍水相逢，尽是他乡之客。怀帝阍而不见，奉宣室以何年？\n嗟乎！时运不齐，命途多舛。冯唐易老，李广难封。屈贾谊于长沙，非无圣主；窜梁鸿于海曲，岂乏明时？所赖君子见机，达人知命。老当益壮，宁移白首之心？穷且益坚，不坠青云之志。酌贪泉而觉爽，处涸辙以犹欢。北海虽赊，扶摇可接；东隅已逝，桑榆非晚。孟尝高洁，空余报国之情；阮籍猖狂，岂效穷途之哭！\n勃，三尺微命，一介书生。无路请缨，等终军之弱冠；有怀投笔，慕宗悫之长风。舍簪笏于百龄，奉晨昏于万里。非谢家之宝树，接孟氏之芳邻。他日趋庭，叨陪鲤对；今兹捧袂，喜托龙门。杨意不逢，抚凌云而自惜；钟期既遇，奏流水以何惭？\n呜呼！胜地不常，盛筵难再；兰亭已矣，梓泽丘墟。临别赠言，幸承恩于伟饯；登高作赋，是所望于群公。敢竭鄙怀，恭疏短引；一言均赋，四韵俱成。请洒潘江，各倾陆海云尔：\n滕王高阁临江渚，佩玉鸣鸾罢歌舞。\n画栋朝飞南浦云，珠帘暮卷西山雨。\n闲云潭影日悠悠，物换星移几度秋。\n阁中帝子今何在？槛外长江空自流。","2025年修订课标将《滕王阁序》列为整篇推荐篇目；本页收录全文。字形、异体字以现用教材为准。"],
+["黄冈竹楼记","王禹偁","北宋",P,"黄冈之地多竹，大者如椽。竹工破之，刳去其节，用代陶瓦。比屋皆然，以其价廉而工省也。\n子城西北隅，雉堞圮毁，蓁莽荒秽，因作小楼二间，与月波楼通。远吞山光，平挹江濑，幽阒辽夐，不可具状。夏宜急雨，有瀑布声；冬宜密雪，有碎玉声；宜鼓琴，琴调虚畅；宜咏诗，诗韵清绝；宜围棋，子声丁丁然；宜投壶，矢声铮铮然。皆竹楼之所助也。\n公退之暇，被鹤氅衣，戴华阳巾，手执《周易》一卷，焚香默坐，消遣世虑。江山之外，第见风帆沙鸟、烟云竹树而已。待其酒力醒、茶烟歇，送夕阳，迎素月，亦谪居之胜概也。彼齐云、落星，高则高矣；井干、丽谯，华则华矣；止于贮妓女，藏歌舞，非骚人之事，吾所不取。\n吾闻竹工云：“竹之为瓦，仅十稔；若重覆之，得二十稔。”噫！吾以至道乙未岁，自翰林出滁上；丙申，移广陵；丁酉，又入西掖；戊戌岁除日，有齐安之命；己亥闰三月到郡。四年之间，奔走不暇；未知明年又在何处，岂惧竹楼之易朽乎！幸后之人与我同志，嗣而葺之，庶斯楼之不朽也。\n咸平二年八月十五日记。","由竹楼之景写到迁谪中的自适。"],
+["上枢密韩太尉书","苏辙","北宋",P,"太尉执事：辙生好为文，思之至深。以为文者气之所形，然文不可以学而能，气可以养而致。孟子曰：“吾善养吾浩然之气。”今观其文章，宽厚宏博，充乎天地之间，称其气之小大。太史公行天下，周览四海名山大川，与燕、赵间豪俊交游，故其文疏荡，颇有奇气。此二子者，岂尝执笔学为如此之文哉？其气充乎其中而溢乎其貌，动乎其言而见乎其文，而不自知也。\n辙生十有九年矣。其居家所与游者，不过其邻里乡党之人；所见不过数百里之间，无高山大野可登览以自广；百氏之书，虽无所不读，然皆古人之陈迹，不足以激发其志气。恐遂汩没，故决然舍去，求天下奇闻壮观，以知天地之广大。过秦、汉之故都，恣观终南、嵩、华之高，北顾黄河之奔流，慨然想见古之豪杰。至京师，仰观天子宫阙之壮，与仓廪、府库、城池、苑囿之富且大也，而后知天下之巨丽。见翰林欧阳公，听其议论之宏辩，观其容貌之秀伟，与其门人贤士大夫游，而后知天下之文章聚乎此也。太尉以才略冠天下，天下之所恃以无忧，四夷之所惮以不敢发，入则周公、召公，出则方叔、召虎。而辙也未之见焉。\n且夫人之学也，不志其大，虽多而何为？辙之来也，于山见终南、嵩、华之高，于水见黄河之大且深，于人见欧阳公，而犹以为未见太尉也。故愿得观贤人之光耀，闻一言以自壮，然后可以尽天下之大观而无憾者矣。\n辙年少，未能通习吏事。向之来，非有取于斗升之禄，偶然得之，非其所乐。然幸得赐归待选，便得优游数年之间，将归益治其文，且学为政。太尉苟以为可教而辱教之，又幸矣！","“文者气之所形”是全文纲领。"],
+["古代文论选段","多位作者","古代",P,"《毛诗序》\n诗者，志之所之也，在心为志，发言为诗。情动于中而形于言，言之不足，故嗟叹之；嗟叹之不足，故咏歌之；咏歌之不足，不知手之舞之足之蹈之也。\n\n曹丕《典论·论文》\n盖文章，经国之大业，不朽之盛事。年寿有时而尽，荣乐止乎其身，二者必至之常期，未若文章之无穷。是以古之作者，寄身于翰墨，见意于篇籍，不假良史之辞，不托飞驰之势，而声名自传于后。\n\n钟嵘《诗品序》\n若乃春风春鸟，秋月秋蝉，夏云暑雨，冬月祁寒，斯四候之感诸诗者也。嘉会寄诗以亲，离群托诗以怨。至于楚臣去境，汉妾辞宫；或骨横朔野，或魂逐飞蓬；或负戈外戍，杀气雄边；塞客衣单，孀闺泪尽；或士有解佩出朝，一去忘返；女有扬蛾入宠，再盼倾国。凡斯种种，感荡心灵，非陈诗何以展其义？非长歌何以骋其情？故曰：“《诗》可以群，可以怨。”\n\n白居易《与元九书》\n感人心者，莫先乎情，莫始乎言，莫切乎声，莫深乎义。诗者，根情，苗言，华声，实义。\n\n郑燮《题画》\n江馆清秋，晨起看竹，烟光、日影、露气，皆浮动于疏枝密叶之间。胸中勃勃遂有画意。其实胸中之竹，并不是眼中之竹也。因而磨墨展纸，落笔倏作变相，手中之竹，又不是胸中之竹也。总之，意在笔先者，定则也；趣在法外者，化机也。独画云乎哉？\n\n王国维《人间词话》\n词以境界为最上。有境界，则自成高格，自有名句。\n境非独谓景物也。喜怒哀乐，亦人心中之一境界。故能写真景物、真感情者，谓之有境界。否则谓之无境界。\n古今之成大事业、大学问者，罔不经过三种之境界：“昨夜西风凋碧树。独上高楼，望尽天涯路。”此第一境界也。“衣带渐宽终不悔，为伊消得人憔悴。”此第二境界也。“众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。”此第三境界也。此等语皆非大词人不能道。然遽以此意解释诸词，恐为晏欧诸公所不许也。","课标指定六组文论节选：《毛诗序》《典论·论文》《诗品序》《与元九书》《题画》《人间词话》。"],
+["静女","《诗经·邶风》","先秦",S,"静女其姝，俟我于城隅。爱而不见，搔首踟蹰。\n静女其娈，贻我彤管。彤管有炜，说怿女美。\n自牧归荑，洵美且异。匪女之为美，美人之贻。","关键词：俟、爱、见、说怿、归、女等通假与古义。"],
+["无衣","《诗经·秦风》","先秦",S,"岂曰无衣？与子同袍。王于兴师，修我戈矛。与子同仇！\n岂曰无衣？与子同泽。王于兴师，修我矛戟。与子偕作！\n岂曰无衣？与子同裳。王于兴师，修我甲兵。与子偕行！","三章重章叠唱，变化处是默写高频点。"],
+["离骚（节选）","屈原","战国",S,"帝高阳之苗裔兮，朕皇考曰伯庸。\n摄提贞于孟陬兮，惟庚寅吾以降。\n皇览揆余初度兮，肇锡余以嘉名。\n名余曰正则兮，字余曰灵均。\n纷吾既有此内美兮，又重之以修能。\n扈江离与辟芷兮，纫秋兰以为佩。\n汩余若将不及兮，恐年岁之不吾与。\n朝搴阰之木兰兮，夕揽洲之宿莽。\n日月忽其不淹兮，春与秋其代序。\n惟草木之零落兮，恐美人之迟暮。\n不抚壮而弃秽兮，何不改乎此度？\n乘骐骥以驰骋兮，来吾道夫先路！","课标范围：从“帝高阳之苗裔兮”至“来吾道夫先路”。"],
+["涉江采芙蓉","《古诗十九首》","东汉",S,"涉江采芙蓉，兰泽多芳草。\n采之欲遗谁？所思在远道。\n还顾望旧乡，长路漫浩浩。\n同心而离居，忧伤以终老。","“采之欲遗谁”一句常考“遗”的读音与意义。"],
+["短歌行","曹操","东汉末",S,"对酒当歌，人生几何！譬如朝露，去日苦多。\n慨当以慷，忧思难忘。何以解忧？唯有杜康。\n青青子衿，悠悠我心。但为君故，沉吟至今。\n呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。\n明明如月，何时可掇？忧从中来，不可断绝。\n越陌度阡，枉用相存。契阔谈讌，心念旧恩。\n月明星稀，乌鹊南飞。绕树三匝，何枝可依？\n山不厌高，海不厌深。周公吐哺，天下归心。","主旨：感叹人生短暂，表达求贤若渴和统一天下的抱负。"],
+["归园田居（其一）","陶渊明","东晋",S,"少无适俗韵，性本爱丘山。误落尘网中，一去三十年。\n羁鸟恋旧林，池鱼思故渊。开荒南野际，守拙归园田。\n方宅十余亩，草屋八九间。榆柳荫后檐，桃李罗堂前。\n暧暧远人村，依依墟里烟。狗吠深巷中，鸡鸣桑树颠。\n户庭无尘杂，虚室有余闲。久在樊笼里，复得返自然。","“尘网、樊笼”象征官场，“羁鸟、池鱼”是自喻。"],
+["拟行路难（其四）","鲍照","南朝宋",S,"泻水置平地，各自东西南北流。\n人生亦有命，安能行叹复坐愁？\n酌酒以自宽，举杯断绝歌路难。\n心非木石岂无感？吞声踯躅不敢言。","“吞声踯躅不敢言”是情感压抑的顶点。"],
+["春江花月夜","张若虚","唐",S,"春江潮水连海平，海上明月共潮生。\n滟滟随波千万里，何处春江无月明！\n江流宛转绕芳甸，月照花林皆似霰；\n空里流霜不觉飞，汀上白沙看不见。\n江天一色无纤尘，皎皎空中孤月轮。\n江畔何人初见月？江月何年初照人？\n人生代代无穷已，江月年年望相似。\n不知江月待何人，但见长江送流水。\n白云一片去悠悠，青枫浦上不胜愁。\n谁家今夜扁舟子？何处相思明月楼？\n可怜楼上月徘徊，应照离人妆镜台。\n玉户帘中卷不去，捣衣砧上拂还来。\n此时相望不相闻，愿逐月华流照君。\n鸿雁长飞光不度，鱼龙潜跃水成文。\n昨夜闲潭梦落花，可怜春半不还家。\n江水流春去欲尽，江潭落月复西斜。\n斜月沉沉藏海雾，碣石潇湘无限路。\n不知乘月几人归，落月摇情满江树。","全诗较长，建议按“江月美景—宇宙人生—游子思妇”三大板块背诵。"],
+["山居秋暝","王维","唐",S,"空山新雨后，天气晚来秋。\n明月松间照，清泉石上流。\n竹喧归浣女，莲动下渔舟。\n随意春芳歇，王孙自可留。","诗中有画：月、松、泉、石、竹、莲、渔舟。"],
+["蜀道难","李白","唐",S,"噫吁嚱，危乎高哉！蜀道之难，难于上青天！\n蚕丛及鱼凫，开国何茫然！尔来四万八千岁，不与秦塞通人烟。\n西当太白有鸟道，可以横绝峨眉巅。地崩山摧壮士死，然后天梯石栈相钩连。\n上有六龙回日之高标，下有冲波逆折之回川。\n黄鹤之飞尚不得过，猿猱欲度愁攀援。\n青泥何盘盘，百步九折萦岩峦。\n扪参历井仰胁息，以手抚膺坐长叹。\n问君西游何时还？畏途巉岩不可攀。\n但见悲鸟号古木，雄飞雌从绕林间。又闻子规啼夜月，愁空山。\n蜀道之难，难于上青天，使人听此凋朱颜！\n连峰去天不盈尺，枯松倒挂倚绝壁。\n飞湍瀑流争喧豗，砯崖转石万壑雷。\n其险也如此，嗟尔远道之人胡为乎来哉！\n剑阁峥嵘而崔嵬，一夫当关，万夫莫开。\n所守或匪亲，化为狼与豺。\n朝避猛虎，夕避长蛇；磨牙吮血，杀人如麻。\n锦城虽云乐，不如早还家。\n蜀道之难，难于上青天，侧身西望长咨嗟！","反复咏叹“蜀道之难，难于上青天”是结构标志。"],
+["梦游天姥吟留别","李白","唐",S,"海客谈瀛洲，烟涛微茫信难求；越人语天姥，云霞明灭或可睹。\n天姥连天向天横，势拔五岳掩赤城。天台四万八千丈，对此欲倒东南倾。\n我欲因之梦吴越，一夜飞度镜湖月。\n湖月照我影，送我至剡溪。\n谢公宿处今尚在，渌水荡漾清猿啼。\n脚著谢公屐，身登青云梯。\n半壁见海日，空中闻天鸡。\n千岩万转路不定，迷花倚石忽已暝。\n熊咆龙吟殷岩泉，栗深林兮惊层巅。\n云青青兮欲雨，水澹澹兮生烟。\n列缺霹雳，丘峦崩摧。洞天石扉，訇然中开。\n青冥浩荡不见底，日月照耀金银台。\n霓为衣兮风为马，云之君兮纷纷而来下。\n虎鼓瑟兮鸾回车，仙之人兮列如麻。\n忽魂悸以魄动，恍惊起而长嗟。\n惟觉时之枕席，失向来之烟霞。\n世间行乐亦如此，古来万事东流水。\n别君去兮何时还？且放白鹿青崖间，须行即骑访名山。\n安能摧眉折腰事权贵，使我不得开心颜！","梦境奇幻，结尾直抒不事权贵的傲岸。"],
+["将进酒","李白","唐",S,"君不见黄河之水天上来，奔流到海不复回。\n君不见高堂明镜悲白发，朝如青丝暮成雪。\n人生得意须尽欢，莫使金樽空对月。\n天生我材必有用，千金散尽还复来。\n烹羊宰牛且为乐，会须一饮三百杯。\n岑夫子，丹丘生，将进酒，杯莫停。\n与君歌一曲，请君为我倾耳听。\n钟鼓馔玉不足贵，但愿长醉不复醒。\n古来圣贤皆寂寞，惟有饮者留其名。\n陈王昔时宴平乐，斗酒十千恣欢谑。\n主人何为言少钱，径须沽取对君酌。\n五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。","情绪从悲到乐、狂放，再落到“万古愁”。"],
+["燕歌行","高适","唐",S,"开元二十六年，客有从御史大夫张公出塞而还者，作《燕歌行》以示适，感征戍之事，因而和焉。\n\n汉家烟尘在东北，汉将辞家破残贼。\n男儿本自重横行，天子非常赐颜色。\n摐金伐鼓下榆关，旌旆逶迤碣石间。\n校尉羽书飞瀚海，单于猎火照狼山。\n山川萧条极边土，胡骑凭陵杂风雨。\n战士军前半死生，美人帐下犹歌舞！\n大漠穷秋塞草腓，孤城落日斗兵稀。\n身当恩遇恒轻敌，力尽关山未解围。\n铁衣远戍辛勤久，玉箸应啼别离后。\n少妇城南欲断肠，征人蓟北空回首。\n边庭飘飖那可度，绝域苍茫更何有！\n杀气三时作阵云，寒声一夜传刁斗。\n相看白刃血纷纷，死节从来岂顾勋？\n君不见沙场征战苦，至今犹忆李将军！","边塞诗名篇，篇幅较长，注意对比手法。"],
+["蜀相","杜甫","唐",S,"丞相祠堂何处寻？锦官城外柏森森。\n映阶碧草自春色，隔叶黄鹂空好音。\n三顾频烦天下计，两朝开济老臣心。\n出师未捷身先死，长使英雄泪满襟。","“自、空”写景中含人事寂寥。"],
+["客至","杜甫","唐",S,"舍南舍北皆春水，但见群鸥日日来。\n花径不曾缘客扫，蓬门今始为君开。\n盘飧市远无兼味，樽酒家贫只旧醅。\n肯与邻翁相对饮，隔篱呼取尽余杯。","生活气息浓，写待客之真挚。"],
+["登高","杜甫","唐",S,"风急天高猿啸哀，渚清沙白鸟飞回。\n无边落木萧萧下，不尽长江滚滚来。\n万里悲秋常作客，百年多病独登台。\n艰难苦恨繁霜鬓，潦倒新停浊酒杯。","八句高度凝练，颈联十四字包含多重悲意。"],
+["登岳阳楼","杜甫","唐",S,"昔闻洞庭水，今上岳阳楼。\n吴楚东南坼，乾坤日夜浮。\n亲朋无一字，老病有孤舟。\n戎马关山北，凭轩涕泗流。","由壮阔湖景落到身世与国事。"],
+["琵琶行（并序）","白居易","唐",S,"元和十年，予左迁九江郡司马。明年秋，送客湓浦口，闻舟中夜弹琵琶者，听其音，铮铮然有京都声。问其人，本长安倡女，尝学琵琶于穆、曹二善才，年长色衰，委身为贾人妇。遂命酒，使快弹数曲。曲罢悯然，自叙少小时欢乐事，今漂沦憔悴，转徙于江湖间。予出官二年，恬然自安，感斯人言，是夕始觉有迁谪意。因为长句，歌以赠之，凡六百一十六言，命曰《琵琶行》。\n\n浔阳江头夜送客，枫叶荻花秋瑟瑟。\n主人下马客在船，举酒欲饮无管弦。\n醉不成欢惨将别，别时茫茫江浸月。\n忽闻水上琵琶声，主人忘归客不发。\n寻声暗问弹者谁？琵琶声停欲语迟。\n移船相近邀相见，添酒回灯重开宴。\n千呼万唤始出来，犹抱琵琶半遮面。\n转轴拨弦三两声，未成曲调先有情。\n弦弦掩抑声声思，似诉平生不得志。\n低眉信手续续弹，说尽心中无限事。\n轻拢慢捻抹复挑，初为《霓裳》后《六幺》。\n大弦嘈嘈如急雨，小弦切切如私语。\n嘈嘈切切错杂弹，大珠小珠落玉盘。\n间关莺语花底滑，幽咽泉流冰下难。\n冰泉冷涩弦凝绝，凝绝不通声暂歇。\n别有幽愁暗恨生，此时无声胜有声。\n银瓶乍破水浆迸，铁骑突出刀枪鸣。\n曲终收拨当心画，四弦一声如裂帛。\n东船西舫悄无言，唯见江心秋月白。\n沉吟放拨插弦中，整顿衣裳起敛容。\n自言本是京城女，家在虾蟆陵下住。\n十三学得琵琶成，名属教坊第一部。\n曲罢曾教善才服，妆成每被秋娘妒。\n五陵年少争缠头，一曲红绡不知数。\n钿头银篦击节碎，血色罗裙翻酒污。\n今年欢笑复明年，秋月春风等闲度。\n弟走从军阿姨死，暮去朝来颜色故。\n门前冷落鞍马稀，老大嫁作商人妇。\n商人重利轻别离，前月浮梁买茶去。\n去来江口守空船，绕船月明江水寒。\n夜深忽梦少年事，梦啼妆泪红阑干。\n我闻琵琶已叹息，又闻此语重唧唧。\n同是天涯沦落人，相逢何必曾相识！\n我从去年辞帝京，谪居卧病浔阳城。\n浔阳地僻无音乐，终岁不闻丝竹声。\n住近湓江地低湿，黄芦苦竹绕宅生。\n其间旦暮闻何物？杜鹃啼血猿哀鸣。\n春江花朝秋月夜，往往取酒还独倾。\n岂无山歌与村笛？呕哑嘲哳难为听。\n今夜闻君琵琶语，如听仙乐耳暂明。\n莫辞更坐弹一曲，为君翻作《琵琶行》。\n感我此言良久立，却坐促弦弦转急。\n凄凄不似向前声，满座重闻皆掩泣。\n座中泣下谁最多？江州司马青衫湿。","音乐描写与人物身世交织，“同是天涯沦落人”是情感核心。"],
+["李凭箜篌引","李贺","唐",S,"吴丝蜀桐张高秋，空山凝云颓不流。\n江娥啼竹素女愁，李凭中国弹箜篌。\n昆山玉碎凤凰叫，芙蓉泣露香兰笑。\n十二门前融冷光，二十三丝动紫皇。\n女娲炼石补天处，石破天惊逗秋雨。\n梦入神山教神妪，老鱼跳波瘦蛟舞。\n吴质不眠倚桂树，露脚斜飞湿寒兔。","大量通感、想象写音乐。"],
+["菩萨蛮（小山重叠金明灭）","温庭筠","唐",S,"小山重叠金明灭，鬓云欲度香腮雪。\n懒起画蛾眉，弄妆梳洗迟。\n照花前后镜，花面交相映。\n新帖绣罗襦，双双金鹧鸪。","闺情词，结尾“鹧鸪成双”反衬人孤独。"],
+["锦瑟","李商隐","唐",S,"锦瑟无端五十弦，一弦一柱思华年。\n庄生晓梦迷蝴蝶，望帝春心托杜鹃。\n沧海月明珠有泪，蓝田日暖玉生烟。\n此情可待成追忆？只是当时已惘然。","四个核心意象典故：庄周梦蝶、杜鹃啼血、沧海珠泪、蓝田玉烟。"],
+["虞美人（春花秋月何时了）","李煜","南唐",S,"春花秋月何时了？往事知多少。\n小楼昨夜又东风，故国不堪回首月明中。\n雕栏玉砌应犹在，只是朱颜改。\n问君能有几多愁？恰似一江春水向东流。","以“一江春水”把抽象愁情化为可感形象。"],
+["望海潮（东南形胜）","柳永","北宋",S,"东南形胜，三吴都会，钱塘自古繁华。烟柳画桥，风帘翠幕，参差十万人家。\n云树绕堤沙，怒涛卷霜雪，天堑无涯。市列珠玑，户盈罗绮，竞豪奢。\n重湖叠巘清嘉，有三秋桂子，十里荷花。羌管弄晴，菱歌泛夜，嬉嬉钓叟莲娃。\n千骑拥高牙，乘醉听箫鼓，吟赏烟霞。异日图将好景，归去凤池夸。","杭州城市风物和繁华生活层层铺陈。"],
+["桂枝香·金陵怀古","王安石","北宋",S,"登临送目，正故国晚秋，天气初肃。千里澄江似练，翠峰如簇。归帆去棹残阳里，背西风，酒旗斜矗。彩舟云淡，星河鹭起，画图难足。\n念往昔，繁华竞逐，叹门外楼头，悲恨相续。千古凭高对此，谩嗟荣辱。六朝旧事随流水，但寒烟衰草凝绿。至今商女，时时犹唱，后庭遗曲。","上片写景，下片怀古讽今。"],
+["江城子·乙卯正月二十日夜记梦","苏轼","北宋",S,"十年生死两茫茫，不思量，自难忘。千里孤坟，无处话凄凉。\n纵使相逢应不识，尘满面，鬓如霜。\n夜来幽梦忽还乡，小轩窗，正梳妆。相顾无言，惟有泪千行。\n料得年年肠断处，明月夜，短松冈。","悼亡词，梦前—梦中—梦后结构清楚。"],
+["念奴娇·赤壁怀古","苏轼","北宋",S,"大江东去，浪淘尽，千古风流人物。故垒西边，人道是，三国周郎赤壁。\n乱石穿空，惊涛拍岸，卷起千堆雪。江山如画，一时多少豪杰。\n遥想公瑾当年，小乔初嫁了，雄姿英发。羽扇纶巾，谈笑间，樯橹灰飞烟灭。\n故国神游，多情应笑我，早生华发。人生如梦，一尊还酹江月。","写景—怀人—自伤—旷达。"],
+["登快阁","黄庭坚","北宋",S,"痴儿了却公家事，快阁东西倚晚晴。\n落木千山天远大，澄江一道月分明。\n朱弦已为佳人绝，青眼聊因美酒横。\n万里归船弄长笛，此心吾与白鸥盟。","颔联境界开阔，是名句。"],
+["鹊桥仙（纤云弄巧）","秦观","北宋",S,"纤云弄巧，飞星传恨，银汉迢迢暗度。金风玉露一相逢，便胜却人间无数。\n柔情似水，佳期如梦，忍顾鹊桥归路。两情若是久长时，又岂在朝朝暮暮。","结句翻新七夕爱情主题。"],
+["苏幕遮（燎沉香）","周邦彦","北宋",S,"燎沉香，消溽暑。鸟雀呼晴，侵晓窥檐语。叶上初阳干宿雨，水面清圆，一一风荷举。\n故乡遥，何日去？家住吴门，久作长安旅。五月渔郎相忆否？小楫轻舟，梦入芙蓉浦。","“水面清圆，一一风荷举”写荷名句。"],
+["声声慢（寻寻觅觅）","李清照","南宋",S,"寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。\n三杯两盏淡酒，怎敌他、晚来风急！雁过也，正伤心，却是旧时相识。\n满地黄花堆积，憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑！\n梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！","开头十四个叠字是语言特色。"],
+["书愤（其一）","陆游","南宋",S,"早岁那知世事艰，中原北望气如山。\n楼船夜雪瓜洲渡，铁马秋风大散关。\n塞上长城空自许，镜中衰鬓已先斑。\n出师一表真名世，千载谁堪伯仲间！","壮志与现实悲愤对照。"],
+["临安春雨初霁","陆游","南宋",S,"世味年来薄似纱，谁令骑马客京华。\n小楼一夜听春雨，深巷明朝卖杏花。\n矮纸斜行闲作草，晴窗细乳戏分茶。\n素衣莫起风尘叹，犹及清明可到家。","表面闲适，内含对仕途与现实的复杂感受。"],
+["念奴娇·过洞庭","张孝祥","南宋",S,"洞庭青草，近中秋，更无一点风色。玉鉴琼田三万顷，着我扁舟一叶。\n素月分辉，明河共影，表里俱澄澈。悠然心会，妙处难与君说。\n应念岭海经年，孤光自照，肝肺皆冰雪。短发萧骚襟袖冷，稳泛沧浪空阔。\n尽挹西江，细斟北斗，万象为宾客。扣舷独啸，不知今夕何夕。","“表里俱澄澈”兼写景与人格。"],
+["永遇乐·京口北固亭怀古","辛弃疾","南宋",S,"千古江山，英雄无觅孙仲谋处。舞榭歌台，风流总被雨打风吹去。\n斜阳草树，寻常巷陌，人道寄奴曾住。想当年，金戈铁马，气吞万里如虎。\n元嘉草草，封狼居胥，赢得仓皇北顾。四十三年，望中犹记，烽火扬州路。\n可堪回首，佛狸祠下，一片神鸦社鼓！凭谁问：廉颇老矣，尚能饭否？","典故密集，按孙权—刘裕—元嘉—佛狸—廉颇梳理。"],
+["菩萨蛮·书江西造口壁","辛弃疾","南宋",S,"郁孤台下清江水，中间多少行人泪。西北望长安，可怜无数山。\n青山遮不住，毕竟东流去。江晚正愁余，山深闻鹧鸪。","山可遮望眼，却遮不住东流江水，寓意深。"],
+["青玉案·元夕","辛弃疾","南宋",S,"东风夜放花千树。更吹落、星如雨。宝马雕车香满路。\n凤箫声动，玉壶光转，一夜鱼龙舞。\n蛾儿雪柳黄金缕。笑语盈盈暗香去。\n众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。","极盛元夕反衬“那人”的孤高。"],
+["扬州慢（淮左名都）","姜夔","南宋",S,"淮左名都，竹西佳处，解鞍少驻初程。过春风十里，尽荠麦青青。\n自胡马窥江去后，废池乔木，犹厌言兵。渐黄昏，清角吹寒，都在空城。\n杜郎俊赏，算而今、重到须惊。纵豆蔻词工，青楼梦好，难赋深情。\n二十四桥仍在，波心荡、冷月无声。念桥边红药，年年知为谁生？","今昔对比，写战后扬州的荒凉。"],
+["贺新郎（国脉微如缕）","刘克庄","南宋",S,"国脉微如缕。问长缨何时入手，缚将戎主？未必人间无好汉，谁与宽些尺度？试看取当年韩五。\n岂有谷城公付授，也不干曾遇骊山母。谈笑起，两河路。\n少时棋柝曾联句。叹而今登楼揽镜，事机频误。闻说北风吹面急，边上冲梯屡舞。君莫道投鞭虚语。\n自古一贤能制难，有金汤便可无张许？快投笔，莫题柱。","题名与个别字词版本常见差异，默写以教材为准。"],
+["长亭送别（正宫·端正好）","王实甫","元",S,"碧云天，黄花地，西风紧，北雁南飞。晓来谁染霜林醉？总是离人泪。","《西厢记》选曲，篇幅短但意象集中。"],
+["朝天子·咏喇叭","王磐","明",S,"喇叭，唢呐，曲儿小腔儿大。官船来往乱如麻，全仗你抬声价。\n军听了军愁，民听了民怕。哪里去辨甚么真共假？\n眼见的吹翻了这家，吹伤了那家，只吹的水尽鹅飞罢！","借咏喇叭讽刺权势扰民。"]
+].map((x,i)=>({id:i+1,title:x[0],author:x[1],era:x[2],type:x[3],text:x[4],note:x[5]}));
+
+const examData={"劝学（节选）":{"status":"精校","通假字":["輮使之然也：“輮”通“煣”，用火烘木使弯曲。","虽有槁暴：“有”通“又”；“暴”通“曝”，晒。","知明而行无过矣：“知”通“智”，智慧。","君子生非异也：“生”通“性”，资质、禀赋。"],"古今异义":["博学：古义是广泛学习；今义多指学问广博。","爪牙：古义指爪子和牙齿；今义多比喻帮凶。","跪：古义指蟹腿；今义指双膝着地。"],"活用":["木直中绳，輮以为轮：輮，使动用法，使……弯曲。","君子博学而日参省乎己：日，名词作状语，每天。","上食埃土，下饮黄泉：上、下，名词作状语，向上、向下。","用心一也：一，数词作形容词，专一。"],"句式":["青，取之于蓝，而青于蓝：介词结构后置。","蚓无爪牙之利，筋骨之强：定语后置。","輮使之然也：判断句。"],"易错":["輮／煣、槁暴、参省、须臾、跬步、骐骥、驽马、锲而不舍、金石可镂、蟹六跪而二螯。"],"名句":"故不积跬步，无以至千里；不积小流，无以成江海。"},"师说":{"status":"精校","通假字":["师者，所以传道受业解惑也：“受”通“授”，传授。","或师焉，或不焉：“不”通“否”。"],"古今异义":["古之学者必有师：学者，古义为求学的人。","所以传道受业解惑也：所以，古义为“用来……的”。","小学而大遗：小学，古义为小的方面学习。","是故弟子不必不如师：不必，古义“不一定”。"],"活用":["吾从而师之：师，意动用法，以……为师。","其下圣人也亦远矣：下，名词作动词，低于。","而耻学于师：耻，意动，以……为耻。","孔子师郯子：师，意动，以……为师。"],"句式":["师者，所以传道受业解惑也：判断句。","句读之不知，惑之不解：宾语前置。","不拘于时：被动句。","而耻学于师：介词结构后置。"],"易错":["受业、句读、或不焉、巫医乐师百工之人、郯子、苌弘、师襄、老聃。"],"名句":"是故无贵无贱，无长无少，道之所存，师之所存也。"},"阿房宫赋":{"status":"精校","通假字":[],"古今异义":["各抱地势，钩心斗角：古义形容宫室结构参差错落、精巧工致。","韩魏之经营：经营，古义指金玉珠宝等积蓄。","齐楚之精英：精英，古义指金玉珠宝。","可怜焦土：可怜，古义为可惜。"],"活用":["六王毕，四海一：一，数词作动词，统一。","骊山北构而西折：北、西，名词作状语。","朝歌夜弦：朝、夜名词作状语；歌、弦名词作动词。","燕赵之收藏：收藏，动词作名词，收藏的金玉珠宝。","族秦者秦也：族，名词作动词，灭族。"],"句式":["灭六国者六国也，非秦也：判断句。","戍卒叫，函谷举：被动句。","使负栋之柱，多于南亩之农夫：介词结构后置。"],"易错":["蜀山兀、廊腰缦回、檐牙高啄、鼎铛玉石、金块珠砾、锱铢、架梁之椽、直栏横槛、管弦呕哑。"],"名句":"后人哀之而不鉴之，亦使后人而复哀后人也。"},"六国论":{"status":"精校","通假字":["暴霜露，斩荆棘：“暴”通“曝”，冒着。","当与秦相较，或未易量：“当”通“倘”，如果。"],"古今异义":["其实百倍：其实，古义为它的实际数目。","思厥先祖父：祖父，古义为祖辈父辈。","后秦击赵者再：再，古义为两次。","可谓智力孤危：智力，古义为智谋和力量。","而从六国破亡之故事：故事，古义为旧事、先例。"],"活用":["日削月割：日、月，名词作状语，一天天、一月月。","以地事秦：事，名词作动词，侍奉。","义不赂秦：义，名词作动词，坚持正义。","李牧连却之：却，使动，使……退却。"],"句式":["六国破灭，非兵不利，战不善：判断句。","赂秦而力亏，破灭之道也：判断句。","洎牧以谗诛：被动句。","赵尝五战于秦：介词结构后置。"],"易错":["弊在赂秦、与嬴而不助五国、洎牧以谗诛、革灭殆尽、胜负之数、当与秦相较。"],"名句":"苟以天下之大，下而从六国破亡之故事，是又在六国下矣。"},"赤壁赋":{"status":"精校","通假字":["浩浩乎如冯虚御风：“冯”通“凭”。","山川相缪：“缪”通“缭”，盘绕。","举匏樽以相属：“属”通“嘱”，劝酒。"],"古今异义":["徘徊于斗牛之间：斗牛，古义指斗宿、牛宿。","白露横江：白露，古义指白茫茫的水汽。","凌万顷之茫然：茫然，古义为旷远的样子。"],"活用":["西望夏口，东望武昌：西、东，名词作状语。","舞幽壑之潜蛟，泣孤舟之嫠妇：舞、泣，使动用法。","正襟危坐：正，使动，使衣襟端正。","侣鱼虾而友麋鹿：侣、友，意动，以……为伴、为友。"],"句式":["是造物者之无尽藏也：判断句。","而今安在哉：宾语前置。","月出于东山之上：介词结构后置。","凌万顷之茫然：定语后置。"],"易错":["壬戌、既望、属客、窈窕、冯虚御风、桂棹、嫠妇、愀然、山川相缪、舳舻、酾酒、横槊、匏樽、蜉蝣。"],"名句":"寄蜉蝣于天地，渺沧海之一粟。"},"陈情表":{"status":"精校","通假字":["臣以险衅，夙遭闵凶：“闵”通“悯”，忧患。","零丁孤苦：“零丁”通“伶仃”，孤独的样子。","常在床蓐：“蓐”通“褥”，草席、褥子。","祖母今年九十有六：“有”通“又”。"],"古今异义":["九岁不行：不行，古义为不能走路。","至于成立：成立，古义为成人自立。","后刺史臣荣举臣秀才：秀才，古义为优秀人才。","非臣陨首所能上报：上报，古义为报答皇恩。"],"活用":["臣少多疾病：疾病，名词作动词，生病。","外无期功强近之亲，内无应门五尺之僮：外、内，名词作状语。","臣具以表闻：闻，使动，使上闻。","则刘病日笃：日，名词作状语，一天天。"],"句式":["而刘夙婴疾病：被动句。","州司临门，急于星火：介词结构后置。","今臣亡国贱俘：判断句。","是臣尽节于陛下之日长：介词结构后置。"],"易错":["险衅、闵凶、祚薄、期功强近、茕茕孑立、形影相吊、洗马、猥以微贱、逋慢、拔擢、矜育、陨首、犬马怖惧。"],"名句":"臣无祖母，无以至今日；祖母无臣，无以终余年。"},"归去来兮辞（并序）":{"status":"精校","通假字":["乃瞻衡宇：“衡”通“横”，横木。","景翳翳以将入：“景”通“影”，日光。"],"古今异义":["幼稚盈室：幼稚，古义指小孩。","悦亲戚之情话：亲戚，古义指内外亲属；情话，知心话。","将有事于西畴：有事，古义指农事。"],"活用":["眄庭柯以怡颜：怡，使动，使……愉快。","园日涉以成趣：日，名词作状语，每天。","策扶老以流憩：策，名词作动词，拄着。","或棹孤舟：棹，名词作动词，划船。","善万物之得时：善，意动，以……为好、羡慕。"],"句式":["既自以心为形役：被动句。","复驾言兮焉求：宾语前置。","胡为乎遑遑欲何之：宾语前置。","农人告余以春及：介词结构后置。"],"易错":["惆怅、谏、迷途其未远、熹微、衡宇、三径就荒、樽、眄庭柯、流憩、岫、景翳翳、遑遑、耘耔、窈窕、崎岖。"],"名句":"悟已往之不谏，知来者之可追。"},"兰亭集序":{"status":"精校","通假字":["悟言一室之内：“悟”通“晤”，面对面交谈。","虽趣舍万殊：“趣”通“取”，取向。"],"古今异义":["列坐其次：其次，古义为曲水旁边。","俯察品类之盛：品类，古义指自然界万物。","所以游目骋怀：所以，古义为用来……的。","或取诸怀抱：怀抱，古义指胸怀抱负。"],"活用":["群贤毕至，少长咸集：贤、少、长，形容词作名词。","固知一死生为虚诞：一，意动，把死生看作一样。","齐彭殇为妄作：齐，意动，把长寿短命看作相等。"],"句式":["会于会稽山阴之兰亭：介词结构后置。","死生亦大矣：判断句。","当其欣于所遇：介词结构后置。"],"易错":["癸丑、会稽、修禊、群贤毕至、崇山峻岭、清流激湍、流觞曲水、游目骋怀、趣舍万殊、感慨系之、嗟悼、彭殇。"],"名句":"后之视今，亦犹今之视昔，悲夫！"},"滕王阁序":{"status":"精校","通假字":["俨骖騑于上路：“俨”通“严”，整齐的样子（教材注释体系或作整治）。","云销雨霁：“销”通“消”。","所赖君子见机：“机”通“几”，预兆。"],"古今异义":["穷且益坚：穷，古义为困厄、处境艰难。","一介书生：介，古义为量词，一个。","千里逢迎：逢迎，古义为迎接。","俨骖騑于上路：上路，古义为高高的道路。"],"活用":["襟三江而带五湖：襟、带，意动，以……为襟、为带。","雄州雾列，俊采星驰：雾、星，名词作状语。","宾主尽东南之美：美，形容词作名词，俊杰。","屈贾谊于长沙：屈，使动，使……受委屈。"],"句式":["童子何知：宾语前置。","纤歌凝而白云遏：被动句。","舍簪笏于百龄：介词结构后置。"],"易错":["豫章、翼轸、襟三江、控蛮荆、棨戟、襜帷、潦水、俨骖騑、鹤汀凫渚、闾阎、舸舰、遄飞、睢园、簪笏。"],"名句":"穷且益坚，不坠青云之志。"},"蜀道难":{"status":"精校","通假字":["所守或匪亲：“匪”通“非”。"],"古今异义":["危乎高哉：危，古义为高。","尔来四万八千岁：尔来，古义为从那时以来。","可以横绝峨眉巅：可以，古义为可以凭借（语境中作能够）。"],"活用":["使人听此凋朱颜：凋，使动，使……凋谢衰老。","砯崖转石万壑雷：转，使动，使……滚转。","侧身西望长咨嗟：西，名词作状语，向西。"],"句式":["蜀道之难，难于上青天：介词结构后置。","嗟尔远道之人胡为乎来哉：宾语前置。"],"易错":["噫吁嚱、蚕丛、鱼凫、秦塞、石栈、猿猱、萦岩峦、扪参历井、抚膺、巉岩、喧豗、砯崖、崔嵬、吮血、咨嗟。"],"名句":"蜀道之难，难于上青天！"},"琵琶行（并序）":{"status":"精校","通假字":["曲终收拨当心画：“画”通“划”，划过。"],"古今异义":["明年秋：明年，古义为第二年。","因为长句：因为，古义为于是创作。","暮去朝来颜色故：颜色，古义指容貌。","老大嫁作商人妇：老大，古义为年纪大了。"],"活用":["闻舟中夜弹琵琶者：夜，名词作状语，在夜里。","遂命酒：酒，名词作动词，摆酒。","商人重利轻别离：重、轻，意动，以……为重/轻。"],"句式":["转徙于江湖间：介词结构后置。","感斯人言：被动意味，受到这人的话触动。","尝学琵琶于穆、曹二善才：介词结构后置。"],"易错":["湓浦、铮铮、贾人、浔阳、荻花、管弦、掩抑、轻拢慢捻抹复挑、幽咽、乍破、虾蟆陵、钿头银篦、红绡、呕哑嘲哳、青衫。"],"名句":"同是天涯沦落人，相逢何必曾相识！"},"永遇乐·京口北固亭怀古":{"status":"精校","通假字":[],"古今异义":["风流总被雨打风吹去：风流，古义指英雄业绩及流风余韵。","可堪回首：可堪，能够忍受。"],"活用":["赢得仓皇北顾：北，名词作状语，向北。","尚能饭否：饭，名词作动词，吃饭。"],"句式":["英雄无觅孙仲谋处：无处寻觅英雄孙权，语序凝练。"],"易错":["舞榭歌台、寻常巷陌、金戈铁马、元嘉草草、封狼居胥、佛狸祠、神鸦社鼓、廉颇老矣。"],"名句":"凭谁问：廉颇老矣，尚能饭否？"}};
+
+const quizBank={"论语（十二章）":[["《论语》中强调既要勤于做事，又要谨慎说话，并主动向有道之人求教的句子是：","敏于事而慎于言，就有道而正焉"],["孔子用“文”与“质”的关系说明君子应当兼具文采和质朴的句子是：","文质彬彬，然后君子"],["孔子以“堆土成山”为喻，说明功亏一篑与坚持前进都取决于自己的句子是：","譬如为山，未成一篑，止，吾止也；譬如平地，虽覆一篑，进，吾往也"]],"劝学（节选）":[["荀子以木受墨线和刀剑磨砺为喻，引出君子广泛学习并反省自己的结果：","君子博学而日参省乎己，则知明而行无过矣"],["《劝学》中用“登高而招”“顺风而呼”等例子说明善于借助外物的重要性，最终概括为：","君子生非异也，善假于物也"],["《劝学》中用雕刻作比，正反说明坚持的重要性的句子是：","锲而舍之，朽木不折；锲而不舍，金石可镂"]],"屈原列传（节选）":[["司马迁概括屈原文章语言简约、含义精微、志趣高洁、行为廉正的句子是：","其文约，其辞微，其志洁，其行廉"],["《屈原列传》中说明屈原作品“文小旨大、举近见远”的句子是：","其称文小而其指极大，举类迩而见义远"],["司马迁高度评价屈原志向高洁，即使与日月争辉也可以的句子是：","推此志也，虽与日月争光可也"]],"谏太宗十思疏":[["魏征以树木和水流设喻，说明治国必须积累德义的句子是：","思国之安者，必积其德义"],["魏征指出君主若能推行十思、弘扬九德，就能达到君臣无事、无为而治的境界，原文是：","鸣琴垂拱，不言而化"],["《谏太宗十思疏》中以舟与水的关系警示君主民心可畏的句子是：","载舟覆舟，所宜深慎"]],"师说":[["韩愈用一句话概括教师职能：","师者，所以传道受业解惑也"],["《师说》中说明择师标准与地位、年龄无关的句子是：","是故无贵无贱，无长无少，道之所存，师之所存也"],["韩愈以孔子为例说明圣人没有固定老师的句子是：","圣人无常师"]],"阿房宫赋":[["杜牧用“明星”“绿云”等比喻夸张描写宫女梳妆的两句是：","明星荧荧，开妆镜也；绿云扰扰，梳晓鬟也"],["《阿房宫赋》中用强烈对比写秦统治者搜刮极尽、挥霍无度的句子是：","奈何取之尽锱铢，用之如泥沙"],["杜牧借秦亡教训警告后人，若只哀叹而不借鉴仍会重蹈覆辙的句子是：","后人哀之而不鉴之，亦使后人而复哀后人也"]],"六国论":[["苏洵开篇提出六国灭亡根本原因的句子是：","六国破灭，非兵不利，战不善，弊在赂秦"],["《六国论》中以“薪不尽火不灭”形象说明割地赂秦后患无穷的句子是：","以地事秦，犹抱薪救火，薪不尽，火不灭"],["苏洵告诫北宋统治者不要重蹈六国覆辙的收束句是：","苟以天下之大，下而从六国破亡之故事，是又在六国下矣"]],"答司马谏议书":[["王安石认为读书人争论的根源，在于：","所操之术多异故也"],["王安石用“盘庚迁都”的历史说明改革不会因为怨言而改变的句子是：","盘庚之迁，胥怨者民也，非特朝廷士大夫而已"],["王安石表明若有人指责自己该更加努力，他会欣然接受的句子是：","如曰今日当一切不事事，守前所为而已，则非某之所敢知"]],"赤壁赋":[["苏轼写客人箫声凄切，能使潜龙起舞、寡妇落泪的句子是：","舞幽壑之潜蛟，泣孤舟之嫠妇"],["《赤壁赋》中以江水和月亮说明万物“变”与“不变”辩证关系的开端是：","逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也"],["苏轼写清风明月取之不尽、用之不竭，是自然无穷宝藏的句子是：","取之无禁，用之不竭，是造物者之无尽藏也"]],"项脊轩志":[["归有光写项脊轩修葺后环境幽静，小鸟不怕人的句子是：","小鸟时来啄食，人至不去"],["《项脊轩志》中描写月夜桂影婆娑、可爱动人的句子是：","桂影斑驳，风移影动，珊珊可爱"],["全文最著名的结尾，以枇杷树寄托悼亡之情：","庭有枇杷树，吾妻死之年所手植也，今已亭亭如盖矣"]],"子路、曾皙、冉有、公西华侍坐":[["曾皙描绘理想生活中在沂水洗浴、舞雩台吹风后歌咏而归的句子是：","浴乎沂，风乎舞雩，咏而归"],["孔子听完曾皙志向后明确表示赞同的句子是：","吾与点也"],["孔子解释为何笑子路，指出治理国家应当讲礼而子路言语不谦让：","为国以礼，其言不让，是故哂之"]],"礼运（节选）·大道之行也":[["《礼运》中概括“大同”社会选贤任能、讲求诚信、培养和睦风气的句子是：","选贤与能，讲信修睦"],["描写大同社会人们不仅赡养自己的父母、抚育自己的子女的句子是：","故人不独亲其亲，不独子其子"],["《礼运》中写社会安定，盗窃作乱不兴、家家不必闭门的句子是：","是故谋闭而不兴，盗窃乱贼而不作，故外户而不闭"]],"过秦论（上）":[["贾谊写陈涉起义时天下人像云一样聚集、像回声一样响应的句子是：","天下云集响应，赢粮而景从"],["《过秦论》结尾揭示秦亡根本原因的句子是：","仁义不施而攻守之势异也"],["作者写始皇吞并周室、灭诸侯、登至尊控制天下的句子是：","吞二周而亡诸侯，履至尊而制六合"]],"报任安书（节选）":[["司马迁列举古代圣贤困厄著书后，概括《诗经》创作动因的句子是：","《诗》三百篇，大抵圣贤发愤之所为作也"],["司马迁说明自己撰写《史记》的最高目标是：","究天人之际，通古今之变，成一家之言"],["司马迁表示完成著作后即使遭受无数次杀戮也无悔的句子是：","虽万被戮，岂有悔哉"]],"陈情表":[["李密用“日薄西山”等比喻形容祖母刘氏病危的句子是：","但以刘日薄西山，气息奄奄，人命危浅，朝不虑夕"],["《陈情表》中说明自己与祖母相依为命、不能离开的句子是：","臣无祖母，无以至今日；祖母无臣，无以终余年"],["李密以乌鸦反哺比喻孝亲之情，请求奉养祖母终老的句子是：","乌鸟私情，愿乞终养"]],"归去来兮辞（并序）":[["陶渊明表达过去不可挽回而未来尚可补救的句子是：","悟已往之不谏，知来者之可追"],["《归去来兮辞》中以云和鸟写自然自由，也映照归隐心境的句子是：","云无心以出岫，鸟倦飞而知还"],["作者在结尾表示顺应自然直到生命终结、不再疑虑的句子是：","聊乘化以归尽，乐夫天命复奚疑"]],"种树郭橐驼传":[["郭橐驼概括自己种树方法的根本原则是：","能顺木之天，以致其性焉尔"],["柳宗元借种树写治民，批评官吏表面爱民其实扰民的句子是：","虽曰爱之，其实害之；虽曰忧之，其实仇之"],["文章结尾点明作者写作目的：","传其事以为官戒也"]],"五代史伶官传序":[["欧阳修开篇提出国家盛衰虽说有天命，其实更在人事的句子是：","盛衰之理，虽曰天命，岂非人事哉"],["《伶官传序》中引用《尚书》并概括兴亡规律的句子是：","满招损，谦得益"],["文章结尾由庄宗教训推及一般规律的名句是：","夫祸患常积于忽微，而智勇多困于所溺"]],"石钟山记":[["苏轼提出认识事物不能凭主观臆断的反问句是：","事不目见耳闻，而臆断其有无，可乎"],["《石钟山记》中描写大石像猛兽奇鬼一样森然欲扑人的句子是：","大石侧立千尺，如猛兽奇鬼，森然欲搏人"],["作者说明石钟山得名之声来自石穴罅和风水吞吐的句子中，写两种声音相互应和的是：","与向之噌吰者相应，如乐作焉"]],"登泰山记":[["姚鼐登顶后写青山负雪、雪光照亮南天的句子是：","苍山负雪，明烛天南"],["《登泰山记》中描写夕阳照城郭、汶水徂徕如画而半山云雾如带的句子是：","望晚日照城郭，汶水、徂徕如画，而半山居雾若带然"],["作者描写泰山日出时太阳下面红光摇动承托的句子是：","日上，正赤如丹，下有红光，动摇承之"]],"《老子》八章":[["《老子》中以水为最高善的比喻，指出水利万物而不争的句子是：","上善若水。水善利万物而不争"],["《老子》用“跂立、跨行”说明急于求成反而不能成功的句子是：","跂者不立；跨者不行"],["《老子》最后一章概括天道与圣人之道共同特征的句子是：","天之道，利而不害；圣人之道，为而不争"]],"季氏将伐颛臾":[["孔子引用周任的话说明在职位上应尽力，不能胜任就应辞职：","陈力就列，不能者止"],["孔子用猛兽出笼、宝物毁于匣中追问责任归属的句子是：","虎兕出于柙，龟玉毁于椟中，是谁之过与"],["文章末尾孔子判断季孙真正的忧患来自内部的句子是：","吾恐季孙之忧，不在颛臾，而在萧墙之内也"]],"大学（节选）":[["《大学》中由个人修养逐层推到天下治理，指出“正心”之前应做到：","欲正其心者，先诚其意"],["《大学》概括“格物、致知、诚意、正心、修身、齐家、治国、平天下”递进关系中，身修之后是：","身修而后家齐，家齐而后国治，国治而后天下平"],["《大学》强调无论天子还是平民都以修身为根本的句子是：","自天子以至于庶人，壹是皆以修身为本"]],"中庸（节选）":[["《中庸》把喜怒哀乐尚未表现出来的状态称为：","喜怒哀乐之未发，谓之中"],["《中庸》指出达到“中和”境界后天地各安其位、万物得以生长的句子是：","致中和，天地位焉，万物育焉"],["《中庸》列出学习思考实践五个环节的句子是：","博学之，审问之，慎思之，明辨之，笃行之"]],"《孟子》一则":[["孟子解释“浩然之气”的特征，认为它至大至刚的句子是：","其为气也，至大至刚"],["孟子认为浩然之气必须与义和道相配，否则就会衰弱的句子是：","其为气也，配义与道；无是，馁也"],["孟子用宋人揠苗助长的寓言说明人为强求不仅无益反而有害，结论是：","非徒无益，而又害之"]],"逍遥游（节选）":[["惠子认为大葫芦无用，最终采取的做法是：","吾为其无用而掊之"],["庄子借“不龟手之药”说明同一事物用途不同，结果可能完全不同的句子是：","能不龟手一也，或以封，或不免于洴澼絖，则所用之异也"],["庄子批评惠子不能理解“大用”，说他仍有被蓬草堵塞般的成见：","则夫子犹有蓬之心也夫"]],"谏逐客书":[["李斯开篇直接指出逐客主张错误的句子是：","臣闻吏议逐客，窃以为过矣"],["《谏逐客书》中以泰山、河海不拒绝细小事物为喻说明君王应广纳人才的句子是：","太山不让土壤，故能成其大；河海不择细流，故能就其深"],["李斯用“借兵器给敌寇、送粮食给盗贼”形容逐客后果的句子是：","此所谓“藉寇兵而赍盗粮”者也"]],"兰亭集序":[["王羲之描写兰亭周围有高山茂林修竹和清流激湍的句子是：","此地有崇山峻岭，茂林修竹；又有清流激湍，映带左右"],["《兰亭集序》中写仰观宇宙、俯察万物以舒展视听的句子是：","仰观宇宙之大，俯察品类之盛"],["王羲之批评把生死看作同一、把长寿夭折等量齐观的观点：","固知一死生为虚诞，齐彭殇为妄作"]],"滕王阁序":[["王勃描写雨过天晴、落霞与孤鹜相伴、秋水长天一色的名句是：","落霞与孤鹜齐飞，秋水共长天一色"],["《滕王阁序》中写地势高远使人感到宇宙无穷，兴尽悲来又意识到盛衰有数的句子是：","天高地迥，觉宇宙之无穷；兴尽悲来，识盈虚之有数"],["王勃用“老当益壮”“穷且益坚”表达逆境中不改志向的句子是：","老当益壮，宁移白首之心？穷且益坚，不坠青云之志"]],"黄冈竹楼记":[["王禹偁列举竹楼适合急雨和密雪，并以声音写景的句子是：","夏宜急雨，有瀑布声；冬宜密雪，有碎玉声"],["《黄冈竹楼记》中写作者焚香静坐、排遣世俗忧虑的句子是：","焚香默坐，消遣世虑"],["作者面对竹楼易朽并不担忧，因为仕途漂泊，反问道：","未知明年又在何处，岂惧竹楼之易朽乎"]],"上枢密韩太尉书":[["苏辙提出文章是作者内在气质外在表现的观点：","文者气之所形"],["文中以孟子和司马迁为例，强调文章气势来自生活阅历与内在涵养，概括为：","气可以养而致"],["苏辙说明自己出游目的，是为了见识天下奇闻壮观、拓展志气的句子是：","求天下奇闻壮观，以知天地之广大"]],"古代文论选段":[["《毛诗序》解释诗歌产生于内心情志并由语言表现出来的句子是：","在心为志，发言为诗"],["曹丕《典论·论文》把文章提升到国家大业和不朽盛事高度的句子是：","盖文章，经国之大业，不朽之盛事"],["白居易《与元九书》用植物作比说明诗歌四要素的句子是：","诗者，根情，苗言，华声，实义"]],"静女":[["《静女》中写女子美丽娴静、约男子在城角见面的句子是：","静女其姝，俟我于城隅"],["男子爱屋及乌，认为荑草美并不是草本身美，而是因为美人所赠：","匪女之为美，美人之贻"],["《静女》中写男子因女子故意隐藏而焦急徘徊的句子是：","爱而不见，搔首踟蹰"]],"无衣":[["《无衣》首章表现战友共穿战袍、同仇敌忾的句子是：","岂曰无衣？与子同袍"],["诗中写共同修整矛戟并一起行动的句子是：","修我矛戟。与子偕作"],["第三章写共同修理铠甲兵器、一起出征的句子是：","修我甲兵。与子偕行"]],"离骚（节选）":[["屈原表明自己既有内在美德，又重视后天修养的句子是：","纷吾既有此内美兮，又重之以修能"],["《离骚》中借早晚采集香草写珍惜时光、自我修养的句子是：","朝搴阰之木兰兮，夕揽洲之宿莽"],["屈原愿意乘骏马驰骋，为君王在前引路的句子是：","乘骐骥以驰骋兮，来吾道夫先路"]],"涉江采芙蓉":[["诗人采到芙蓉却因思念之人在远方而无从赠送的句子是：","采之欲遗谁？所思在远道"],["《涉江采芙蓉》中回望故乡，只见道路漫长无边的句子是：","还顾望旧乡，长路漫浩浩"],["诗的结尾写相爱的人分居两地、忧伤终老：","同心而离居，忧伤以终老"]],"短歌行":[["曹操用朝露比喻人生短暂、过去岁月太多的句子是：","譬如朝露，去日苦多"],["《短歌行》中化用《诗经》表达对贤才思慕的句子是：","青青子衿，悠悠我心"],["曹操以周公自比，表示愿广纳贤才、成就统一大业的句子是：","周公吐哺，天下归心"]],"归园田居（其一）":[["陶渊明用鸟恋旧林、鱼思故渊比喻自己厌恶官场、眷恋田园的句子是：","羁鸟恋旧林，池鱼思故渊"],["《归园田居》中以“方宅”“草屋”具体描绘居所朴素开阔的句子是：","方宅十余亩，草屋八九间"],["诗人归隐后重新获得自由自在生活的结尾是：","久在樊笼里，复得返自然"]],"拟行路难（其四）":[["鲍照以把水倒在平地、流向各异起兴，暗示人生贵贱不齐的句子是：","泻水置平地，各自东西南北流"],["诗人用反问表达人的命运既然有定数又何必叹愁的句子是：","人生亦有命，安能行叹复坐愁"],["诗人面对不平现实只能强压愤怒、欲言又止的句子是：","心非木石岂无感？吞声踯躅不敢言"]],"春江花月夜":[["张若虚写春江潮水连海、海上明月与潮水共生的句子是：","春江潮水连海平，海上明月共潮生"],["诗人由月光追问人生代代不穷而江月年年相似的句子是：","人生代代无穷已，江月年年望相似"],["《春江花月夜》结尾以落月、海雾和江树写游子思归不尽的句子是：","不知乘月几人归，落月摇情满江树"]],"山居秋暝":[["王维写雨后空山、秋日晚来的清新环境：","空山新雨后，天气晚来秋"],["《山居秋暝》中以明月松间、清泉石上营造清幽意境的句子是：","明月松间照，清泉石上流"],["诗人认为即使春芳消歇，自己也愿留在山中的句子是：","随意春芳歇，王孙自可留"]],"蜀道难":[["李白反复咏叹蜀道高险的主旋律句是：","蜀道之难，难于上青天"],["《蜀道难》中用黄鹤不得飞过、猿猱发愁攀援突出山势高险的句子是：","黄鹤之飞尚不得过，猿猱欲度愁攀援"],["诗中写剑阁一夫当关、万人难开的险要地势：","一夫当关，万夫莫开"]],"梦游天姥吟留别":[["李白用天姥山横亘天际、拔起五岳、遮蔽赤城写其高大的句子是：","天姥连天向天横，势拔五岳掩赤城"],["梦境中山石泉水震响，深林峰峦颤动的句子是：","熊咆龙吟殷岩泉，栗深林兮惊层巅"],["诗人蔑视权贵、坚持人格独立的千古名句是：","安能摧眉折腰事权贵，使我不得开心颜"]],"将进酒":[["李白以黄河奔流到海不回头、青丝暮成雪感叹时光易逝：","君不见黄河之水天上来，奔流到海不复回"],["《将进酒》中表达人生得意应尽情欢乐、不要让金杯空对明月的句子是：","人生得意须尽欢，莫使金樽空对月"],["李白坚信自己的才华终会有用、钱财散尽还能再来的句子是：","天生我材必有用，千金散尽还复来"]],"燕歌行":[["高适写战士在前线拼死作战、将帅却在帐中享乐的对比句是：","战士军前半死生，美人帐下犹歌舞"],["《燕歌行》中以大漠穷秋、塞草枯衰写边地肃杀景象的句子是：","大漠穷秋塞草腓，孤城落日斗兵稀"],["诗末感叹当今再无李广那样爱护士卒的名将：","君不见沙场征战苦，至今犹忆李将军"]],"蜀相":[["杜甫寻访武侯祠，写祠堂外柏树森森的句子是：","丞相祠堂何处寻？锦官城外柏森森"],["《蜀相》中以春色鸟鸣反衬祠堂寂寞、寄托哀思的句子是：","映阶碧草自春色，隔叶黄鹂空好音"],["杜甫高度概括诸葛亮功业与忠诚，并为其壮志未酬惋惜的句子是：","出师未捷身先死，长使英雄泪满襟"]],"客至":[["杜甫写住所周围春水环绕、群鸥日日来往的句子是：","舍南舍北皆春水，但见群鸥日日来"],["《客至》中写平日少有人来，今日特为客人打开花径和蓬门的句子是：","花径不曾缘客扫，蓬门今始为君开"],["诗人酒菜简薄却真诚待客，还邀邻翁共饮的句子是：","肯与邻翁相对饮，隔篱呼取尽余杯"]],"登高":[["杜甫以风急、天高、猿啸和清渚白沙飞鸟写夔州秋景的句子是：","风急天高猿啸哀，渚清沙白鸟飞回"],["《登高》中写落叶无边而下、长江滚滚而来的名句是：","无边落木萧萧下，不尽长江滚滚来"],["诗人把漂泊、老病、孤独和登台重阳结合的句子是：","万里悲秋常作客，百年多病独登台"]],"登岳阳楼":[["杜甫用洞庭湖分割吴楚、吞吐日月星辰的夸张写其浩瀚：","吴楚东南坼，乾坤日夜浮"],["《登岳阳楼》中写自己亲友音信全无、老病只剩孤舟的句子是：","亲朋无一字，老病有孤舟"],["诗人由个人身世转向国事，听闻关山战乱而凭栏流泪：","戎马关山北，凭轩涕泗流"]],"琵琶行（并序）":[["白居易用“大珠小珠落玉盘”比喻琵琶声清脆错落的前一句是：","嘈嘈切切错杂弹，大珠小珠落玉盘"],["《琵琶行》中写音乐暂歇、无声反而更胜有声的名句是：","别有幽愁暗恨生，此时无声胜有声"],["诗人与琵琶女同病相怜，发出人生漂泊共鸣的句子是：","同是天涯沦落人，相逢何必曾相识"]],"李凭箜篌引":[["李贺以昆山玉碎、凤凰鸣叫比喻箜篌声清脆和婉：","昆山玉碎凤凰叫，芙蓉泣露香兰笑"],["《李凭箜篌引》中写音乐使长安十二门前冷气消融、皇城秋意沉浸的句子是：","十二门前融冷光，二十三丝动紫皇"],["诗人想象女娲补天之石被音乐震裂、秋雨从天倾落：","女娲炼石补天处，石破天惊逗秋雨"]],"菩萨蛮（小山重叠金明灭）":[["温庭筠写女子晨起懒画蛾眉、梳妆迟迟的句子是：","懒起画蛾眉，弄妆梳洗迟"],["词中写女子照镜时前后两面花相映，面庞与绣衣相互辉映：","照花前后镜，花面交相映"],["结尾以新帖绣罗襦上的双双金鹧鸪暗示孤独：","新帖绣罗襦，双双金鹧鸪"]],"锦瑟":[["李商隐借锦瑟无端五十弦引出对华年追忆的句子是：","锦瑟无端五十弦，一弦一柱思华年"],["《锦瑟》中用庄周梦蝶和望帝啼鹃两个典故表达迷惘哀怨：","庄生晓梦迷蝴蝶，望帝春心托杜鹃"],["诗人感叹这份情感追忆如今惆怅，当时其实已迷惘的结尾是：","此情可待成追忆？只是当时已惘然"]],"虞美人（春花秋月何时了）":[["李煜面对春花秋月追问往事，引出亡国之痛的句子是：","春花秋月何时了？往事知多少"],["词中写故国宫殿应仍在，只是人的容颜已经改变：","雕栏玉砌应犹在，只是朱颜改"],["李煜以春水比喻愁绪无穷无尽的千古名句是：","问君能有几多愁？恰似一江春水向东流"]],"望海潮（东南形胜）":[["柳永用“三吴都会”“钱塘自古繁华”总写杭州重要与富庶：","东南形胜，三吴都会，钱塘自古繁华"],["词中描写钱塘江潮如雪浪奔涌、声势如雷的句子是：","怒涛卷霜雪，天堑无涯"],["柳永写西湖桂子、荷花的名句是：","有三秋桂子，十里荷花"]],"桂枝香·金陵怀古":[["王安石登高送目，写深秋金陵天气清肃的开篇是：","登临送目，正故国晚秋，天气初肃"],["词中以彩舟云淡、星河鹭起构成绚丽江景的句子是：","彩舟云淡，星河鹭起，画图难足"],["王安石借六朝旧事批评统治者沉迷享乐，写“至今商女”仍唱亡国曲：","至今商女，时时犹唱，后庭遗曲"]],"江城子·乙卯正月二十日夜记梦":[["苏轼悼念亡妻，写十年生死两茫茫、不刻意思念却难忘：","十年生死两茫茫，不思量，自难忘"],["梦中夫妻相见无言，只有泪流满面的句子是：","相顾无言，惟有泪千行"],["词末设想亡妻坟前年年断肠之夜、明月照短松冈：","料得年年肠断处，明月夜，短松冈"]],"念奴娇·赤壁怀古":[["苏轼以“大江东去”起笔，把历史人物与滚滚江水联系起来：","大江东去，浪淘尽，千古风流人物"],["词中写赤壁乱石穿空、惊涛拍岸、浪花如雪的雄奇景象：","乱石穿空，惊涛拍岸，卷起千堆雪"],["苏轼想象周瑜谈笑间使强敌战船灰飞烟灭的句子是：","谈笑间，樯橹灰飞烟灭"]],"登快阁":[["黄庭坚忙完公务登阁放松，首联写自己终于倚着晴日快阁眺望：","痴儿了却公家事，快阁东西倚晚晴"],["诗中化用伯牙、阮籍典故，写知音难觅、借酒排遣的句子是：","朱弦已为佳人绝，青眼聊因美酒横"],["结尾表示归船上已有白鸥作伴，流露归隐愿望：","万里归船弄长笛，此心吾与白鸥盟"]],"鹊桥仙（纤云弄巧）":[["秦观写牛郎织女踏过银河、暗中相逢的句子是：","金风玉露一相逢，便胜却人间无数"],["词中写柔情似水、佳期如梦，又不忍回看鹊桥归路：","柔情似水，佳期如梦，忍顾鹊桥归路"],["秦观突破朝夕相守观念，歌颂真挚爱情长久的名句是：","两情若是久长时，又岂在朝朝暮暮"]],"苏幕遮（燎沉香）":[["周邦彦写鸟雀清晨呼晴、侵晓窥檐的句子是：","鸟雀呼晴，侵晓窥檐语"],["词中描写荷叶上初阳晒干宿雨、水面清圆、风吹荷叶举起的名句是：","叶上初阳干宿雨，水面清圆，一一风荷举"],["词人由眼前荷塘想到故乡五月渔郎，表达思乡的句子是：","五月渔郎相忆否？小楫轻舟，梦入芙蓉浦"]],"声声慢（寻寻觅觅）":[["李清照以七组叠词开篇，写寻找、冷清与凄惨心境：","寻寻觅觅，冷冷清清，凄凄惨惨戚戚"],["词中写大雁飞过，因是旧时相识而更添伤感：","雁过也，正伤心，却是旧时相识"],["结尾认为一个“愁”字也难概括此刻情绪的句子是：","这次第，怎一个愁字了得"]],"书愤（其一）":[["陆游回忆年轻时就知道报国艰难，仍北望中原气概如山：","早岁那知世事艰，中原北望气如山"],["诗中以瓜洲渡雪夜战船、铁骑秋风大散关概括抗金经历：","楼船夜雪瓜洲渡，铁马秋风大散关"],["陆游以诸葛亮《出师表》自勉并感慨谁可与之相比：","出师一表真名世，千载谁堪伯仲间"]],"临安春雨初霁":[["陆游感叹世味近年来薄如纱，并反问为何骑马来到京华：","世味年来薄似纱，谁令骑马客京华"],["诗中用小楼听一夜春雨、深巷明早卖杏花写江南春景：","小楼一夜听春雨，深巷明朝卖杏花"],["结尾表明自己不必感叹白衣被风尘染黑，清明还来得及回家：","素衣莫起风尘叹，犹及清明可到家"]],"念奴娇·过洞庭":[["张孝祥写洞庭与青草湖相连，中秋前后万里无云的句子是：","洞庭青草，近中秋，更无一点风色"],["词人用“玉鉴琼田”写湖面澄澈，并感叹自己身心清明：","玉鉴琼田三万顷，着我扁舟一叶"],["下阕写自己肝胆如冰雪般光明磊落的句子是：","孤光自照，肝肺皆冰雪"]],"永遇乐·京口北固亭怀古":[["辛弃疾登北固亭怀古，感叹孙权这样的英雄人物已无处寻觅：","千古江山，英雄无觅孙仲谋处"],["词中赞颂刘裕当年北伐气势如虹的句子是：","金戈铁马，气吞万里如虎"],["辛弃疾以廉颇自比，表达虽老仍愿报国却无人问津的句子是：","凭谁问：廉颇老矣，尚能饭否"]],"菩萨蛮·书江西造口壁":[["辛弃疾以郁孤台下清江水写其中有多少中原百姓泪水：","郁孤台下清江水，中间多少行人泪"],["词中写青山遮不住江水毕竟东流，象征正义不可阻挡：","青山遮不住，毕竟东流去"],["结尾写江晚愁绪深沉、山中鹧鸪鸣叫：","江晚正愁余，山深闻鹧鸪"]],"青玉案·元夕":[["辛弃疾写元宵焰火如东风吹落千树繁花、又像星雨纷落：","东风夜放花千树。更吹落、星如雨"],["词中写女子衣香鬓影、笑语盈盈从人群走过的句子是：","蛾儿雪柳黄金缕。笑语盈盈暗香去"],["全词最著名的结尾写蓦然回首，所寻之人在灯火稀疏处：","蓦然回首，那人却在，灯火阑珊处"]],"扬州慢（淮左名都）":[["姜夔到扬州看到过去繁华地如今只剩荠麦青青：","过春风十里，尽荠麦青青"],["词中写废弃池苑、乔木仍厌恶谈论战争，采用拟人手法的句子是：","废池乔木，犹厌言兵"],["结尾写桥边红芍药年年生长，却不知为谁开放：","念桥边红药，年年知为谁生"]],"贺新郎（国脉微如缕）":[["刘克庄开篇以“国脉微如缕”写国势危急，随即追问何时能擒敌：","问长缨何时入手，缚将戎主"],["词人反问难道人间没有好汉，只是选才尺度太窄的句子是：","未必人间无好汉，谁与宽些尺度"],["结尾号召有志之士像班超一样投笔从戎，不要只求虚名：","快投笔，莫题柱"]],"长亭送别（正宫·端正好）":[["《长亭送别》用碧云、黄花、西风、南飞雁营造深秋离别氛围的句子是：","碧云天，黄花地，西风紧，北雁南飞"],["曲中把霜林红色想象为被离人泪染醉，情景交融的句子是：","晓来谁染霜林醉？总是离人泪"],["这支曲牌中最能直接点明“离情”的收束句是：","总是离人泪"]],"朝天子·咏喇叭":[["王磐用“小”与“大”对比讽刺喇叭本身微小却声势惊人的句子是：","喇叭，唢呐，曲儿小腔儿大"],["曲中写官船往来如麻，全靠喇叭抬高声价，讽刺权势的句子是：","官船来往乱如麻，全仗你抬声价"],["结尾用夸张写喇叭扰民危害，直到“水尽鹅飞”的句子是：","眼见的吹翻了这家，吹伤了那家，只吹的水尽鹅飞罢"]]};
+
+const eraTips={'先秦':'关注先秦散文的语气、虚词和思想概念；默写尤其注意通假字与古今字。','汉':'关注史传叙事、铺陈议论以及古今异义。','魏晋':'关注生命意识、人格精神和骈散结合的表达。','东晋':'关注山水、玄思与生命感慨。','唐':'关注意象、格律、用典、夸张和情景关系。','北宋':'关注议论说理、借古讽今及豪放旷达。','南宋':'关注家国之思、用典与报国情怀。','宋':'关注词的意象、虚实、典故和情感转折。','元':'关注曲的口语化、讽刺性和情景交融。','明':'关注小品文细节、叙事线索和寄情于物。','清':'关注游记的空间顺序、景物层次和简洁笔法。'};
+
+const gloss={
+'仁':'仁爱、仁德','礼':'礼制、礼仪规范','喻':'明白、懂得','弘毅':'志向远大而意志坚强','已':'停止','参省':'检验、省察','知明':'智慧明达','假':'借助','绝':'横渡','跬步':'半步；古代称跨出一脚为跬','锲':'刻','用心一也':'因为心思专一',
+'疾':'痛心、痛恨','聪':'明察','谗谄':'说坏话奉承献媚的小人','穷':'困窘、处境艰难','惨怛':'忧伤、悲痛','见疑':'被怀疑','指':'同“旨”，意旨','迩':'近','濯淖':'污泥','皭然':'洁白的样子',
+'固':'使……牢固','浚':'疏通、深挖','神器':'帝位','景命':'大命、天命','克终':'能够坚持到底','董':'督察','谦冲':'谦虚','自牧':'自我修养','黜恶':'斥退奸恶',
+'学者':'求学的人','所以':'用来……的','受业':'传授学业；“受”通“授”','句读':'古人指文辞休止和停顿处','不齿':'不屑与之同列','常师':'固定的老师','专攻':'专门研究',
+'毕':'完结','兀':'山高而上平；这里指山上树木被砍尽','钩心斗角':'宫室结构参差错落、精巧工致','缦立':'久立','锱铢':'极言细微','独夫':'失去人心而极端孤立的统治者','族':'灭族','鉴':'以……为鉴',
+'兵':'兵器','赂':'贿赂；这里指割地求和','率':'全都、一概','厌':'满足','事':'侍奉','速':'招致','洎':'及、等到','劫':'胁迫','故事':'旧事、先例',
+'蒙教':'承蒙赐教','操术':'所持的政治主张、方法','强聒':'硬在耳边啰嗦','名实':'名称与实际','有司':'有关主管部门','壬人':'巧言谄媚、不行正道的人','胥怨':'相与怨恨','度义':'考虑是否合理',
+'既望':'农历十六日','属客':'劝客人饮酒','冯虚御风':'凌空驾风而行；冯通“凭”','愀然':'容色改变的样子','危坐':'端坐','酾酒':'斟酒','横槊':'横执长矛','须臾':'片刻','蜉蝣':'一种朝生暮死的小虫','卒':'最终','适':'享有',
+'方丈':'一丈见方','渗漉':'从小孔慢慢漏下','垣墙':'砌墙','偃仰':'安居、休息','三五之夜':'农历十五的夜晚','异爨':'分灶做饭，指分家','先妣':'去世的母亲','束发':'十五岁左右','归宁':'出嫁女子回娘家省亲','亭亭如盖':'高高挺立，树冠像伞盖',
+'率尔':'轻率急忙的样子','摄':'夹处','饥馑':'饥荒','方':'合乎礼义的行事准则','哂':'微笑，这里略带讥讽','端章甫':'穿礼服、戴礼帽','相':'诸侯祭祀或会盟时主持赞礼的司仪','撰':'才能，这里指为政才能','与':'赞成',
+'摩灭':'磨灭','倜傥':'卓越不凡','厄':'困厄','膑脚':'受膑刑','发愤':'抒发郁愤','稽':'考察','究天人之际':'探究天道与人事的关系',
+'席卷':'像卷席子一样席卷','包举':'并吞','连衡':'秦国采取的离间六国、使其各自同秦联合的策略','逡巡':'有所顾虑而徘徊不进','追亡逐北':'追逐逃亡败北的军队','瓮牖绳枢':'以破瓮作窗、绳系门轴，形容贫穷','序八州':'招致八州归附','仁义不施而攻守之势异也':'不施行仁义，攻取天下与守天下的形势已经不同',
+'亲民':'亲近、爱护人民；版本亦作“新民”','格物':'推究事物的原理','致知':'获得知识、达到认识','诚意':'使意念真诚','正心':'端正内心','修身':'修养自身',
+'浩然之气':'盛大刚直、由道义长期积累而成的精神气质','配义与道':'与义和道相配合','馁':'萎靡不振',
+'逍遥':'自由自在、无所依待的精神境界','恶乎待哉':'还依赖什么呢','无己':'忘掉自我的偏执','无功':'不追求功业','无名':'不追求声名',
+'逐客':'驱逐客卿','藉寇兵而赍盗粮':'借兵器给敌寇、送粮食给盗贼，比喻帮助敌人','黔首':'百姓',
+'修禊':'古代三月上巳日临水洗濯祓除不祥的习俗','流觞曲水':'把酒杯放在曲水中漂流，停在谁面前谁饮酒赋诗','俯仰':'一俯一仰之间，形容时间短暂','修短随化':'寿命长短听凭造化','彭殇':'长寿与短命',
+'襟':'以……为衣襟','带':'以……为衣带','物华天宝':'物产精华是上天的珍宝','人杰地灵':'人有俊杰是因地有灵秀之气','潦水尽而寒潭清':'积水消尽，寒潭清澈','穷且益坚':'处境艰难而意志更加坚定',
+'椽':'架在檩上承托屋面的木条','刳':'剖削','比屋':'家家户户','胜概':'美景','谪居':'被贬后居住',
+'气':'文章所表现出的人的精神气质','养气':'通过阅历、修养扩充精神境界','宏辩':'宏伟善辩','斗升之禄':'微薄俸禄',
+'俟':'等待','爱而不见':'同“薆”，隐藏；见同“现”','娈':'美好','贻':'赠送','说怿':'喜爱；说通“悦”','归荑':'赠我初生的茅草；归通“馈”',
+'同袍':'同穿一件战袍，比喻同心并肩','兴师':'起兵','偕作':'一起行动','甲兵':'铠甲兵器',
+'遗':'赠送','还顾':'回头看','漫浩浩':'路途遥远无边','同心':'感情深厚、心意相同',
+'杜康':'相传最早造酒的人，这里代指酒','子衿':'周代读书人的服装，借指贤才','掇':'拾取、摘取','契阔':'聚散、久别重逢','吐哺':'吐出口中食物，形容求贤殷切',
+'适俗韵':'适应世俗的性情','尘网':'尘世罗网，指仕途官场','守拙':'守住质朴本性','暧暧':'昏暗、模糊','墟里':'村落','樊笼':'关鸟兽的笼子，比喻官场',
+'踯躅':'徘徊不前','吞声':'有话不敢说，只能强忍','行路难':'乐府旧题，这里兼指人生道路艰难',
+'芳甸':'开满花草的郊野','霰':'雪珠','汀':'水边平地','纤尘':'微尘','穷已':'穷尽、停止','可怜':'可爱','扁舟':'小船',
+'歇':'消歇、凋零','王孙':'原指贵族子弟，诗中可理解为诗人自指',
+'危乎高哉':'高啊，真高啊','横绝':'飞越','凋朱颜':'使容颜衰老','喧豗':'喧闹声','砯崖转石':'水冲击石壁使巨石转动','咨嗟':'叹息',
+'信难求':'确实难以寻求','渌水':'清水','殷岩泉':'使山岩泉水震响；殷作动词','栗深林':'使深林战栗','訇然':'声音很大的样子','摧眉折腰':'低头弯腰，形容屈身奉承',
+'将进酒':'请饮酒；将读qiāng','会须':'应当','钟鼓馔玉':'富贵豪华的生活','恣欢谑':'尽情欢乐戏谑','沽取':'买取','销万古愁':'消解绵长无尽的愁',
+'横行':'纵横驰骋','摐金伐鼓':'敲击金属乐器、击鼓','旌旆':'军中各种旗帜','逶迤':'绵延不绝','绝域':'极远之地','死节':'为节义而死',
+'频烦':'多次烦劳；即多次拜访','开济':'开创并扶助','泪满襟':'泪水沾满衣襟',
+'缘客扫':'因为客人到来而打扫','蓬门':'柴门','盘飧':'盘中菜肴','旧醅':'隔年的陈酒',
+'渚':'水中小洲','落木':'落叶','百年':'一生、晚年','繁霜鬓':'像浓霜一样的白发','潦倒':'衰颓失意',
+'坼':'分裂，这里形容洞庭湖把吴楚大地分开','乾坤':'天地','戎马':'战争','凭轩':'倚着楼窗',
+'荻花':'芦荻的花','管弦':'音乐','间关':'鸟声婉转，这里形容弦声','幽咽':'低沉滞涩','冰泉冷涩':'比喻弦声凝滞','银瓶乍破':'比喻乐声突然高亢激越','天涯沦落':'漂泊失意',
+'张高秋':'在深秋弹奏；张，演奏','颓':'凝滞不流动','昆山玉碎':'形容乐声清脆激越','逗秋雨':'引出秋雨','露脚':'露珠下滴',
+'无端':'没有来由','华年':'青春年华','春心':'伤春之心，亦指美好愿望','可待':'岂待、哪待','惘然':'迷惘怅然',
+'故国':'旧国、故都','雕栏玉砌':'雕花栏杆和玉石台阶，代指宫殿','朱颜':'红润的容颜，也可指宫女','几多':'多少',
+'形胜':'地理形势优越','三吴':'古代吴兴、吴郡、会稽一带，泛指江浙地区','天堑':'天然壕沟，指钱塘江','珠玑':'珠宝','罗绮':'绫罗绸缎','高牙':'高大的牙旗，代指高官仪仗',
+'送目':'纵目远望','故国':'这里指金陵','澄江似练':'清澈江水像白色绸带','谩嗟':'徒然感叹','后庭遗曲':'指《玉树后庭花》，亡国之音',
+'茫茫':'相隔遥远、音容渺茫','料得':'料想','短松冈':'长着矮松的山冈，指亡妻墓地',
+'故垒':'古战场营垒遗迹','周郎':'周瑜','纶巾':'青丝带头巾','樯橹':'代指曹军水师','尊':'同“樽”，酒杯','酹':'洒酒在地上祭奠',
+'了却':'办完','公家事':'官府公务','朱弦':'琴弦，典出伯牙绝弦','青眼':'表示喜爱或重视','白鸥盟':'与白鸥为友，表示归隐心志',
+'纤云':'轻盈的云','飞星':'流星','金风玉露':'秋风白露','忍顾':'怎忍回头看','朝朝暮暮':'日日夜夜',
+'燎沉香':'焚烧沉香','溽暑':'湿热暑气','侵晓':'临近拂晓','宿雨':'昨夜的雨','清圆':'清润圆正','芙蓉浦':'荷花水边',
+'将息':'调养休息','黄花':'菊花','怎生':'怎么、怎样','次第':'光景、情形',
+'气如山':'收复失地的豪情壮志如山','楼船夜雪':'指宋军水战战绩','铁马秋风':'指骑兵边地作战','塞上长城':'自许为守边名将','伯仲':'不相上下',
+'世味':'世态人情','客京华':'客居京城','矮纸斜行':'在短纸上斜着写字','细乳':'茶水煎沸时浮起的白色小泡','素衣':'白衣，典出风尘染衣',
+'玉鉴琼田':'形容月光下洞庭湖洁白如玉','明河':'银河','表里俱澄澈':'内外都清明澄澈','萧骚':'稀疏','挹':'舀取','扣舷':'敲击船舷',
+'风流':'英雄业绩及其流风余韵','寄奴':'刘裕小名','元嘉草草':'宋文帝刘义隆草率北伐','封狼居胥':'登狼居胥山筑坛祭天，指建立显赫军功','佛狸':'北魏太武帝拓跋焘小名','神鸦社鼓':'祭祀声响，写百姓忘却战败历史','廉颇老矣':'以廉颇自况，表达仍愿报国',
+'郁孤台':'赣州古台名','长安':'借指南宋都城或中原故土','可怜':'可惜','愁余':'使我忧愁；余，我','鹧鸪':'叫声常被理解为“不如归去”，增添愁意',
+'花千树':'灯火如千树繁花','星如雨':'烟火纷落如星雨','玉壶':'月亮或白玉灯','鱼龙舞':'鱼龙形彩灯舞动','阑珊':'零落、将尽',
+'长缨':'长绳，典出请缨缚敌','戎主':'敌方首领','金汤':'金城汤池，比喻坚固防御','投笔':'班超投笔从戎典故','题柱':'司马相如题桥柱典故',
+'淮左':'淮河东面','竹西':'扬州亭名','春风十里':'化用杜牧诗，指昔日繁华街市','胡马窥江':'金兵南侵','废池乔木':'荒废池苑和老树','豆蔻':'比喻少女','二十四桥':'扬州名胜','红药':'芍药',
+'霜林醉':'枫林经霜变红，仿佛醉了','离人泪':'离别之人的泪水',
+'腔儿大':'声音响亮，暗讽权势张扬','抬声价':'借权势提高身价','水尽鹅飞':'比喻搜刮殆尽、民穷财尽'
+};
+
+const themeMap={
+'论语（十二章）':'围绕仁、义、礼、修身、好学与推己及人，集中体现儒家人格修养与学习观。',
+'劝学（节选）':'论证学习不可停止，强调后天学习、善借外物、环境影响以及积累、坚持、专一。',
+'屈原列传（节选）':'赞美屈原忠贞高洁的人格，并借其遭遇揭示忠而被谤、正道不容的政治悲剧。',
+'谏太宗十思疏':'劝唐太宗居安思危、戒奢以俭、虚心纳谏，以“十思”实现长治久安。',
+'师说':'批判耻于从师的社会风气，阐明从师学习的必要性和“道之所存，师之所存”的择师原则。',
+'阿房宫赋':'通过铺写阿房宫的奢华和秦统治者的骄奢，揭示秦亡根源并警戒后世统治者。',
+'六国论':'以“弊在赂秦”为中心论点，总结六国灭亡教训，借古讽今。',
+'答司马谏议书':'针对司马光对变法的指责逐项辨明，表达坚持改革、担当国事的立场。',
+'赤壁赋':'由游赤壁之乐转入人生短暂之悲，再以水月哲理化解，表现旷达超然的人生态度。',
+'项脊轩志':'借一间小屋的兴废与日常细节追忆家庭变迁和亲人，感情深沉含蓄。',
+'子路、曾皙、冉有、公西华侍坐':'通过师生谈志展现不同人生理想，并以孔子“吾与点也”体现礼乐治国和从容生活的向往。',
+'报任安书（节选）':'以古代圣贤受辱著述自励，说明忍辱完成《史记》的原因与“成一家之言”的志向。',
+'过秦论（上）':'铺叙秦由弱到强再迅速灭亡的历史，归结为“仁义不施而攻守之势异也”。',
+'礼运（节选）·大道之行也':'描绘天下为公、选贤与能、人人得到照顾的“大同”社会理想。',
+'陈情表':'陈述祖母抚养之恩与自己尽孝之情，在忠孝冲突中恳求暂缓应诏。',
+'归去来兮辞（并序）':'写辞官归田的喜悦、田园生活的闲适以及顺应自然的人生态度。',
+'种树郭橐驼传':'由种树之道类比治民之理，主张顺应事物天性、减少繁苛扰民。',
+'五代史伶官传序':'以庄宗盛衰说明“忧劳可以兴国，逸豫可以亡身”，强调人事对国家兴亡的重要性。',
+'石钟山记':'通过实地考察辨明石钟山得名，强调对疑难问题不可主观臆断，应亲自探究。',
+'登泰山记':'按登山路线和时间顺序描绘冬日登泰山、观日出的雄奇景象。',
+'《老子》八章':'以多个短章阐释柔弱、不争、知足、知人、自胜等道家思想。',
+'季氏将伐颛臾':'孔子批评弟子为季氏攻打颛臾开脱，阐明为政者应修文德、安定内部而非穷兵黩武。',
+'大学（节选）':'以“三纲八目”说明由个人修养推及齐家治国平天下的儒家修养路径。',
+'中庸（节选）':'先以“中”“和”说明情感合乎节度与天地万物和谐的关系，再以“博学、审问、慎思、明辨、笃行”强调持久而扎实的学习实践。',
+'《孟子》一则':'论“浩然之气”，强调以道义长期积累形成刚健正大的精神力量。',
+'逍遥游（节选）':'借“大瓠”与“不龟手之药”的寓言说明事物价值取决于眼界和使用方式，批评拘泥常规、不能“用大”的狭隘认识。',
+'谏逐客书':'以秦国历史事实和人才、物产类比反对逐客，主张广纳人才以成帝业。',
+'兰亭集序':'由兰亭雅集之乐转入对生命短暂的感慨，并批评虚无生死观，表达珍惜生命的意识。',
+'滕王阁序':'写洪州形胜、宴会盛况和人生际遇，在失意中表现不坠青云之志的昂扬精神。',
+'黄冈竹楼记':'写竹楼环境、声响与生活情趣，表现贬谪中的自适和清雅人格。',
+'上枢密韩太尉书':'以“文者气之所形”为中心，说明游历见闻、交游贤者对养气作文的重要作用。',
+'古代文论选段':'从诗言志、文章不朽、感物而作、诗根于情、艺术转化和“境界”等角度呈现中国古代文论核心观念。'
+};
+
+
+const $ = (selector, scope = document) => scope.querySelector(selector);
+const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
+const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+
+const STORAGE_KEY = 'gushiwen72.sidebarCollapsed';
+const MOBILE_QUERY = '(max-width: 900px)';
+
+const state = {
+  collapsed: false,
+  mobile: matchMedia(MOBILE_QUERY).matches,
+  activeIndex: 0,
+};
+
+const refs = {
+  body: document.body,
+  sidebar: $('#sidebar'),
+  toggle: $('#sidebarToggle'),
+  backdrop: $('#sidebarBackdrop'),
+  catalog: $('#catalog'),
+  content: $('#content'),
+  main: $('#main'),
+};
+
+const groups = [
+  { label: '文言文 · 必修', from: 0, to: 10 },
+  { label: '文言文 · 选择性必修', from: 10, to: 20 },
+  { label: '文言文 · 选修', from: 20, to: 32 },
+  { label: '诗词曲', from: 32, to: 72 },
+];
+
+function articleId(index) { return `article-${index + 1}`; }
+function readStoredSidebarState() {
+  try { return localStorage.getItem(STORAGE_KEY) === '1'; }
+  catch { return false; }
+}
+function storeSidebarState(collapsed) {
+  try { localStorage.setItem(STORAGE_KEY, collapsed ? '1' : '0'); }
+  catch {}
+}
+
+function notesFor(text) {
+  return Object.entries(gloss).filter(([term]) => text.includes(term)).slice(0, 14);
+}
+
+function renderCatalog() {
+  refs.catalog.innerHTML = groups.map(group => {
+    const rows = data.slice(group.from, group.to).map((item, offset) => {
+      const index = group.from + offset;
+      return `<a class="catalog-item" href="#${articleId(index)}" data-index="${index}">
+        <span class="catalog-num" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>
+        <span class="catalog-copy">
+          <b>${escapeHTML(item.title)}</b>
+          <small>${escapeHTML(item.author)} · ${escapeHTML(item.era)}</small>
+        </span>
+      </a>`;
+    }).join('');
+    return `<section class="catalog-group" aria-label="${escapeHTML(group.label)}">
+      <div class="catalog-heading"><span>${escapeHTML(group.label)}</span><em>${group.to - group.from}</em></div>
+      ${rows}
+    </section>`;
+  }).join('');
+}
+function renderNotes(text) {
+  const notes = notesFor(text);
+  if (!notes.length) return '<div class="quiet-card">本篇以课内教材注释为准，复习时重点关注实词、虚词、通假字和特殊句式。</div>';
+  return `<div class="note-list">${notes.map(([term, meaning]) => `<div class="note"><b>${escapeHTML(term)}</b><span>${escapeHTML(meaning)}</span></div>`).join('')}</div>`;
+}
+
+function renderDictation(title) {
+  const rows = quizBank[title] || [];
+  return `<div class="section-head"><h3>理解性默写</h3><span>${rows.length} 题</span></div>
+    <div class="dictation-list">${rows.map(([q, a], index) => `<article class="dictation-card"><div class="question"><b>${index + 1}</b><p>${escapeHTML(q)}</p></div><div class="answer"><span>答案</span><p>${escapeHTML(a)}</p></div></article>`).join('')}</div>`;
+}
+
+function renderKnowledge(title, era, type) {
+  const info = examData[title];
+  if (!info) {
+    return `<div class="knowledge-grid"><div class="knowledge-card wide"><b>复习提示</b><p>${escapeHTML(eraTips[era] || (type === '诗词曲' ? '关注意象、情感、炼字、手法、典故与名句默写。' : '关注重点实词、虚词、句式和篇章结构。'))}</p></div></div>`;
+  }
+  const keys = ['通假字','古今异义','活用','句式','易错'];
+  const cards = keys.filter(key => info[key]?.length).map(key => `<div class="knowledge-card ${key === '易错' ? 'wide' : ''}"><b>${key}</b><ul>${info[key].map(x => `<li>${escapeHTML(x)}</li>`).join('')}</ul></div>`).join('');
+  return `<div class="knowledge-grid">${cards}${info['名句'] ? `<div class="knowledge-card wide quote"><b>重点名句</b><p>${escapeHTML(info['名句'])}</p></div>` : ''}</div>`;
+}
+
+function renderExam(title, type, era) {
+  const qs = quizBank[title] || [];
+  const answers = qs.map(x => x[1]).slice(0, 3);
+  return `<div class="exam-grid">
+    <div class="exam-card"><h4>阅读抓手</h4><p>${escapeHTML(type === '诗词曲' ? '先抓意象与情感变化，再看炼字、用典、对比、虚实和情景关系。' : '先抓中心论点或叙事线索，再落实实词、句式、论证与人物态度。')}</p></div>
+    <div class="exam-card"><h4>时代线索</h4><p>${escapeHTML(eraTips[era] || `${era}作品复习时注意时代背景与文本表达的联系。`)}</p></div>
+    <div class="exam-card wide"><h4>高频默写句</h4><p>${escapeHTML(answers.join('；') || '结合本篇理解性默写题重点复习。')}</p></div>
+  </div>`;
+}
+
+function renderArticles() {
+  refs.content.innerHTML = data.map((item, index) => {
+    const { title, author, era, type, text, note: range } = item;
+    const headingId = `article-title-${index + 1}`;
+    const typeClass = type === '诗词曲' ? 'article--poetry' : 'article--prose';
+    return `<article class="article ${typeClass}" id="${articleId(index)}" data-index="${index}" aria-labelledby="${headingId}">
+      <header class="article-header">
+        <div class="article-kicker">
+          <span class="article-index">${String(index + 1).padStart(2, '0')} / 72</span>
+          <span class="article-type">${escapeHTML(type)}</span>
+        </div>
+        <h1 id="${headingId}">${escapeHTML(title)}</h1>
+        <p>${escapeHTML(era)} · ${escapeHTML(author)}</p>
+      </header>
+      <section class="section original" aria-labelledby="original-${index + 1}">
+        <h3 id="original-${index + 1}">原文</h3>
+        <div class="poem">${escapeHTML(text)}</div>
+        ${range ? `<div class="range"><b>课标范围</b><span>${escapeHTML(range)}</span></div>` : ''}
+      </section>
+      <section class="section"><h3>重点注释</h3>${renderNotes(text)}</section>
+      <section class="section"><h3>主旨 · 赏析</h3><div class="summary">${escapeHTML(themeMap[title] || '结合全文把握内容、结构、语言和情感，重点理解课标指定语句在篇章中的作用。')}</div></section>
+      <section class="section dictation">${renderDictation(title)}</section>
+      <section class="section"><h3>知识清单</h3>${renderKnowledge(title, era, type)}</section>
+      <section class="section"><h3>考点精讲</h3>${renderExam(title, type, era)}</section>
+    </article>`;
+  }).join('');
+}
+function syncSidebarA11y() {
+  refs.toggle.setAttribute('aria-expanded', String(!state.collapsed));
+  refs.toggle.setAttribute('aria-label', state.collapsed ? '展开目录' : '收起目录');
+  refs.toggle.firstElementChild.textContent = state.collapsed ? '☰' : '‹';
+  refs.sidebar.setAttribute('aria-hidden', String(state.collapsed));
+  if ('inert' in refs.sidebar) refs.sidebar.inert = state.collapsed;
+  if (refs.backdrop) refs.backdrop.hidden = state.collapsed || !state.mobile;
+}
+
+function setCollapsed(next, { preserveScroll = true, persist = true } = {}) {
+  const x = scrollX, y = scrollY;
+  state.collapsed = Boolean(next);
+  refs.body.classList.toggle('sidebar-collapsed', state.collapsed);
+  syncSidebarA11y();
+  if (persist && !state.mobile) storeSidebarState(state.collapsed);
+  if (preserveScroll) {
+    requestAnimationFrame(() => {
+      scrollTo(x, y);
+      requestAnimationFrame(() => scrollTo(x, y));
+    });
+  }
+}
+
+function initializeSidebar() {
+  setCollapsed(state.mobile ? true : readStoredSidebarState(), { preserveScroll: false, persist: false });
+
+  refs.toggle.addEventListener('click', event => {
+    event.preventDefault();
+    setCollapsed(!state.collapsed);
+  });
+
+  refs.backdrop?.addEventListener('click', () => setCollapsed(true, { persist: false }));
+
+  refs.catalog.addEventListener('click', event => {
+    const link = event.target.closest('.catalog-item');
+    if (!link) return;
+    if (state.mobile) setCollapsed(true, { preserveScroll: false, persist: false });
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && state.mobile && !state.collapsed) {
+      setCollapsed(true, { persist: false });
+      refs.toggle.focus({ preventScroll: true });
+    }
+  });
+
+  const mq = matchMedia(MOBILE_QUERY);
+  mq.addEventListener('change', event => {
+    const x = scrollX, y = scrollY;
+    state.mobile = event.matches;
+    setCollapsed(state.mobile ? true : readStoredSidebarState(), { preserveScroll: false, persist: false });
+    requestAnimationFrame(() => scrollTo(x, y));
+  });
+}
+
+function initializeActiveArticle() {
+  const links = $$('.catalog-item', refs.catalog);
+  const articles = $$('.article', refs.content);
+
+  const activate = index => {
+    if (!Number.isInteger(index) || index < 0 || index >= links.length) return;
+    if (state.activeIndex === index && links[index]?.classList.contains('active')) return;
+    const previous = links[state.activeIndex];
+    if (previous) {
+      previous.classList.remove('active');
+      previous.removeAttribute('aria-current');
+    }
+
+    state.activeIndex = index;
+    const active = links[index];
+    if (active) {
+      active.classList.add('active');
+      active.setAttribute('aria-current', 'true');
+    }
+    if (active && !state.collapsed) {
+      const sideRect = refs.sidebar.getBoundingClientRect();
+      const itemRect = active.getBoundingClientRect();
+      if (itemRect.top < sideRect.top + 82 || itemRect.bottom > sideRect.bottom - 22) {
+        const target = active.offsetTop - refs.sidebar.clientHeight * .36;
+        refs.sidebar.scrollTo({ top: Math.max(0, target), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      }
+    }
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    const candidates = entries
+      .filter(entry => entry.isIntersecting)
+      .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+    if (candidates[0]) activate(Number(candidates[0].target.dataset.index));
+  }, { rootMargin: '-14% 0px -72% 0px', threshold: [0, 0.01] });
+
+  articles.forEach(article => observer.observe(article));
+
+  const hashMatch = location.hash.match(/^#article-(\d+)$/);
+  activate(hashMatch ? Math.max(0, Math.min(71, Number(hashMatch[1]) - 1)) : 0);
+
+  window.addEventListener('hashchange', () => {
+    const match = location.hash.match(/^#article-(\d+)$/);
+    if (match) activate(Math.max(0, Math.min(71, Number(match[1]) - 1)));
+  });
+}
+
+function validateData() {
+  const errors = [];
+  if (data.length !== 72) errors.push(`篇目数量异常：${data.length}`);
+
+  const titles = data.map(item => item.title);
+  if (new Set(titles).size !== titles.length) errors.push('存在重复标题');
+
+  const missingQuiz = data.filter(item => !(quizBank[item.title]?.length));
+  if (missingQuiz.length) errors.push(`缺少理解性默写：${missingQuiz.map(item => item.title).join('、')}`);
+
+  const wrongQuizCount = data.filter(item => (quizBank[item.title]?.length || 0) !== 3);
+  if (wrongQuizCount.length) errors.push(`默写题数量异常：${wrongQuizCount.map(item => item.title).join('、')}`);
+
+  const mismatch = [];
+  data.forEach(item => {
+    (quizBank[item.title] || []).forEach(([, answer], index) => {
+      if (!item.text.includes(answer)) mismatch.push(`${item.title} 第${index + 1}题`);
+    });
+  });
+  if (mismatch.length) errors.push(`默写答案未在正文中找到：${mismatch.join('、')}`);
+
+  if (errors.length) console.warn('[内容校验]', errors);
+}
+renderCatalog();
+renderArticles();
+validateData();
+initializeSidebar();
+initializeActiveArticle();
+
+const searchInput = document.getElementById('catalogSearch');
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  let count = 0;
+  document.querySelectorAll('.catalog-item').forEach(link => {
+    const item = data[Number(link.dataset.index)];
+    const visible = (item.title + item.author + item.era).toLowerCase().includes(query);
+    link.hidden = !visible;
+    link.style.display = visible ? '' : 'none';
+    if (visible) count++;
+  });
+  document.querySelectorAll('.catalog-group').forEach(group => { group.hidden = !group.querySelector('.catalog-item:not([hidden])'); });
+  document.getElementById('searchEmpty').hidden = count > 0;
+});
+let readingSize = 20;
+function adjustSize(delta) {
+  readingSize = Math.max(18, Math.min(26, readingSize + delta));
+  document.documentElement.style.setProperty('--reading-size', readingSize + 'px');
+  document.getElementById('fontDown').disabled = readingSize === 18;
+  document.getElementById('fontUp').disabled = readingSize === 26;
+}
+document.getElementById('fontDown').addEventListener('click', () => adjustSize(-1));
+document.getElementById('fontUp').addEventListener('click', () => adjustSize(1));
+document.getElementById('focusReading').addEventListener('click', event => {
+  const enabled = document.body.classList.toggle('focus-reading');
+  event.currentTarget.setAttribute('aria-pressed', String(enabled));
+  event.currentTarget.textContent = enabled ? '完整阅读' : '纯净阅读';
+});
+</script>
+</body>
+</html>
