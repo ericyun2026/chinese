@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-skin="pearl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#edf2ef" />
-  <meta name="description" content="高中72篇必背古诗文，2025课标精校，含全文、重点注释、赏析、知识清单与216道理解性默写。" />
-  <title>青绿书卷 · 高中72篇必背古诗文</title>
+  <meta name="description" content="高中72篇必背古诗文，含全文、重点注释、情感分析、知识清单与216道理解性默写与答案。" />
+  <title>诗文 · 高中72篇阅读集</title>
   <style>
 @layer reset, tokens, base, layout, components, responsive, print;
 
@@ -117,9 +117,100 @@ body.focus-reading .article .section:not(.original){display:none}body.focus-read
 }
 @media print{.reading-tools,.landscape{display:none!important}}
 
+
+/* Six complete reading palettes */
+@media screen{
+html[data-skin="jade"]{--skin-canvas:#edf2ef;--skin-surface:#fffefa;--skin-soft:#f3f7ef;--skin-text:#263c36;--skin-secondary:#647567;--skin-primary:#356b57;--skin-selected:#e2eee5;--skin-edge:#d6e1d4;--skin-wash:#dcebe0;color-scheme:light}
+html[data-skin="pearl"]{--skin-canvas:#f0f3f8;--skin-surface:#ffffff;--skin-soft:#f6f8fc;--skin-text:#263448;--skin-secondary:#64748b;--skin-primary:#3d6ec2;--skin-selected:#e6eefb;--skin-edge:#dce3ef;--skin-wash:#e1eafa;color-scheme:light}
+html[data-skin="sand"]{--skin-canvas:#f3ece0;--skin-surface:#fffaf0;--skin-soft:#f7efdf;--skin-text:#4a3a2e;--skin-secondary:#88715b;--skin-primary:#9c643b;--skin-selected:#f0e0ca;--skin-edge:#e5d6bf;--skin-wash:#efdfc3;color-scheme:light}
+html[data-skin="rose"]{--skin-canvas:#f6edf0;--skin-surface:#fffafc;--skin-soft:#faf0f4;--skin-text:#523b49;--skin-secondary:#8b6d7f;--skin-primary:#a4527a;--skin-selected:#f3deea;--skin-edge:#ead6e1;--skin-wash:#f0d9e5;color-scheme:light}
+html[data-skin="night"]{--skin-canvas:#101a28;--skin-surface:#192637;--skin-soft:#203044;--skin-text:#e0e9f3;--skin-secondary:#a3b4c9;--skin-primary:#a0c4ff;--skin-selected:#2c405b;--skin-edge:#34465d;--skin-wash:#243f60;color-scheme:dark}
+html[data-skin="ink"]{--skin-canvas:#191a1b;--skin-surface:#232526;--skin-soft:#2b2d2e;--skin-text:#e9e5da;--skin-secondary:#b4b0a6;--skin-primary:#d0b57e;--skin-selected:#403a2e;--skin-edge:#45433e;--skin-wash:#383831;color-scheme:dark}
+
+:root{--bg:var(--skin-canvas);--paper:var(--skin-surface);--paper-soft:var(--skin-soft);--paper-warm:var(--skin-selected);--ink:var(--skin-text);--muted:var(--skin-secondary);--line:var(--skin-edge);--accent:var(--skin-primary);--accent-soft:var(--skin-selected)}
+html,body{background-color:var(--skin-canvas);color:var(--skin-text)}body{background:radial-gradient(ellipse at 92% 0,var(--skin-wash),transparent 55%),var(--skin-canvas);background-attachment:fixed}
+::selection{background:var(--skin-selected);color:var(--skin-text)}
+.sidebar{background:var(--skin-soft);border-color:var(--skin-edge);scrollbar-color:var(--skin-edge) transparent}.brand-mark{background:var(--skin-primary);color:var(--skin-surface);box-shadow:none}.brand p,.catalog-heading,.catalog-heading em,.catalog-copy small,.catalog-num,.search-empty{color:var(--skin-secondary)}
+.catalog-item:hover,.catalog-item.active{background:var(--skin-selected);color:var(--skin-primary)}.catalog-item.active:before{background:var(--skin-primary)}.catalog-item.active .catalog-num{color:var(--skin-primary)}.catalog-search{background:var(--skin-surface);border-color:var(--skin-edge);color:var(--skin-secondary)}.catalog-search input{color:var(--skin-text)}.catalog-search input::placeholder{color:var(--skin-secondary)}
+.sidebar-toggle{background:var(--skin-surface);border-color:var(--skin-edge);color:var(--skin-primary)}.sidebar-toggle:hover{background:var(--skin-selected)}
+.hero{background:linear-gradient(112deg,var(--skin-surface),var(--skin-wash));border-color:var(--skin-edge)}.hero .eyebrow,.hero-meta b{color:var(--skin-primary)}.hero h2 span,.hero-copy{color:var(--skin-secondary)}.hero-meta span{background:var(--skin-surface);border-color:var(--skin-edge);color:var(--skin-secondary)}
+.landscape{color:var(--skin-primary)}.landscape path{fill:currentColor;opacity:.13}.landscape path[fill="none"]{fill:none;stroke:currentColor;opacity:.25}.landscape circle{fill:currentColor;opacity:.1}
+.reading-tools p,.footer{color:var(--skin-secondary)}.tool-actions button{background:var(--skin-surface);border-color:var(--skin-edge);color:var(--skin-primary)}.tool-actions button:hover{background:var(--skin-selected)}.tool-actions button[aria-pressed=true]{background:var(--skin-primary);border-color:var(--skin-primary);color:var(--skin-surface)}button:disabled{opacity:.4;cursor:default}
+.article{background:var(--skin-surface);border-color:var(--skin-edge)}.article-header,.section+.section{border-color:var(--skin-edge)}.article-header:after{color:var(--skin-primary);border-color:var(--skin-primary)}.article-index,.article-header p{color:var(--skin-secondary)}.article-type,.section-head span{color:var(--skin-primary);background:var(--skin-selected);border-color:var(--skin-edge)}.poem,.article--poetry .poem,.article--prose .poem{color:var(--skin-text)}.section h3,.section-head h3{color:var(--skin-primary)}.section h3:before,.section-head h3:before{background:var(--skin-primary)}
+.range{background:var(--skin-selected);color:var(--skin-secondary);border-color:var(--skin-primary)}.range b{color:var(--skin-primary)}.note,.knowledge-card,.exam-card,.summary,.quiet-card,.dictation-card{background:var(--skin-soft);border-color:var(--skin-edge);color:var(--skin-text)}.note b,.knowledge-card>b,.exam-card h4,.knowledge-card.quote p{color:var(--skin-primary)}.note span,.knowledge-card p,.knowledge-card li,.exam-card p,.summary,.question p,.answer{color:var(--skin-text)}.dictation-card:before{background:var(--skin-primary)}.question>b,.answer>span{background:var(--skin-selected);color:var(--skin-primary)}.answer{border-color:var(--skin-edge)}
+.skin-studio{max-width:var(--content);margin:0 auto 18px;border:1px solid var(--skin-edge);border-radius:15px;background:var(--skin-surface);overflow:hidden}.skin-studio summary{display:flex;justify-content:space-between;gap:10px;align-items:center;cursor:pointer;list-style:none;padding:16px 20px;color:var(--skin-text);font-size:12px}.skin-studio summary::-webkit-details-marker{display:none}.skin-studio summary::after{content:'＋';color:var(--skin-primary);font-size:18px}.skin-studio[open] summary::after{content:'−'}.skin-summary{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.skin-dot{width:10px;height:10px;border-radius:50%;background:var(--skin-primary)}.skin-summary small{font-size:11px;color:var(--skin-secondary)}
+.skin-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;padding:2px 18px 18px}.skin-option{position:relative;min-width:0;text-align:left;background:var(--skin-soft);border:1px solid var(--skin-edge);border-radius:10px;padding:8px;cursor:pointer;color:var(--skin-text)}.skin-option[aria-pressed=true]{border-color:var(--skin-primary);box-shadow:0 0 0 1px var(--skin-primary)}.skin-option[aria-pressed=true]::after{content:'✓';position:absolute;right:12px;top:12px;width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:var(--skin-primary);color:var(--skin-surface);font-size:12px}.skin-option:hover{transform:translateY(-2px)}.skin-option strong{display:block;font-size:11px;font-weight:550;margin:9px 1px 4px}.skin-option small{display:block;font-size:9px;color:var(--skin-secondary);line-height:1.5;margin:0 1px 3px}.skin-preview{height:64px;display:grid;grid-template-columns:18% 1fr;gap:6px;padding:8px;border-radius:6px;background:var(--preview-bg);border:1px solid var(--preview-line)}.skin-preview i{background:var(--preview-accent);opacity:.28;border-radius:2px}.skin-preview span{background:var(--preview-paper);border-radius:3px;padding:7px}.skin-preview span::before,.skin-preview span::after{content:'';display:block;height:3px;border-radius:2px;background:var(--preview-accent);width:60%;margin-bottom:6px;opacity:.7}.skin-preview span::after{width:85%;opacity:.25}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--skin-primary);outline-offset:4px}.catalog-search:focus-within{outline-color:var(--skin-primary)}
+@media(max-width:1150px){.skin-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){.skin-studio{max-width:760px}}
+@media(max-width:540px){.skin-grid{gap:8px;padding:0 12px 14px}.skin-studio summary{padding:14px}.skin-option small{font-size:9px}.skin-preview{height:52px}.skin-summary small{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.skin-option:hover{transform:none}}
+}
+@media print{.skin-studio{display:none!important}}
+
+
+@media screen{
+.study-hub{max-width:var(--content);margin:0 auto 20px;padding:25px 28px;background:var(--skin-surface);border:1px solid var(--skin-edge);border-radius:18px}.study-hub h3{font-family:var(--serif);font-size:24px;font-weight:500;margin:8px 0 10px}.study-hub>div>p:not(.eyebrow){font-size:12px;color:var(--skin-secondary)}.study-hub .eyebrow{color:var(--skin-primary)}.study-hub>p{font-size:12px;line-height:1.8;margin-top:12px}.study-hub>small{display:block;font-size:10px;color:var(--skin-secondary);line-height:1.7;margin-top:4px}
+.study-hint{font-size:11px!important;color:var(--skin-secondary)!important;line-height:1.8!important;margin:10px 0}.reference-line{font-family:var(--serif);font-size:16px;line-height:1.9}.analysis-question{font-size:13px;line-height:1.9}.study-detail{margin-top:14px;border:1px solid var(--skin-edge);border-radius:12px;padding:14px 16px;background:var(--skin-soft);font-size:12px;line-height:1.9}.study-detail summary{cursor:pointer;color:var(--skin-primary);font-weight:600}.study-detail>p,.study-detail>ol{margin-top:12px}.study-detail h4{margin:18px 0 10px;color:var(--skin-primary);font-size:12px}.study-detail a{color:var(--skin-primary)}
+.emotion-flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:18px 0}.emotion-flow span{padding:7px 10px;border-radius:9px;background:var(--skin-selected);color:var(--skin-primary);font-size:11px;line-height:1.6}.emotion-flow b{display:inline-block;margin-right:7px;opacity:.6}.emotion-flow i{font-style:normal;color:var(--skin-secondary)}.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.evidence-card{padding:16px;background:var(--skin-surface);border:1px solid var(--skin-edge);border-radius:12px;min-width:0}.technique{color:var(--skin-primary);font-size:10px;letter-spacing:.04em}.evidence-card blockquote{margin:10px 0;font-size:17px;font-family:var(--serif);color:var(--skin-text);line-height:1.85}.evidence-card p{color:var(--skin-secondary);font-size:12px;line-height:1.9}.analysis-caution{margin-top:14px;border-left:3px solid var(--skin-primary);padding:10px 14px;background:var(--skin-selected);border-radius:0 9px 9px 0}.analysis-caution b{color:var(--skin-primary);font-size:11px}.analysis-caution p{margin-top:4px;font-size:12px}.sample-answer{font-size:13px;line-height:2}
+@media(max-width:900px){.study-hub{max-width:760px}}
+@media(max-width:540px){.study-hub{padding:22px 18px}.evidence-grid{grid-template-columns:1fr}.study-detail{padding:13px}.section-head{gap:10px;flex-wrap:wrap}.dictation-card{padding:15px 13px}}
+}
+
+@media screen{
+.simple-answer{margin-top:14px;border-top:1px solid var(--skin-edge);padding-top:12px}.simple-answer summary{display:list-item;list-style-position:inside;width:fit-content;cursor:pointer;padding:8px 12px;border:1px solid var(--skin-edge);border-radius:9px;background:var(--skin-surface);color:var(--skin-primary);font-size:12px;min-height:38px}.simple-answer summary:hover{background:var(--skin-selected)}.simple-answer .reference-line{padding:15px 17px;background:var(--skin-selected);color:var(--skin-text);border-radius:10px;margin-top:12px;font-family:var(--serif);font-size:17px;line-height:2;overflow-wrap:anywhere}
+.simple-answer>.reference-line{animation:none}.when-open{display:none}details[open]>summary>.when-open{display:inline}details[open]>summary>.when-closed{display:none}.analysis-reference>summary{padding-block:4px;min-height:32px}
+}
+@media print{.study-hub{display:none!important}.when-open{display:none}.study-detail{color:#222;background:#fff}}
+
+
+/* Apple-inspired reading chrome: motion is limited to composited controls. */
+@media screen{
+:root{--sidebar:278px;--content:940px;--chrome-height:calc(64px + env(safe-area-inset-top,0px))}
+html{scroll-padding-top:175px}body{background:radial-gradient(ellipse at 88% 12%,var(--skin-wash),transparent 52%),var(--skin-canvas);background-attachment:fixed}.app-bar{position:fixed;inset:0 0 auto;z-index:100;height:var(--chrome-height);padding:env(safe-area-inset-top,0px) max(24px,env(safe-area-inset-right,0px)) 0 78px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--skin-edge);background:var(--skin-surface)}
+@supports(backdrop-filter:blur(20px)){.app-bar,.reading-tools{background:color-mix(in srgb,var(--skin-surface) 84%,transparent);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%)}}
+.app-brand{display:flex;gap:10px;align-items:center;text-decoration:none;white-space:nowrap;min-height:44px;color:var(--skin-text)}.app-brand svg{width:23px;height:23px;color:var(--skin-primary)}.app-brand b{font-size:17px;letter-spacing:.04em;font-weight:650}.app-brand span{font-size:11px;color:var(--skin-secondary);border-left:1px solid var(--skin-edge);padding-left:12px;margin-left:4px}.app-actions{display:flex;align-items:center;gap:18px}.app-count{font-size:11px;color:var(--skin-secondary)}.app-actions button{background:var(--skin-soft);border:1px solid var(--skin-edge);border-radius:14px;color:var(--skin-primary);padding:9px 15px;min-height:40px;font-size:12px;cursor:pointer}
+.sidebar,.sidebar-collapsed .sidebar{top:calc(var(--chrome-height) + 12px);bottom:12px;left:12px;width:254px;height:calc(100dvh - var(--chrome-height) - 24px);border:1px solid var(--skin-edge);border-radius:22px;padding:23px 12px 26px;background:var(--skin-surface);box-shadow:0 8px 36px #17233305;transition:transform 240ms cubic-bezier(.22,.7,.2,1),opacity 180ms ease}.sidebar-collapsed .sidebar{transform:translateX(calc(-100% - 20px));opacity:0}.brand{padding:0 7px 22px;gap:11px}.brand h1{font-family:var(--ui);font-size:16px;font-weight:650;letter-spacing:0}.brand p{font-size:10px;letter-spacing:.04em}.brand-mark{border-radius:13px;width:38px;height:38px;flex-basis:38px;font-family:var(--ui);font-size:15px;font-weight:650;background:var(--skin-selected);color:var(--skin-primary)}
+.sidebar-toggle,.sidebar-collapsed .sidebar-toggle{top:calc(10px + env(safe-area-inset-top,0px));left:18px;transform:none;border:0;border-radius:13px;box-shadow:none;width:44px;height:44px;background:transparent;color:var(--skin-primary);z-index:110}.sidebar-toggle:hover{box-shadow:none;background:var(--skin-selected)}.sidebar-toggle svg{width:23px;height:23px;display:block}.sidebar-toggle span{display:block}.sidebar-backdrop{top:var(--chrome-height);background:#0b14232e;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.catalog-search{background:var(--skin-soft);border-color:transparent;border-radius:12px;padding:11px;min-height:44px;margin:0 3px}.catalog-search input{font-size:13px}.catalog-heading{font-size:10px;letter-spacing:.04em;margin-top:25px;margin-bottom:9px}.catalog-item{border-radius:12px;min-height:55px;padding:11px 9px;transition:background 130ms ease,color 130ms ease}.catalog-copy b{font-size:12px;font-weight:550;line-height:1.45}.catalog-copy small{font-size:10px}.catalog-num{font-size:10px}.catalog-item.active{background:var(--skin-selected)}.catalog-item.active::before{display:none}
+.main,.sidebar-collapsed .main{padding:calc(var(--chrome-height) + 38px) clamp(22px,4vw,62px) 80px;transition:none;will-change:auto}.main{margin-left:var(--sidebar);width:calc(100% - var(--sidebar))}.sidebar-collapsed .main{margin-left:0;width:100%;transform:none}
+.hero{min-height:310px;padding:36px 40px 32px;border-radius:28px;border:1px solid var(--skin-edge);background:linear-gradient(115deg,var(--skin-surface),var(--skin-wash));box-shadow:0 10px 45px #17233304;margin-bottom:20px}.hero .eyebrow{font-family:var(--ui);font-size:9px;letter-spacing:.22em;font-weight:600;margin-bottom:20px}.hero h2{font-family:var(--ui);font-size:clamp(32px,3.8vw,49px);font-weight:650;line-height:1.22;letter-spacing:-.045em}.hero h2 span{font-size:11px;letter-spacing:.06em;font-weight:500;margin-top:16px}.hero-copy{font-size:12px;line-height:1.9;margin-top:15px}.hero-meta{margin-top:24px;gap:7px}.hero-meta span{font-size:10px;border:0;border-radius:9px;padding:8px 10px;background:color-mix(in srgb,var(--skin-surface) 75%,transparent);box-shadow:none}.hero-meta b{font-size:12px;font-weight:650}.landscape{width:62%;opacity:.4;right:-40px}
+.study-hub{padding:20px 25px;border-radius:21px;background:var(--skin-surface);border-color:var(--skin-edge);display:flex;align-items:center;justify-content:space-between;gap:24px}.study-hub .eyebrow{font-size:9px;letter-spacing:.14em;margin-bottom:5px}.study-hub h3{font-family:var(--ui);font-size:17px;font-weight:600;margin:5px 0 8px}.study-hub>div>p:not(.eyebrow){font-size:10px}.study-hub>.study-hint{max-width:220px;font-size:11px!important;margin:0;text-align:right}.skin-studio{border-radius:18px}.skin-studio summary{padding:14px 20px;min-height:48px}.skin-option{border-radius:13px;transition:transform 160ms ease,box-shadow 160ms ease}.skin-preview{border-radius:8px}.skin-option[aria-pressed=true]{box-shadow:0 0 0 1px var(--skin-primary),0 5px 14px #00000008}
+.reading-tools{position:sticky;top:calc(var(--chrome-height) + 10px);z-index:60;display:flex;align-items:center;gap:12px;justify-content:space-between;border:1px solid var(--skin-edge);border-radius:19px;padding:10px 14px;margin:0 auto 22px;background-color:var(--skin-surface);box-shadow:0 8px 28px #12203909}.reading-location{min-width:0;flex:1}.reading-location small{display:block;color:var(--skin-secondary);font-size:9px;line-height:1.4;margin-bottom:4px}.reading-tools .reading-location p{color:var(--skin-text);font-size:12px;font-weight:550;letter-spacing:0;max-width:210px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.section-switch{display:flex;gap:3px;padding:3px;border-radius:11px;background:var(--skin-soft);flex-shrink:0}.section-switch button{min-height:36px;border:0;background:transparent;color:var(--skin-secondary);font-size:11px;border-radius:8px;padding:7px 10px;cursor:pointer}.section-switch button:hover,.section-switch button:focus-visible{background:var(--skin-surface);color:var(--skin-primary)}.tool-actions{gap:4px;flex-shrink:0}.tool-actions button{border:0;border-radius:10px;min-width:36px;min-height:38px;background:var(--skin-soft);font-size:11px;padding:7px 9px}.tool-actions button[aria-pressed=true]{background:var(--skin-selected);color:var(--skin-primary)}
+.article{border-radius:25px;border-color:var(--skin-edge);padding:40px clamp(24px,4vw,48px) 44px;box-shadow:0 8px 35px #1e2b4404;scroll-margin-top:160px}.article h1{font-family:var(--ui);font-weight:600;font-size:29px;letter-spacing:-.03em}.article-header:after{font-size:20px;border-radius:9px;border-color:var(--skin-edge);color:var(--skin-secondary);padding:8px;opacity:.7}.article-index{font-family:var(--ui);font-size:10px;letter-spacing:.08em}.article-header p{letter-spacing:.03em}.article-type{border-radius:6px;font-size:9px;padding:4px 7px;border:0}.section{scroll-margin-top:175px;padding-top:29px}.section h3,.section-head h3{font-size:12px;font-weight:600;letter-spacing:.025em}.section h3:before,.section-head h3:before{width:3px;height:11px}.poem{letter-spacing:.025em}.note,.knowledge-card,.exam-card,.summary,.quiet-card{border-radius:15px}.dictation-card{border-radius:17px;padding:20px;border:1px solid var(--skin-edge);background:var(--skin-soft)}.dictation-card:before{display:none}.question>b{border-radius:8px;width:25px;height:25px;flex-basis:25px}.question p{font-size:13px;line-height:1.95}.simple-answer{padding-top:12px;margin-top:15px;border-top-color:var(--skin-edge)}.simple-answer summary{border-radius:11px;font-family:var(--ui);min-height:42px;padding:10px 13px;font-size:11px;border:0;background:var(--skin-selected);color:var(--skin-primary)}.simple-answer .reference-line{background:var(--skin-surface);border:1px solid var(--skin-edge);border-radius:13px;padding:17px;margin-top:12px;animation:none}.study-detail{border-radius:16px;padding:17px 18px}.study-detail summary{min-height:32px;line-height:2.2;font-weight:550;font-size:12px}.evidence-card{border-radius:14px}.emotion-flow span{border-radius:10px}.analysis-caution{border-radius:0 12px 12px 0}
+button,summary{touch-action:manipulation}button{transition:background 140ms ease,transform 140ms ease,box-shadow 140ms ease}button:active{transform:scale(.97)}.simple-answer summary:active{background:var(--skin-edge)}button:disabled{transform:none}.skin-option:hover{transform:translateY(-2px)}
+@media(max-width:1100px){.reading-tools{flex-wrap:wrap}.reading-location{flex-basis:calc(100% - 185px)}.section-switch{order:3;width:100%;justify-content:stretch}.section-switch button{flex:1}.hero{padding:32px}.article,.section{scroll-margin-top:210px}}
+@media(max-width:900px){.main,.sidebar-collapsed .main{width:100%;margin:0;padding:calc(var(--chrome-height) + 24px) 22px 60px}.sidebar,.sidebar-collapsed .sidebar{width:min(310px,calc(100vw - 38px));left:12px;padding:23px 15px}.sidebar{box-shadow:8px 16px 55px #00000020}.hero,.reading-tools,.study-hub{max-width:760px}.reading-tools{top:calc(var(--chrome-height) + 8px)}.app-brand span{font-size:10px}.app-bar{padding-right:20px}}
+@media(max-width:540px){.app-bar{padding-left:68px;padding-right:12px;gap:8px}.app-brand{gap:7px}.app-brand svg{width:21px;height:21px}.app-brand b{font-size:16px}.app-brand span,.app-count{display:none}.sidebar-toggle,.sidebar-collapsed .sidebar-toggle{left:12px}.main,.sidebar-collapsed .main{padding:calc(var(--chrome-height) + 18px) 12px 45px}.hero{border-radius:23px;padding:28px 25px;min-height:310px}.hero h2{font-size:37px;line-height:1.24;max-width:300px}.hero h2 span{font-size:10px}.hero .eyebrow{font-size:8px}.hero-copy{font-size:11px;max-width:100%}.hero-meta{gap:5px}.hero-meta span{font-size:9px;padding:7px 8px}.hero-meta b{font-size:11px}.landscape{width:90%;right:-130px;opacity:.25}.study-hub{padding:19px 21px;display:block}.study-hub>.study-hint{text-align:left;max-width:none;margin-top:10px;font-size:10px!important}.study-hub h3{font-size:16px}.reading-tools{padding:10px;border-radius:17px;gap:8px}.reading-location{padding-left:4px}.reading-tools .reading-location p{font-size:11px;max-width:150px}.tool-actions button{min-height:40px;padding:7px 8px;font-size:10px}.section-switch button{min-height:36px}.article{padding:28px 22px 32px;border-radius:22px}.article h1{font-size:25px}.dictation-card{padding:16px}.section-head{gap:8px}.section-head span{font-size:9px}.skin-grid{gap:9px}.catalog-search input{font-size:16px}.app-actions button{min-height:42px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+}
+@media print{.app-bar,.section-switch,.reading-tools{display:none!important}}
+
+
+@media screen{
+@supports(backdrop-filter:blur(20px)){
+.app-bar,.reading-tools{background:color-mix(in srgb,var(--skin-surface) 86%,transparent);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%)}
+}
+@media(prefers-reduced-transparency:reduce){.app-bar,.reading-tools{background:var(--skin-surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
+}
+
+@media screen{
+html[data-skin="pearl"]{--skin-canvas:#f4f5f7;--skin-surface:#fff;--skin-soft:#f6f7f9;--skin-text:#24272d;--skin-secondary:#69727e;--skin-primary:#3567b8;--skin-selected:#eaf0fa;--skin-edge:#e3e7ed;--skin-wash:#e8edf6}
+.hero{position:relative;box-shadow:0 12px 46px #18253905}.hero::after{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 1px 0 #ffffff30}.hero h2{letter-spacing:-.055em}.resume-card{display:flex;align-items:center;gap:14px;max-width:var(--content);margin:0 auto 16px;padding:17px 22px;border-radius:20px;border:1px solid var(--skin-edge);background:var(--skin-surface);text-decoration:none;box-shadow:0 4px 18px #17233303;transition:background 150ms ease,transform 150ms ease}.resume-card:hover{background:var(--skin-soft)}.resume-card:active{transform:scale(.992)}.resume-icon{display:grid;place-items:center;width:40px;height:44px;border-radius:12px;background:var(--skin-selected);color:var(--skin-primary);flex-shrink:0}.resume-icon svg{width:21px;height:21px}.resume-copy{flex:1;min-width:0}.resume-copy small{display:block;font-size:10px;color:var(--skin-secondary);margin-bottom:6px}.resume-copy b{font-size:14px;color:var(--skin-text);font-weight:600;line-height:1.5}.resume-arrow{color:var(--skin-primary);font-size:21px}
+.study-hub{box-shadow:none;background:var(--skin-soft);border-color:transparent}.catalog-filters{display:flex;gap:3px;padding:4px;margin:13px 3px 8px;border-radius:11px;background:var(--skin-soft)}.catalog-filters button{flex:1;min-width:0;min-height:36px;padding:7px 4px;border:0;border-radius:8px;background:transparent;color:var(--skin-secondary);font-size:11px;cursor:pointer}.catalog-filters button[aria-pressed=true]{background:var(--skin-surface);box-shadow:0 2px 7px #1723330a;color:var(--skin-primary);font-weight:600}.catalog-results{margin:11px 10px 0;font-size:10px;color:var(--skin-secondary)}.catalog-heading{margin-top:19px}.catalog-item.active .catalog-copy b{font-weight:650}.catalog-item:hover{background:var(--skin-soft)}.catalog-item.active:hover{background:var(--skin-selected)}.reading-location small{display:flex;align-items:center;gap:10px}.reading-location small span{font-variant-numeric:tabular-nums;opacity:.8;font-size:9px;font-weight:400}
+.article{box-shadow:0 10px 40px #18253904}.article-header{padding-bottom:27px}.article-kicker{margin-bottom:14px}.section+.section{margin-top:15px;padding-top:30px}.poem,.article--prose .poem{line-height:2.25}.answer-actions{display:flex;justify-content:flex-end;gap:6px;margin:-3px 0 13px}.answer-actions button{font-size:11px;border:1px solid var(--skin-edge);color:var(--skin-primary);background:var(--skin-surface);padding:8px 11px;min-height:36px;border-radius:9px;cursor:pointer}.answer-actions button:hover{background:var(--skin-selected)}.simple-answer summary{display:flex;align-items:center;gap:8px;list-style:none;width:fit-content}.simple-answer summary::-webkit-details-marker{display:none}.simple-answer summary::after{content:'+';font-family:var(--ui);font-size:16px;line-height:1;opacity:.75}.simple-answer[open]>summary::after{content:'−'}.simple-answer[open]>summary{background:var(--skin-soft);color:var(--skin-secondary)}.reference-line{border-left:2px solid var(--skin-primary)!important}.analysis-reference>summary{font-size:12px;color:var(--skin-primary)}.evidence-grid{gap:14px}.evidence-card blockquote{line-height:1.95}.sample-answer{padding:16px 18px;background:var(--skin-surface);border-radius:12px;border:1px solid var(--skin-edge)}
+.chapter-navigation{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-top:1px solid var(--skin-edge);padding-top:23px;margin-top:30px}.chapter-navigation a{display:flex;flex-direction:column;gap:9px;min-width:0;min-height:77px;padding:16px;background:var(--skin-soft);border:1px solid transparent;border-radius:14px;text-decoration:none;transition:border-color 140ms ease,background 140ms ease}.chapter-navigation a:hover{background:var(--skin-selected);border-color:var(--skin-edge)}.chapter-navigation a:last-child{text-align:right}.chapter-navigation small{font-size:10px;color:var(--skin-secondary)}.chapter-navigation b{font-size:12px;font-weight:550;line-height:1.55;color:var(--skin-primary)}.chapter-boundary{align-self:center;font-family:var(--serif);font-size:12px;color:var(--skin-secondary);padding:14px}
+@media(max-width:900px){.resume-card{max-width:760px}}
+@media(max-width:540px){.resume-card{padding:15px 18px;border-radius:18px;gap:12px}.resume-copy b{font-size:13px}.catalog-filters button{min-height:40px}.chapter-navigation{gap:9px}.chapter-navigation a{padding:13px 11px}.chapter-navigation b{font-size:11px}.answer-actions button{min-height:40px}.study-hub{padding:16px 20px}.study-hub .eyebrow{display:none}.study-hub h3{font-size:15px}.study-hub .study-hint{line-height:1.7!important}.reading-tools{box-shadow:0 7px 25px #14233e0b}.section+.section{margin-top:12px}.article-header{padding-bottom:23px}}
+@media(prefers-reduced-motion:reduce){.resume-card,.chapter-navigation a{transition:none}.resume-card:active{transform:none}}
+}
+@media print{.resume-card,.catalog-filters,.catalog-results,.answer-actions,.chapter-navigation{display:none!important}}
+
 </style>
+<script>try{const skin=localStorage.getItem('poetry-reader-skin');if(['jade','pearl','sand','rose','night','ink'].includes(skin))document.documentElement.dataset.skin=skin;}catch{}</script>
 </head>
 <body>
+  <header class="app-bar"><a class="app-brand" href="#main" aria-label="诗文，返回页首"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v15M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1Z"/></svg><b>诗文</b><span>高中阅读集</span></a><div class="app-actions"><span class="app-count">72 篇 · 随时静读</span><button id="appearanceShortcut" type="button" aria-label="打开阅读皮肤设置">外观</button></div></header>
   <a class="skip-link" href="#main">跳到正文</a>
   <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-controls="sidebar" aria-expanded="true" aria-label="收起目录">
     <span aria-hidden="true">‹</span>
@@ -130,25 +221,28 @@ body.focus-reading .article .section:not(.original){display:none}body.focus-read
       <div class="brand-mark">72</div>
       <div>
         <h1>高中古诗文</h1>
-        <p>2025 课标精校</p>
+        <p>阅读 · 默写 · 鉴赏</p>
       </div>
     </header>
     <label class="catalog-search"><span aria-hidden="true">⌕</span><input id="catalogSearch" type="search" placeholder="搜索篇名、作者" aria-label="搜索篇名、作者" autocomplete="off"></label><p id="searchEmpty" class="search-empty" hidden>没有找到篇目，试试作者或标题关键词。</p>
-    <nav id="catalog" class="catalog"></nav>
+    <div class="catalog-filters" role="group" aria-label="筛选篇目"><button type="button" data-category="all" aria-pressed="true">全部</button><button type="button" data-category="文言文" aria-pressed="false">文言文</button><button type="button" data-category="诗词曲" aria-pressed="false">诗词曲</button></div><p class="catalog-results" id="catalogCount" aria-live="polite">72 篇</p><nav id="catalog" class="catalog"></nav>
   </aside>
   <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="关闭目录" hidden></button>
 
   <main class="main" id="main" tabindex="-1" aria-label="高中72篇必背古诗文正文">
     <header class="hero">
 <svg class="landscape" viewBox="0 0 600 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs><linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#a9c6b1" stop-opacity=".4"/><stop offset="1" stop-color="#507f68" stop-opacity=".55"/></linearGradient></defs><circle cx="407" cy="96" r="35" fill="#d5d6ac" opacity=".6"/><path d="M0 360 Q65 210 114 260 Q165 178 210 237 Q275 108 313 204 Q356 164 402 250 Q470 188 525 294 L600 235 V420 H0Z" fill="#b5cbbb" opacity=".55"/><path d="M30 420 Q120 305 180 335 Q250 190 306 292 Q349 235 397 295 Q464 178 504 251 Q540 220 600 324 V420Z" fill="url(#mountain)"/><path d="M120 420 Q215 339 302 370 T600 347 V420Z" fill="#7b9e8a" opacity=".4"/><path d="M0 399 Q177 366 335 404 T600 382" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/><path d="m338 127 8-3 8 4m20 9 7-3 7 2" fill="none" stroke="#739582" stroke-width="1.4"/></svg>
-      <p class="eyebrow">青绿书卷 / 高中古诗文阅读集</p>
-      <h2>在字里行间，<br>与千年相见。<span>高中 72 篇必背古诗文</span></h2>
-      <p class="hero-copy">从一字一句，读懂一篇。全文、注释、赏析与默写，陪你把书读薄，把记忆留深。</p>
+      <p class="eyebrow">READ · THINK · REMEMBER</p>
+      <h2>静下来，<br>读懂字里千年。<span>高中 72 篇必背古诗文</span></h2>
+      <p class="hero-copy">原文、默写与鉴赏，都在一处。<br>从容读，慢慢记。</p>
       <div class="hero-meta" aria-label="内容统计">
         <span><b>72</b> 篇目</span><span><b>32</b> 文言文</span><span><b>40</b> 诗词曲</span><span><b>216</b> 理解性默写</span>
       </div>
     </header>
-    <div class="reading-tools"><p>慢慢读，让每一句有回响。</p><div class="tool-actions"><button type="button" id="fontDown" aria-label="减小字号">A−</button><button type="button" id="fontUp" aria-label="增大字号">A＋</button><button type="button" id="focusReading" aria-pressed="false">纯净阅读</button></div></div>
+    <a class="resume-card" id="resumeReading" href="#article-1"><span class="resume-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 4h10v17l-5-4-5 4z"/></svg></span><span class="resume-copy"><small id="resumeLabel">开始阅读</small><b id="resumeTitle">论语（十二章）</b></span><span class="resume-arrow" aria-hidden="true">↗</span></a>
+    <section class="study-hub" aria-label="默写与鉴赏"><div><p class="eyebrow">温故 · 知新</p><h3>默写与情感分析</h3><p>216 道理解性默写 · 40 篇诗词精析</p></div><p class="study-hint">想一想，再看答案。每道题都可以一键显示或隐藏，无需填写。</p></section>
+    <details class="skin-studio" id="appearancePanel"><summary><span class="skin-summary"><span class="skin-dot" aria-hidden="true"></span><b>阅读皮肤</b><small id="skinCurrent" aria-live="polite">青绿书卷 · 点击切换</small></span></summary><div class="skin-grid" role="group" aria-label="选择阅读皮肤"><button type="button" class="skin-option" data-skin-choice="jade" aria-pressed="false" style="--preview-bg:#edf2ef;--preview-paper:#fffefa;--preview-line:#d6e1d4;--preview-accent:#356b57"><span class="skin-preview" aria-hidden="true"><i></i><span></span></span><strong>青绿书卷</strong><small>青山入卷，清新自然</small></button><button type="button" class="skin-option" data-skin-choice="pearl" aria-pressed="false" style="--preview-bg:#f0f3f8;--preview-paper:#ffffff;--preview-line:#dce3ef;--preview-accent:#3d6ec2"><span class="skin-preview" aria-hidden="true"><i></i><span></span></span><strong>冰川白</strong><small>轻盈留白，简洁通透</small></button><button type="button" class="skin-option" data-skin-choice="sand" aria-pressed="false" style="--preview-bg:#f3ece0;--preview-paper:#fffaf0;--preview-line:#e5d6bf;--preview-accent:#9c643b"><span class="skin-preview" aria-hidden="true"><i></i><span></span></span><strong>暖杏笺</strong><small>暖纸墨香，柔和耐看</small></button><button type="button" class="skin-option" data-skin-choice="rose" aria-pressed="false" style="--preview-bg:#f6edf0;--preview-paper:#fffafc;--preview-line:#ead6e1;--preview-accent:#a4527a"><span class="skin-preview" aria-hidden="true"><i></i><span></span></span><strong>落樱粉</strong><small>淡粉春色，温柔明净</small></button><button type="button" class="skin-option" data-skin-choice="night" aria-pressed="false" style="--preview-bg:#101a28;--preview-paper:#192637;--preview-line:#34465d;--preview-accent:#a0c4ff"><span class="skin-preview" aria-hidden="true"><i></i><span></span></span><strong>深海蓝</strong><small>静夜沉读，低亮柔光</small></button><button type="button" class="skin-option" data-skin-choice="ink" aria-pressed="false" style="--preview-bg:#191a1b;--preview-paper:#232526;--preview-line:#45433e;--preview-accent:#d0b57e"><span class="skin-preview" aria-hidden="true"><i></i><span></span></span><strong>曜石黑</strong><small>黑金点缀，沉静克制</small></button></div></details>
+    <div class="reading-tools" aria-label="阅读工具栏"><div class="reading-location"><small>正在阅读 <span id="chapterPosition">01 / 72</span></small><p id="currentReading">论语（十二章）</p></div><nav class="section-switch" aria-label="本篇快速跳转"><button type="button" data-jump-section="original">原文</button><button type="button" data-jump-section="dictation">默写</button><button type="button" data-jump-section="analysis">鉴赏</button></nav><div class="tool-actions"><button type="button" id="fontDown" aria-label="减小字号">A−</button><button type="button" id="fontUp" aria-label="增大字号">A＋</button><button type="button" id="focusReading" aria-pressed="false">纯净阅读</button></div></div>
     <div id="content" class="content"></div>
     <footer class="footer">青绿书卷 · 72 篇古诗文<br><br>古籍用字及教材版本可能存在差异，考试请以学校现用教材与当地要求为准。</footer>
   </main>
@@ -336,6 +430,9 @@ const themeMap={
 };
 
 
+const emotionBank = {"静女": {"flow": "期待与焦急→收礼欣喜→爱屋及乌", "points": [{"quote": "搔首踟蹰", "explain": "动作描写写出等待恋人时的焦急，体现珍视与期待。", "technique": "细节描写"}, {"quote": "匪女之为美，美人之贻", "explain": "物品可贵在于赠者是心上人，表现真挚爱意。", "technique": "直抒胸臆"}], "pitfall": "“爱而不见”的“爱”通“薆”，不能解释为“不爱对方”。"}, "无衣": {"flow": "同仇敌忾→整装待发→共同出征", "points": [{"quote": "与子同袍", "explain": "愿共享战袍，表现同心互助、团结御敌的情谊。", "technique": "反复咏叹"}, {"quote": "与子偕行", "explain": "由共同仇敌、一起准备推进到共同出征，情绪愈发昂扬。", "technique": "重章叠句、层层推进"}], "pitfall": "不要只答“友情”，还要点明共同御敌的战斗热情。"}, "离骚（节选）": {"flow": "自许高洁→忧时惜时→主动引路", "points": [{"quote": "扈江离与辟芷兮，纫秋兰以为佩", "explain": "以佩戴芳草写修洁自身，表达对高尚品德的追求。", "technique": "香草比兴"}, {"quote": "来吾道夫先路", "explain": "愿为君王引路，表现改革政治、积极进取的担当。", "technique": "直接抒情"}], "pitfall": "本页是开篇节选，应紧扣修身、惜时与引路，不要套用未选入的语句。"}, "涉江采芙蓉": {"flow": "采花欲赠→路远难达→相思忧伤", "points": [{"quote": "所思在远道", "explain": "采花欲赠而爱人在远方，愿望与现实形成落差，生出思念之苦。", "technique": "设问"}, {"quote": "同心而离居，忧伤以终老", "explain": "彼此相爱却不能相聚，直接表达离居相思的深重忧伤。", "technique": "直抒胸臆"}], "pitfall": "抒情主体的视角有不同解释，答题优先抓住“同心而离居”，不武断限定性别。"}, "短歌行": {"flow": "叹人生短暂→渴求贤才→期望天下归心", "points": [{"quote": "青青子衿，悠悠我心", "explain": "借《诗经》成句写绵长思念，将对贤才的渴求表达得深切。", "technique": "引用、用典"}, {"quote": "周公吐哺，天下归心", "explain": "以周公礼贤下士自励，表达招纳人才、实现统一的抱负。", "technique": "用典言志"}], "pitfall": "开头虽有忧叹，主旨并非消极享乐，而是珍惜时光、求贤建业。"}, "归园田居（其一）": {"flow": "厌倦官场→向往田园→归返欣喜", "points": [{"quote": "羁鸟恋旧林，池鱼思故渊", "explain": "以笼鸟池鱼自比，表现受束缚的苦闷和对自由生活的向往。", "technique": "比喻、对偶"}, {"quote": "久在樊笼里，复得返自然", "explain": "将官场比作樊笼，写摆脱束缚、回归本性的轻松喜悦。", "technique": "比喻、直抒胸臆"}], "pitfall": "田园景物的闲适要联系“守拙”与回归本性，不能只写风景优美。"}, "拟行路难（其四）": {"flow": "自我宽解→愤懑难平→压抑吞声", "points": [{"quote": "泻水置平地，各自东西南北流", "explain": "以水流方向不同引出人生际遇不一，寄寓对不公平处境的感慨。", "technique": "比兴"}, {"quote": "心非木石岂无感", "explain": "反问冲破自我宽解，表明内心愤懑难以平息。", "technique": "反问"}], "pitfall": "“不敢言”体现现实压抑，不等于没有不平，也不宜把全诗概括成安于命运。"}, "春江花月夜": {"flow": "月夜欣赏→宇宙人生思索→游子思妇相思", "points": [{"quote": "人生代代无穷已，江月年年望相似", "explain": "将代代相继的人生与年年相似的江月并写，蕴含对生命和时间的思索。", "technique": "对照、哲理抒情"}, {"quote": "此时相望不相闻，愿逐月华流照君", "explain": "希望随月光照到对方身边，表达相隔两地、难以相见的思念。", "technique": "想象、借月抒情"}], "pitfall": "“人生短暂”并非全诗唯一情感，需同时注意生命相续与相思之情。"}, "山居秋暝": {"flow": "欣赏清幽山景→感受生活生机→愿意留居", "points": [{"quote": "明月松间照，清泉石上流", "explain": "月色与清泉构成清幽明净的山居环境，寄托对自然生活的喜爱。", "technique": "动静结合、借景抒情"}, {"quote": "王孙自可留", "explain": "将山居写成值得留恋的所在，表达留居山中的愿望。", "technique": "化用典故"}], "pitfall": "空山并非无人，浣女与渔舟呈现的是宁静而有生机的生活。"}, "蜀道难": {"flow": "惊叹高险→忧惧行旅→警惕人事之险", "points": [{"quote": "黄鹤之飞尚不得过，猿猱欲度愁攀援", "explain": "连善飞善攀者也难通过，从侧面突出山势险峻，强化惊惧感。", "technique": "夸张、侧面烘托"}, {"quote": "所守或匪亲，化为狼与豺", "explain": "由山川险阻转到守关者可能作乱，表现对人事风险的忧虑。", "technique": "比喻、由景入议"}], "pitfall": "不能只答赞美山河，还要注意劝返、忧惧及对割据风险的警惕。"}, "梦游天姥吟留别": {"flow": "神往仙境→梦醒失落→蔑视权贵", "points": [{"quote": "惟觉时之枕席，失向来之烟霞", "explain": "梦中奇境消失，只剩眼前枕席，形成强烈落差，写梦醒怅惘。", "technique": "梦境与现实对照"}, {"quote": "安能摧眉折腰事权贵", "explain": "反问语气强烈，表现维护人格尊严、不屈从权贵的态度。", "technique": "反问、直抒胸臆"}], "pitfall": "不可只答逃避现实，结尾明确表达独立人格和对权贵的蔑视。"}, "将进酒": {"flow": "悲时光易逝→自信豪放→愤激与深愁", "points": [{"quote": "天生我材必有用", "explain": "肯定自身才能与价值，在失意中仍保持自信。", "technique": "直抒胸臆"}, {"quote": "与尔同销万古愁", "explain": "以夸大的“万古”写愁深而广，点出豪饮背后的失意与愤懑。", "technique": "夸张"}], "pitfall": "豪放与悲愤并存，不要把劝酒简单解释成纵情享乐。"}, "燕歌行": {"flow": "出征声威→败战危急→征人离苦→追怀良将", "points": [{"quote": "战士军前半死生，美人帐下犹歌舞", "explain": "战士浴血与将领享乐形成对比，揭露将领不恤士卒，表达愤慨。", "technique": "对比"}, {"quote": "至今犹忆李将军", "explain": "追怀体恤士卒的李广，寄托对良将的期盼，也反衬眼前将领。", "technique": "用典、借古讽今"}], "pitfall": "既同情士卒、赞赏其牺牲，也批评将领；不能泛化成单一的反战主题。"}, "蜀相": {"flow": "寻访敬仰→景中伤感→赞颂功业→壮志未酬之悲", "points": [{"quote": "三顾频烦天下计，两朝开济老臣心", "explain": "概括诸葛亮的才略与忠诚，表达崇敬和赞美。", "technique": "史事概括、对偶"}, {"quote": "出师未捷身先死", "explain": "为诸葛亮未成大业而早逝叹惋，也引起后世有志者的共鸣。", "technique": "直抒胸臆"}], "pitfall": "“自”“空”使美景染上寂寥，不能将颔联仅理解为赏春喜悦。"}, "客至": {"flow": "闲居清寂→迎客欣喜→率真畅饮", "points": [{"quote": "蓬门今始为君开", "explain": "写专为友人开门迎接，表现重视友人、喜迎来客。", "technique": "生活细节"}, {"quote": "隔篱呼取尽余杯", "explain": "隔篱邀邻翁共饮，表现热情、随意而真诚的待客之情。", "technique": "动作描写"}], "pitfall": "家贫酒薄是自谦与真诚，情感重心是喜客，不是诉苦。"}, "登高": {"flow": "悲秋景象→漂泊老病→困顿苦闷", "points": [{"quote": "万里悲秋常作客，百年多病独登台", "explain": "远离故乡、长年漂泊，又值晚年多病且独自登高，身世之悲层层叠加。", "technique": "对偶、直抒胸臆"}, {"quote": "艰难苦恨繁霜鬓", "explain": "世事艰难与自身困顿催添白发，深化忧苦之情。", "technique": "情景照应"}], "pitfall": "不能只写“悲秋”，应落实漂泊、孤独、老病与艰难处境；忧时解释需联系背景。"}, "登岳阳楼": {"flow": "登临开阔→自叹孤苦→忧国伤时", "points": [{"quote": "亲朋无一字，老病有孤舟", "explain": "亲友音信断绝，老病漂泊，表现孤苦无依的身世之感。", "technique": "对照、叙事抒情"}, {"quote": "戎马关山北，凭轩涕泗流", "explain": "由个人遭遇转向北方战事，为国家动荡而流泪，表现忧国情怀。", "technique": "直抒胸臆"}], "pitfall": "末联由身世之悲转入国事之忧，不能全答为思乡。"}, "琵琶行（并序）": {"flow": "送别凄清→闻乐动情→身世共鸣→悲情加深", "points": [{"quote": "同是天涯沦落人", "explain": "将琵琶女与自己的失意相联，既同情对方，也慨叹自身遭际。", "technique": "直抒胸臆、人物映照"}, {"quote": "江州司马青衫湿", "explain": "以泪湿衣衫的细节收束，表现感伤之深与命运共鸣。", "technique": "细节描写、侧面表达"}], "pitfall": "音乐描写不只是展示技巧，还与人物身世和情感起伏相联。"}, "李凭箜篌引": {"flow": "奇音动人→惊动天地→余韵不绝", "points": [{"quote": "昆山玉碎凤凰叫", "explain": "以玉碎、凤鸣类比乐声，展现声音的清脆与婉转，赞叹演奏之妙。", "technique": "比喻、以声写声"}, {"quote": "老鱼跳波瘦蛟舞", "explain": "以老鱼瘦蛟也为之起舞的奇想，烘托音乐的强大感染力。", "technique": "想象、侧面烘托"}], "pitfall": "神怪意象主要服务于音乐表现，不宜机械套用忧国、思乡等主题。"}, "菩萨蛮（小山重叠金明灭）": {"flow": "慵懒起身→精心梳妆→孤独暗显", "points": [{"quote": "懒起画蛾眉，弄妆梳洗迟", "explain": "“懒”“迟”写出意兴阑珊，暗示人物内心寂寞。", "technique": "动作细节、炼字"}, {"quote": "双双金鹧鸪", "explain": "衣上鸟儿成双反衬人物独处，使闺中孤寂含蓄显现。", "technique": "反衬"}], "pitfall": "艳丽妆饰与内心孤寂形成反差，不能由华美外貌直接推断心情欢快。"}, "锦瑟": {"flow": "追忆华年→朦胧哀感→惘然难释", "points": [{"quote": "一弦一柱思华年", "explain": "琴弦触发对往昔年华的追忆，奠定感怀基调。", "technique": "触景生情"}, {"quote": "只是当时已惘然", "explain": "不仅如今回忆惆怅，当年身在其中也已惘然，写难以排遣的失落。", "technique": "直抒胸臆"}], "pitfall": "悼亡、自伤等具体解释历来有争议；答题先立足追忆、哀感、惘然，不强定唯一背景。"}, "虞美人（春花秋月何时了）": {"flow": "往事追忆→故国之痛→愁绪无尽", "points": [{"quote": "雕栏玉砌应犹在，只是朱颜改", "explain": "想象宫殿犹在而人事已非，抒发物是人非、故国难返的哀痛。", "technique": "今昔对比、虚写"}, {"quote": "恰似一江春水向东流", "explain": "以绵延流动的江水比无尽愁绪，将抽象哀愁化为可感形象。", "technique": "设问、比喻"}], "pitfall": "春花秋月是引发痛苦的美景，不能按普通伤春词理解。"}, "望海潮（东南形胜）": {"flow": "总写繁华→铺写物阜民丰→赞美钱塘胜景", "points": [{"quote": "有三秋桂子，十里荷花", "explain": "从季节与空间铺展桂荷之美，表达对杭州景色的赞赏。", "technique": "铺陈、数量词运用"}, {"quote": "嬉嬉钓叟莲娃", "explain": "写渔翁采莲女的欢乐生活，呈现承平气象。", "technique": "人物描写、点面结合"}], "pitfall": "写景还包括城市经济与民众生活；结尾兼有对地方长官的称颂。"}, "桂枝香·金陵怀古": {"flow": "江山壮美→追叹六朝→借古警今", "points": [{"quote": "叹门外楼头，悲恨相续", "explain": "以亡国史事叹六朝覆亡相继，表达对统治者沉迷享乐的批评。", "technique": "用典、借古讽今"}, {"quote": "至今商女，时时犹唱，后庭遗曲", "explain": "亡国之音仍被传唱，暗含后人未能吸取历史教训的忧虑。", "technique": "用典、以景事结情"}], "pitfall": "不能停留在怀古伤感，还要指出历史教训与现实警戒。"}, "江城子·乙卯正月二十日夜记梦": {"flow": "长久思念→梦中重逢→醒后哀痛", "points": [{"quote": "不思量，自难忘", "explain": "无需刻意回想也不能忘却，表现对亡妻深长而自然的思念。", "technique": "直抒胸臆"}, {"quote": "相顾无言，惟有泪千行", "explain": "梦中相见却无言流泪，以沉默与泪水写悲喜交集、哀痛难言。", "technique": "细节描写、以无言写深情"}], "pitfall": "“料得”是想象，“梦”与现实需区分，不要把梦中相逢当成实事。"}, "念奴娇·赤壁怀古": {"flow": "壮景怀古→赞叹周瑜→自伤身世→寄情江月", "points": [{"quote": "雄姿英发", "explain": "赞赏周瑜年轻有为、风姿出众，寄托对建功立业的向往。", "technique": "人物描写"}, {"quote": "多情应笑我，早生华发", "explain": "将自己早生白发与周瑜功业相照，表达功业未成的感慨与自嘲。", "technique": "古今对照"}], "pitfall": "结尾有自我排解，不能把全词简单归为消极颓废或一味旷达。"}, "登快阁": {"flow": "暂离公事→登临开怀→知音难觅→向往归隐", "points": [{"quote": "朱弦已为佳人绝", "explain": "借伯牙绝弦典故，写知音难觅的孤独与怅惘。", "technique": "用典"}, {"quote": "此心吾与白鸥盟", "explain": "愿与白鸥为伴，表达摆脱俗务、归向自由生活的愿望。", "technique": "用典、托物寄意"}], "pitfall": "开阔景物并未消除全部苦闷，要看颈联的知音之叹和尾联的归意。"}, "鹊桥仙（纤云弄巧）": {"flow": "相逢珍贵→离别难舍→赞颂坚贞", "points": [{"quote": "金风玉露一相逢，便胜却人间无数", "explain": "赞美牛郎织女相逢的纯美与珍贵，强调爱情的质量。", "technique": "对比、议论抒情"}, {"quote": "两情若是久长时，又岂在朝朝暮暮", "explain": "以反问肯定长久坚贞的爱情，超越日常聚散之限。", "technique": "反问、议论升华"}], "pitfall": "不是否定相聚或离愁，而是在珍惜相逢的基础上强调坚贞。"}, "苏幕遮（燎沉香）": {"flow": "夏日观荷→触景思乡→梦归故里", "points": [{"quote": "故乡遥，何日去", "explain": "从眼前荷景转向故乡，直接写久客他乡、盼望归去的心情。", "technique": "设问、直抒胸臆"}, {"quote": "小楫轻舟，梦入芙蓉浦", "explain": "梦中乘舟进入故乡荷塘，以想象满足归乡愿望，表现思乡之深。", "technique": "虚写、以景结情"}], "pitfall": "上阕荷景与下阕乡思有关联，不要割裂为单纯写景和独立抒情。"}, "声声慢（寻寻觅觅）": {"flow": "寻觅无着→孤冷伤心→愁绪层层积聚", "points": [{"quote": "寻寻觅觅，冷冷清清，凄凄惨惨戚戚", "explain": "从动作到环境再到内心，由外而内表现失落、冷寂与悲苦。", "technique": "叠词、层层推进"}, {"quote": "梧桐更兼细雨", "explain": "梧桐细雨的凄清声响不断触动愁绪，将孤独写得绵长难尽。", "technique": "借景抒情、听觉描写"}], "pitfall": "可以结合身世谈悼亡、漂泊，但不能离开词句只罗列时代背景。"}, "书愤（其一）": {"flow": "追忆壮志与战事→慨叹衰老失意→仰慕先贤自励", "points": [{"quote": "塞上长城空自许", "explain": "自许能守边报国却未能实现，“空”写出壮志难酬的愤懑。", "technique": "用典、炼字"}, {"quote": "出师一表真名世", "explain": "赞颂诸葛亮忠诚北伐，以先贤自勉，表达报国之志不改。", "technique": "用典"}], "pitfall": "“愤”不只是年老，而是报国愿望受阻、国土未复的悲愤。"}, "临安春雨初霁": {"flow": "厌倦世味→客居听雨→闲中排遣→盼归", "points": [{"quote": "世味年来薄似纱", "explain": "以薄纱比世态淡薄，流露对官场人情的失望。", "technique": "比喻"}, {"quote": "矮纸斜行闲作草，晴窗细乳戏分茶", "explain": "写作草书、分茶消磨时光，在表面闲适中含蓄流露无事可为的落寞。", "technique": "细节描写、寓情于事"}], "pitfall": "不能因杏花春雨与分茶场景，就把全诗判作纯粹闲适愉悦。"}, "念奴娇·过洞庭": {"flow": "湖月澄澈→心物相契→自明高洁→豪放超然", "points": [{"quote": "孤光自照，肝肺皆冰雪", "explain": "以冰雪比喻纯洁光明的心地，表现不因遭际而改的高洁品格。", "technique": "比喻、托景言志"}, {"quote": "尽挹西江，细斟北斗，万象为宾客", "explain": "想象取江水为酒、北斗为勺、万象为客，展现豪迈旷达的胸怀。", "technique": "夸张、想象"}], "pitfall": "景物的澄澈与人格的高洁互相映照，不能只写泛舟赏月之乐。"}, "永遇乐·京口北固亭怀古": {"flow": "追怀英雄→警惕轻战→忧虑现实→报国无门", "points": [{"quote": "元嘉草草，封狼居胥，赢得仓皇北顾", "explain": "借刘义隆草率北伐失败的教训，表达对仓促用兵的警惕。", "technique": "用典、借古讽今"}, {"quote": "凭谁问：廉颇老矣，尚能饭否", "explain": "以廉颇自况，写虽老仍愿报国，却无人任用的悲愤。", "technique": "用典、反问"}], "pitfall": "警惕草率出兵不等于反对恢复；需区分不同典故的作用。"}, "菩萨蛮·书江西造口壁": {"flow": "悲悯流离→北望受阻→意志不屈→忧愁难解", "points": [{"quote": "中间多少行人泪", "explain": "把江水与流离者泪水相联，寄寓对战乱中百姓的同情。", "technique": "夸张、情景交融"}, {"quote": "青山遮不住，毕竟东流去", "explain": "江水终究东流，在受阻的忧愁中又透出不可遏止的意志与力量。", "technique": "借景寓意"}], "pitfall": "结尾仍是“愁”，情绪有曲折，不宜概括为全词乐观或作唯一政治寓意解释。"}, "青玉案·元夕": {"flow": "元夕繁华→寻觅执着→意外相见", "points": [{"quote": "众里寻他千百度", "explain": "写在人群中反复寻觅，表现执着与期待。", "technique": "夸张、叙事抒情"}, {"quote": "那人却在，灯火阑珊处", "explain": "所寻之人独处灯火稀疏处，与热闹人群形成反差，突出其独特形象。", "technique": "对比、反衬"}], "pitfall": "可以联系寄托理解高洁自守，但须先分析寻觅情境，不能将象征解释视为唯一结论。"}, "扬州慢（淮左名都）": {"flow": "昔盛今衰→痛惜兵祸→空城凄清→余哀不尽", "points": [{"quote": "过春风十里，尽荠麦青青", "explain": "昔日繁华之地如今遍生荠麦，鲜明落差表现对城市残破的痛惜。", "technique": "今昔对比、化用诗句"}, {"quote": "废池乔木，犹厌言兵", "explain": "连池苑树木也厌谈战争，以拟人突出兵祸创伤之深。", "technique": "拟人"}], "pitfall": "结尾红药无人赏写战后荒凉与黍离之悲，不是一般的惜花伤春。"}, "贺新郎（国脉微如缕）": {"flow": "忧国危急→呼吁用才→警示敌情→勉励报国", "points": [{"quote": "未必人间无好汉，谁与宽些尺度", "explain": "指出并非缺少人才，而是选用标准拘狭，寄寓对用人弊端的不满。", "technique": "反问、议论"}, {"quote": "快投笔，莫题柱", "explain": "以典故劝勉友人投身救国实业，不应只求个人功名。", "technique": "用典、劝勉"}], "pitfall": "不要把全部用典都答成怀才不遇，须对应“用人”“御敌”“劝友”等具体作用。"}, "长亭送别（正宫·端正好）": {"flow": "深秋萧瑟→离情凝聚→悲愁染景", "points": [{"quote": "碧云天，黄花地，西风紧，北雁南飞", "explain": "秋色、紧风与南飞雁共同营造萧瑟离别环境，烘托人物愁绪。", "technique": "意象组合、借景抒情"}, {"quote": "总是离人泪", "explain": "想象霜林被离人的泪染红，将离愁融入景色，写出悲伤之深。", "technique": "设问、夸张、移情"}], "pitfall": "这是莺莺的离别情绪；本页仅选《端正好》，不要把整折内容当作本曲原句。"}, "朝天子·咏喇叭": {"flow": "写其声势→揭其扰民→痛斥其害", "points": [{"quote": "曲儿小腔儿大", "explain": "以曲小腔大讽刺虚张声势、仗势欺人的丑态。", "technique": "对比、托物讽刺"}, {"quote": "军听了军愁，民听了民怕", "explain": "从军民反应写其扰害，表达对百姓的同情和对弄权者的痛斥。", "technique": "侧面描写"}], "pitfall": "咏喇叭是讽刺载体，不能只答对乐器声音的不满。"}};
+Object.entries(emotionBank).forEach(([title, info]) => {themeMap[title] = info.points.map(point => point.explain).join(" ");});
+
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
@@ -343,6 +440,7 @@ const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':
 const STORAGE_KEY = 'gushiwen72.sidebarCollapsed';
 const MOBILE_QUERY = '(max-width: 900px)';
 
+const previousReadingTitle = (() => { try { return localStorage.getItem('poetry-last-title'); } catch { return null; } })();
 const state = {
   collapsed: false,
   mobile: matchMedia(MOBILE_QUERY).matches,
@@ -406,8 +504,28 @@ function renderNotes(text) {
 
 function renderDictation(title) {
   const rows = quizBank[title] || [];
-  return `<div class="section-head"><h3>理解性默写</h3><span>${rows.length} 题</span></div>
-    <div class="dictation-list">${rows.map(([q, a], index) => `<article class="dictation-card"><div class="question"><b>${index + 1}</b><p>${escapeHTML(q)}</p></div><div class="answer"><span>答案</span><p>${escapeHTML(a)}</p></div></article>`).join('')}</div>`;
+  return `<div class="section-head"><h3>理解性默写</h3><span>${rows.length} 题 · 自编训练</span></div>
+    <div class="answer-actions" role="group" aria-label="本篇默写答案"><button type="button" data-answers="show">全部显示</button><button type="button" data-answers="hide">全部隐藏</button></div>
+    <div class="dictation-list">${rows.map(([q, answer], index) => `<article class="dictation-card"><div class="question"><b>${index + 1}</b><p>${escapeHTML(q)}</p></div>
+      <details class="simple-answer"><summary><span class="when-closed">显示答案</span><span class="when-open">隐藏答案</span></summary><div class="reference-line">${escapeHTML(answer)}</div></details>
+    </article>`).join('')}</div>`;
+}
+
+function renderAnalysis(item, index) {
+  const info = emotionBank[item.title];
+  if (!info) {
+    return `<section class="section"><h3>文意与作者态度</h3><div class="quiet-card"><p>${escapeHTML(themeMap[item.title] || '')}</p><p class="study-hint">论说文重点分析观点、理由与态度，不必强套诗词情感标签。</p></div><details class="study-detail"><summary>怎样组织这篇的分析？</summary><ol><li>从原文中找出直接表明观点或态度的一句。</li><li>解释这句话在具体语境中的含义。</li><li>联系叙事、论证或写景，说明作者为何这样表达。</li></ol></details></section>`;
+  }
+  const question = `结合《${item.title}》的具体语句，分析作品表达的情感或态度，并说明其表达方式。`;
+  return `<section class="section emotion-section"><div class="section-head"><h3>情感与表达 · 鉴赏</h3><span>自编题 · 非真题</span></div>
+    <p id="analysis-q-${index}" class="analysis-question">${escapeHTML(question)}</p>
+    <details class="study-detail analysis-reference"><summary><span class="when-closed">显示答案与分析</span><span class="when-open">隐藏答案与分析</span></summary>
+      <p class="study-hint">以下为学习参考，不是官方评分标准；解释应随题目设问和选段调整。</p>
+      <div class="emotion-flow">${info.flow.split('→').map((t,i) => `<span><b>${i+1}</b>${escapeHTML(t)}</span>`).join('<i aria-hidden="true">→</i>')}</div>
+      <div class="evidence-grid">${info.points.map(point => `<div class="evidence-card"><span class="technique">${escapeHTML(point.technique)}</span><blockquote>“${escapeHTML(point.quote)}”</blockquote><p>${escapeHTML(point.explain)}</p></div>`).join('')}</div>
+      <div class="analysis-caution"><b>容易答偏的地方</b><p>${escapeHTML(info.pitfall)}</p></div>
+      <h4>参考作答</h4><p class="sample-answer">${info.points.map((p,i)=>`${i+1}. “${escapeHTML(p.quote)}”运用${escapeHTML(p.technique)}，${escapeHTML(p.explain)}`).join('<br>')}</p>
+    </details></section>`;
 }
 
 function renderKnowledge(title, era, type) {
@@ -426,7 +544,7 @@ function renderExam(title, type, era) {
   return `<div class="exam-grid">
     <div class="exam-card"><h4>阅读抓手</h4><p>${escapeHTML(type === '诗词曲' ? '先抓意象与情感变化，再看炼字、用典、对比、虚实和情景关系。' : '先抓中心论点或叙事线索，再落实实词、句式、论证与人物态度。')}</p></div>
     <div class="exam-card"><h4>时代线索</h4><p>${escapeHTML(eraTips[era] || `${era}作品复习时注意时代背景与文本表达的联系。`)}</p></div>
-    <div class="exam-card wide"><h4>高频默写句</h4><p>${escapeHTML(answers.join('；') || '结合本篇理解性默写题重点复习。')}</p></div>
+    <div class="exam-card wide"><h4>本篇默写选句</h4><p>${escapeHTML(answers.join('；') || '结合本篇理解性默写题重点复习。')}</p></div>
   </div>`;
 }
 
@@ -450,34 +568,38 @@ function renderArticles() {
         ${range ? `<div class="range"><b>课标范围</b><span>${escapeHTML(range)}</span></div>` : ''}
       </section>
       <section class="section"><h3>重点注释</h3>${renderNotes(text)}</section>
-      <section class="section"><h3>主旨 · 赏析</h3><div class="summary">${escapeHTML(themeMap[title] || '结合全文把握内容、结构、语言和情感，重点理解课标指定语句在篇章中的作用。')}</div></section>
+      <section class="section overview-section"><h3>主旨 · 赏析</h3><div class="summary">${escapeHTML(themeMap[title] || '结合全文把握内容、结构、语言和情感，重点理解课标指定语句在篇章中的作用。')}</div></section>
       <section class="section dictation">${renderDictation(title)}</section>
+      ${renderAnalysis(item, index)}
       <section class="section"><h3>知识清单</h3>${renderKnowledge(title, era, type)}</section>
       <section class="section"><h3>考点精讲</h3>${renderExam(title, type, era)}</section>
+      <nav class="chapter-navigation" aria-label="相邻篇目">
+        ${index > 0 ? `<a href="#${articleId(index - 1)}"><small>← 上一篇</small><b>${escapeHTML(data[index-1].title)}</b></a>` : `<span class="chapter-boundary">开卷有益，慢慢读。</span>`}
+        ${index < data.length - 1 ? `<a href="#${articleId(index + 1)}"><small>下一篇 →</small><b>${escapeHTML(data[index+1].title)}</b></a>` : `<a href="#main"><small>已到最后一篇</small><b>返回首页 ↑</b></a>`}
+      </nav>
     </article>`;
   }).join('');
 }
 function syncSidebarA11y() {
   refs.toggle.setAttribute('aria-expanded', String(!state.collapsed));
   refs.toggle.setAttribute('aria-label', state.collapsed ? '展开目录' : '收起目录');
-  refs.toggle.firstElementChild.textContent = state.collapsed ? '☰' : '‹';
+  refs.toggle.firstElementChild.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M9 5v14"/></svg>';
   refs.sidebar.setAttribute('aria-hidden', String(state.collapsed));
   if ('inert' in refs.sidebar) refs.sidebar.inert = state.collapsed;
   if (refs.backdrop) refs.backdrop.hidden = state.collapsed || !state.mobile;
 }
 
 function setCollapsed(next, { preserveScroll = true, persist = true } = {}) {
-  const x = scrollX, y = scrollY;
+  const anchor = document.getElementById(articleId(state.activeIndex));
+  const oldTop = preserveScroll && !state.mobile && scrollY > 200 && anchor ? anchor.getBoundingClientRect().top : null;
   state.collapsed = Boolean(next);
   refs.body.classList.toggle('sidebar-collapsed', state.collapsed);
   syncSidebarA11y();
   if (persist && !state.mobile) storeSidebarState(state.collapsed);
-  if (preserveScroll) {
-    requestAnimationFrame(() => {
-      scrollTo(x, y);
-      requestAnimationFrame(() => scrollTo(x, y));
-    });
-  }
+  if (oldTop !== null) requestAnimationFrame(() => {
+    const shift = anchor.getBoundingClientRect().top - oldTop;
+    if (Math.abs(shift) > 1) window.scrollBy({top:shift,behavior:'instant'});
+  });
 }
 
 function initializeSidebar() {
@@ -515,48 +637,41 @@ function initializeSidebar() {
 function initializeActiveArticle() {
   const links = $$('.catalog-item', refs.catalog);
   const articles = $$('.article', refs.content);
-
+  const toolbar = document.querySelector('.reading-tools');
+  let scheduled = false;
+  let lastStored = previousReadingTitle;
   const activate = index => {
     if (!Number.isInteger(index) || index < 0 || index >= links.length) return;
-    if (state.activeIndex === index && links[index]?.classList.contains('active')) return;
+    if ((scrollY > 500 || location.hash.startsWith('#article-')) && lastStored !== data[index].title) {
+      try { localStorage.setItem('poetry-last-title', data[index].title); lastStored = data[index].title; } catch {}
+    }
+    if (state.activeIndex === index && links[index].classList.contains('active')) return;
     const previous = links[state.activeIndex];
-    if (previous) {
-      previous.classList.remove('active');
-      previous.removeAttribute('aria-current');
-    }
-
+    if (previous) { previous.classList.remove('active'); previous.removeAttribute('aria-current'); }
     state.activeIndex = index;
-    const active = links[index];
-    if (active) {
-      active.classList.add('active');
-      active.setAttribute('aria-current', 'true');
-    }
-    if (active && !state.collapsed) {
-      const sideRect = refs.sidebar.getBoundingClientRect();
-      const itemRect = active.getBoundingClientRect();
-      if (itemRect.top < sideRect.top + 82 || itemRect.bottom > sideRect.bottom - 22) {
-        const target = active.offsetTop - refs.sidebar.clientHeight * .36;
-        refs.sidebar.scrollTo({ top: Math.max(0, target), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-      }
+    document.getElementById('currentReading').textContent = data[index].title;
+    document.getElementById('chapterPosition').textContent = String(index + 1).padStart(2, '0') + ' / 72';
+    const active = links[index];active.classList.add('active');active.setAttribute('aria-current','true');
+    if (!state.collapsed && !active.hidden) {
+      const bounds = refs.sidebar.getBoundingClientRect(), item = active.getBoundingClientRect();
+      if (item.top < bounds.top + 20 || item.bottom > bounds.bottom - 20) refs.sidebar.scrollTo({top:Math.max(0, refs.sidebar.scrollTop + item.top - bounds.top - refs.sidebar.clientHeight * .4), behavior:'instant'});
     }
   };
-
-  const observer = new IntersectionObserver(entries => {
-    const candidates = entries
-      .filter(entry => entry.isIntersecting)
-      .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
-    if (candidates[0]) activate(Number(candidates[0].target.dataset.index));
-  }, { rootMargin: '-14% 0px -72% 0px', threshold: [0, 0.01] });
-
-  articles.forEach(article => observer.observe(article));
-
-  const hashMatch = location.hash.match(/^#article-(\d+)$/);
-  activate(hashMatch ? Math.max(0, Math.min(71, Number(hashMatch[1]) - 1)) : 0);
-
-  window.addEventListener('hashchange', () => {
-    const match = location.hash.match(/^#article-(\d+)$/);
-    if (match) activate(Math.max(0, Math.min(71, Number(match[1]) - 1)));
-  });
+  const update = () => {
+    scheduled = false;
+    const rect = toolbar.getBoundingClientRect();
+    const threshold = rect.top < 180 ? rect.bottom + 30 : 160;
+    let low=0, high=articles.length-1, current=0;
+    while(low<=high){const mid=(low+high)>>1;if(articles[mid].getBoundingClientRect().top<=threshold){current=mid;low=mid+1;}else high=mid-1;}
+    activate(current);
+  };
+  const schedule = () => {if(!scheduled){scheduled=true;requestAnimationFrame(update);}};
+  window.addEventListener('scroll',schedule,{passive:true});
+  window.addEventListener('resize',schedule,{passive:true});
+  refs.content.addEventListener('toggle',schedule,true);
+  const hashMatch=location.hash.match(/^#article-(\d+)$/);
+  activate(hashMatch ? Math.max(0,Math.min(71,Number(hashMatch[1])-1)) : 0);
+  window.addEventListener('hashchange',()=>{const match=location.hash.match(/^#article-(\d+)$/);if(match)activate(Math.max(0,Math.min(71,Number(match[1])-1)));});
 }
 
 function validateData() {
@@ -589,25 +704,34 @@ initializeSidebar();
 initializeActiveArticle();
 
 const searchInput = document.getElementById('catalogSearch');
-searchInput.addEventListener('input', () => {
+let catalogCategory = 'all';
+function filterCatalog() {
   const query = searchInput.value.trim().toLowerCase();
   let count = 0;
   document.querySelectorAll('.catalog-item').forEach(link => {
     const item = data[Number(link.dataset.index)];
-    const visible = (item.title + item.author + item.era).toLowerCase().includes(query);
-    link.hidden = !visible;
-    link.style.display = visible ? '' : 'none';
+    const visible = (catalogCategory === 'all' || item.type === catalogCategory) && (item.title + item.author + item.era).toLowerCase().includes(query);
+    link.hidden = !visible;link.style.display = visible ? '' : 'none';
     if (visible) count++;
   });
   document.querySelectorAll('.catalog-group').forEach(group => { group.hidden = !group.querySelector('.catalog-item:not([hidden])'); });
   document.getElementById('searchEmpty').hidden = count > 0;
-});
+  document.getElementById('catalogCount').textContent = count + ' 篇' + (query ? ' · 搜索结果' : '');
+}
+searchInput.addEventListener('input', filterCatalog);
+document.querySelectorAll('[data-category]').forEach(button => button.addEventListener('click', () => {
+  catalogCategory = button.dataset.category;
+  document.querySelectorAll('[data-category]').forEach(item => item.setAttribute('aria-pressed',String(item===button)));
+  filterCatalog();
+}));
 let readingSize = 20;
+try { const saved = Number(localStorage.getItem('poetry-reading-size')); if (saved >= 18 && saved <= 26) readingSize = saved; } catch {}
 function adjustSize(delta) {
   readingSize = Math.max(18, Math.min(26, readingSize + delta));
   document.documentElement.style.setProperty('--reading-size', readingSize + 'px');
   document.getElementById('fontDown').disabled = readingSize === 18;
   document.getElementById('fontUp').disabled = readingSize === 26;
+  try { localStorage.setItem('poetry-reading-size', String(readingSize)); } catch {}
 }
 document.getElementById('fontDown').addEventListener('click', () => adjustSize(-1));
 document.getElementById('fontUp').addEventListener('click', () => adjustSize(1));
@@ -615,6 +739,63 @@ document.getElementById('focusReading').addEventListener('click', event => {
   const enabled = document.body.classList.toggle('focus-reading');
   event.currentTarget.setAttribute('aria-pressed', String(enabled));
   event.currentTarget.textContent = enabled ? '完整阅读' : '纯净阅读';
+});
+
+const skinNames = {"jade": "青绿书卷", "pearl": "冰川白", "sand": "暖杏笺", "rose": "落樱粉", "night": "深海蓝", "ink": "曜石黑"};
+function applySkin(skin, persist = true) {
+  if (!Object.prototype.hasOwnProperty.call(skinNames, skin)) skin = 'jade';
+  document.documentElement.dataset.skin = skin;
+  document.querySelectorAll('[data-skin-choice]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.skinChoice === skin));
+  });
+  document.getElementById('skinCurrent').textContent = skinNames[skin] + ' · 自动记住选择';
+  document.querySelector('meta[name="theme-color"]').content = getComputedStyle(document.documentElement).getPropertyValue('--skin-canvas').trim();
+  if (persist) { try { localStorage.setItem('poetry-reader-skin', skin); } catch { document.getElementById('skinCurrent').textContent = skinNames[skin] + ' · 当前页面生效'; } }
+}
+document.querySelectorAll('[data-skin-choice]').forEach(button => button.addEventListener('click', () => applySkin(button.dataset.skinChoice)));
+applySkin(document.documentElement.dataset.skin, false);
+
+adjustSize(0);
+document.getElementById('appearanceShortcut').addEventListener('click', () => {
+  const panel = document.getElementById('appearancePanel');
+  panel.open = true;
+  panel.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',block:'center'});
+  panel.querySelector('summary').focus({preventScroll:true});
+});
+document.querySelectorAll('[data-jump-section]').forEach(button => button.addEventListener('click', () => {
+  const article = document.getElementById(articleId(state.activeIndex));
+  if (!article) return;
+  const key = button.dataset.jumpSection;
+  if (key !== 'original' && document.body.classList.contains('focus-reading')) {
+    document.body.classList.remove('focus-reading');
+    const control = document.getElementById('focusReading');control.setAttribute('aria-pressed','false');control.textContent='纯净阅读';
+  }
+  const target = key === 'analysis' ? (article.querySelector('.emotion-section') || article.querySelector('.overview-section')) : article.querySelector('.'+key);
+  target?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',block:'start'});
+}));
+// Keep keyboard focus inside the open mobile directory; Escape is handled above.
+document.addEventListener('keydown', event => {
+  if(event.key !== 'Tab' || !state.mobile || state.collapsed) return;
+  const items = [refs.toggle,...refs.sidebar.querySelectorAll('input,a,button')].filter(el => !el.hidden && el.getClientRects().length);
+  const first=items[0],last=items[items.length-1];
+  if(event.shiftKey && (document.activeElement===first || !items.includes(document.activeElement))){event.preventDefault();last.focus();}
+  else if(!event.shiftKey && (document.activeElement===last || !items.includes(document.activeElement))){event.preventDefault();first.focus();}
+});
+
+const resumeIndex = data.findIndex(item => item.title === previousReadingTitle);
+if (resumeIndex >= 0) {
+  document.getElementById('resumeReading').href = '#' + articleId(resumeIndex);
+  document.getElementById('resumeTitle').textContent = data[resumeIndex].title;
+  document.getElementById('resumeLabel').textContent = '继续上次阅读 · 第 ' + (resumeIndex+1) + ' 篇';
+}
+refs.content.addEventListener('click', event => {
+  const button = event.target.closest('[data-answers]');
+  if(button) button.closest('.dictation').querySelectorAll('.simple-answer').forEach(detail => {detail.open=button.dataset.answers==='show';});
+});
+document.addEventListener('keydown', event => {
+  if((event.metaKey || event.ctrlKey) && event.key.toLowerCase()==='k'){
+    event.preventDefault();setCollapsed(false,{preserveScroll:false});searchInput.focus({preventScroll:true});searchInput.select();
+  }
 });
 </script>
 </body>
